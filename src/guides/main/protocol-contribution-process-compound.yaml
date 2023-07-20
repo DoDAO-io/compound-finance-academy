@@ -1,6 +1,6 @@
 categories: []
 content: Process for development and evaluation of protocol contributions
-created: '2023-07-20T16:26:23.740Z'
+created: '2023-07-20T16:32:33.096Z'
 guideType: onboarding
 key: protocol-contribution-process-compound
 name: Protocol Contribution Process
@@ -89,7 +89,7 @@ steps:
 
 
 
-      ### Community Review
+      ### 3. Community Review
 
       This stage finalizes configuration and parameter values with community
       feedback.
@@ -107,7 +107,7 @@ steps:
       4. Create reports of test and simulation results.
 
 
-      ### External Review
+      ### 4. External Review
 
       This stage rectifies any audit issues. The audited contract version should
       be the final deployed version. Only changes to code in this stage should
@@ -127,7 +127,7 @@ steps:
 
 
 
-      ### Final Review
+      ### 5. Final Review
 
       This concluding stage proposes the changes on-chain.
 
