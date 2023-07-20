@@ -1,14 +1,14 @@
 {
   "categories": [],
   "content": "Process for development and evaluation of protocol contributions",
-  "created": "2023-07-20T15:01:31.617Z",
+  "created": "2023-07-20T15:10:32.726Z",
   "guideType": "onboarding",
   "key": "protocol-contribution-process-compound",
   "name": "Protocol Contribution Process",
   "publishStatus": "Live",
   "steps": [
     {
-      "content": "\nIntroduction Comments \n        ",
+      "content": "### About this Guide\nThis guide elucidates a systematic methodology for streamlining the development and appraisal of protocol contributions with a specific focus on community engagement and quality assurance protocols prior to adoption. The guide delineates a structured series of steps, each designed to progressively validate and improve each contribution. These steps are organized into five primary stages, reflecting the journey of a contribution from the initial concept stage through to the conclusive review, before it is finally advanced to be a proposition for on-chain governance.\n\n### Motivation\nThe objective behind this guide is to introduce a higher degree of transparency and understanding to the process of making contributions to the Compound protocol. The details included in the guide illustrate a universal approach that is capable of being applied across a wide spectrum of contributions, thereby making the process more inclusive and efficient. This methodological guide is particularly designed to facilitate and encourage submissions from new contributors, whilst maintaining a minimal burden on those who are continuing to contribute.\n\nThe guide, in its essence, aims to minimize the mandate of employing specific tools in the contribution process. Instead, it emphasizes the importance of traceability, transparency, and accessibility of the evaluation criteria for the entire Compound community. The strategy here is to provide multiple junctures at which feedback can be gathered at early stages of the contribution process, ensuring that quality assurance measures are well-served.\n\nThe suggested structure not only accommodates input from a diverse range of contributors but also sets the stage for constant improvement and iterative refinement of ideas. By offering a clear roadmap of the contribution lifecycle, from ideation through final review, this guide seeks to strengthen the community's engagement and involvement in protocol development, while at the same time ensuring the high quality of the contributions.",
       "name": "Introduction",
       "stepItems": [],
       "uuid": "7fec5e88-722d-47ea-a0fa-d7c0c2ab7456"
@@ -57,6 +57,6 @@
     }
   ],
   "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/cfeebc65_11e7_4a3e_ac01_30b97e0a122a/1689865280215_compound_protocol_contribution.png",
-  "uuid": "cfeebc65-11e7-4a3e-ac01-30b97e0a122a",
+  "uuid": "protocol-contribution-process-compound",
   "version": 1
 }
