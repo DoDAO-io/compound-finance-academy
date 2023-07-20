@@ -1,6 +1,6 @@
 categories: []
 content: Process for development and evaluation of protocol contributions
-created: '2023-07-20T21:51:01.574Z'
+created: '2023-07-20T21:53:03.831Z'
 guideType: onboarding
 key: protocol-contribution-process-compound
 name: Protocol Contribution Process
@@ -163,6 +163,99 @@ steps:
     name: Contribution Process
     stepItems: []
     uuid: 0da0067d-30fc-4396-81b0-0432b12bfdad
+  - content: ''
+    name: Evaluation
+    stepItems:
+      - answerKeys:
+          - C
+        choices:
+          - content: >-
+              To develop a draft contribution with tests for community
+              developers to review
+            key: A
+          - content: To submit a pull request and make additional commits as necessary
+            key: B
+          - content: >-
+              To start a discussion post in the Compound Forum with sufficient
+              detail, gauge community interest, refine the idea using community
+              feedback, and outline the scope and broad technical details of the
+              solution
+            key: C
+          - content: >-
+              To generate test and simulation result reports based on the final
+              code commit
+            key: D
+        content: >-
+          What is the purpose of the Idea Review stage in the contribution
+          process for Compound Protocol?
+        type: SingleChoice
+        uuid: 98bf6cf1-2c3c-442e-9662-f927359fc0fe
+        explanation: >-
+          The purpose of the Idea Review stage is to start a discussion post in
+          the Compound Forum with sufficient detail, gauge community interest,
+          refine the idea using community feedback, and outline the scope and
+          broad technical details of the solution.
+      - answerKeys:
+          - B
+        choices:
+          - content: >-
+              To develop a draft contribution with tests for community
+              developers to review
+            key: A
+          - content: >-
+              To provide feature-complete code with developer feedback from the
+              community. This stage suits contributions requiring new contracts
+              or existing contract updates
+            key: B
+          - content: To submit a pull request and make additional commits as necessary
+            key: C
+          - content: >-
+              To post audit, generate test and simulation result reports based
+              on the final code commit
+            key: D
+        content: >-
+          What is the aim of the Development Review stage in the contribution
+          process for Compound Protocol?
+        type: SingleChoice
+        uuid: 0da1b0df-2f16-4930-927c-86966f2a700f
+        explanation: >-
+          The aim of the Development Review stage is to provide feature-complete
+          code with developer feedback from the community. This stage is
+          suitable for contributions requiring new contracts or existing
+          contract updates.
+      - answerKeys:
+          - C
+        choices:
+          - content: >-
+              To develop a draft contribution with tests for community
+              developers to review
+            key: A
+          - content: >-
+              To provide feature-complete code with developer feedback from the
+              community. This stage suits contributions requiring new contracts
+              or existing contract updates
+            key: B
+          - content: >-
+              To rectify any audit issues. The audited contract version should
+              be the final deployed version. Only changes to code in this stage
+              should be audit issue remedies, and any remediation should undergo
+              auditor review
+            key: C
+          - content: >-
+              To post audit, generate test and simulation result reports based
+              on the final code commit
+            key: D
+        content: >-
+          What is the purpose of the External Review stage in the contribution
+          process for Compound Protocol?
+        type: SingleChoice
+        uuid: 99a1ba7c-c36e-450d-8509-9c5d83a1ed39
+        explanation: >-
+          The purpose of the External Review stage is to rectify any audit
+          issues. The audited contract version should be the final deployed
+          version. Only changes to code in this stage should be audit issue
+          remedies, and any remediation should undergo auditor review.
+    uuid: 82607101-f432-46f0-9e19-5336f58edabe
   - content: >-
       This guide seeks to unify the process of contributing to the protocol,
       reflecting established best practices but broadened to be applicable in a
