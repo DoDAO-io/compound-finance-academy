@@ -1,0 +1,62 @@
+{
+  "categories": [],
+  "content": "Process for development and evaluation of protocol contributions",
+  "created": "2023-07-20T15:01:31.617Z",
+  "guideType": "onboarding",
+  "key": "protocol-contribution-process-compound",
+  "name": "Protocol Contribution Process",
+  "publishStatus": "Live",
+  "steps": [
+    {
+      "content": "\nIntroduction Comments \n        ",
+      "name": "Introduction",
+      "stepItems": [],
+      "uuid": "7fec5e88-722d-47ea-a0fa-d7c0c2ab7456"
+    },
+    {
+      "content": "",
+      "name": "Introduction Evaluation",
+      "stepItems": [
+        {
+          "label": "Full Name",
+          "required": false,
+          "type": "PublicShortInput",
+          "uuid": "61af6d50-155a-4f34-be27-ed2d70942dc9"
+        },
+        {
+          "answerKeys": [
+            "choice_1",
+            "choice_2",
+            "choice_3"
+          ],
+          "choices": [
+            {
+              "content": "Choice 1",
+              "key": "choice_1"
+            },
+            {
+              "content": "Choice 2",
+              "key": "choice_2"
+            },
+            {
+              "content": "Choice 3",
+              "key": "choice_3"
+            },
+            {
+              "content": "Choice 4",
+              "key": "choice_4"
+            }
+          ],
+          "content": "Contents of the question",
+          "type": "MultipleChoice",
+          "uuid": "8035523a-7259-4728-919a-d5f73dda6f3b",
+          "explanation": "Explanation of the question"
+        }
+      ],
+      "uuid": "1dd615f5-8797-43ff-a723-1c69e3c05e8e"
+    }
+  ],
+  "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/cfeebc65_11e7_4a3e_ac01_30b97e0a122a/1689865280215_compound_protocol_contribution.png",
+  "uuid": "cfeebc65-11e7-4a3e-ac01-30b97e0a122a",
+  "version": 1
+}
