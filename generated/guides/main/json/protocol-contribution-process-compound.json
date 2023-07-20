@@ -1,7 +1,7 @@
 {
   "categories": [],
   "content": "Process for development and evaluation of protocol contributions",
-  "created": "2023-07-20T21:38:25.821Z",
+  "created": "2023-07-20T21:43:54.426Z",
   "guideType": "onboarding",
   "key": "protocol-contribution-process-compound",
   "name": "Protocol Contribution Process",
@@ -18,6 +18,12 @@
       "name": "Contribution Process",
       "stepItems": [],
       "uuid": "0da0067d-30fc-4396-81b0-0432b12bfdad"
+    },
+    {
+      "content": "This guide seeks to unify the process of contributing to the protocol, reflecting established best practices but broadened to be applicable in a wide range of situations. The call for a transparent, defined contribution procedure stems from historical instances of protocol updates that led to security vulnerabilities. Despite rigorous bug testing and proactive community outreach for feedback, these security issues were not detected until they became critical. Introducing a five-step contribution procedure paves the way for multiple quality control checkpoints and the early identification of potential security risks.\n\nAdditionally, this structure gives contributors a clear pathway to their end goal, eliminating the ambiguity of deciding when and how to report their development progress and quality control efforts to the community. In the decentralized world of Compound development and governance, it's even more crucial that we clearly communicate the expectations for contributions to both contributors and DAO voters.\n\n### Expected Impact\nImplementation of this process is anticipated to have several positive impacts. For starters, it's expected to streamline the contribution process for newcomers, while concurrently minimizing the burden on existing contributors. It's also likely to accelerate the evaluation of Compound Governor proposals by establishing regular, timely communication of evaluation criteria.\n\nFurther, the contribution process aims to stimulate more active participation in both contributions and evaluation processes. Predictability of the process duration, a feature particularly relevant for grant proposals, is also set to improve. This, in turn, will foster confidence in protocol changes by enhancing transparency and accessibility.\n\nAdditionally, this process will provide enhanced direction for grant recipients, making it easier for them to achieve necessary milestones within the Compound grants program, thereby facilitating payment disbursement.",
+      "name": "Rationale",
+      "stepItems": [],
+      "uuid": "f2b71dd9-6329-42f3-9085-48dab20a6306"
     }
   ],
   "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/cfeebc65_11e7_4a3e_ac01_30b97e0a122a/1689865280215_compound_protocol_contribution.png",
