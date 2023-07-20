@@ -1,7 +1,7 @@
 {
   "categories": [],
   "content": "Process for development and evaluation of protocol contributions",
-  "created": "2023-07-20T21:43:54.426Z",
+  "created": "2023-07-20T21:51:01.574Z",
   "guideType": "onboarding",
   "key": "protocol-contribution-process-compound",
   "name": "Protocol Contribution Process",
@@ -24,6 +24,12 @@
       "name": "Rationale",
       "stepItems": [],
       "uuid": "f2b71dd9-6329-42f3-9085-48dab20a6306"
+    },
+    {
+      "content": "The formalization of contribution guidelines for on-chain upgrades and deployments aims to significantly elevate the quality assurance standard for each contribution, thereby reinforcing the overall protocol's security. This process of creating a structured framework for contributions doesn't prescribe the usage of specific tools for achieving each requirement, but it is anticipated that much of the existing infrastructure in the Compound repositories, particularly the testing and security tools, will be employed.\n\nThis structured contribution process is expected to act as a catalyst for the development of additional testing and security tools for the Compound repositories. These tools would be designed to better streamline the contribution process, possibly by adding levels of automation. The goal is to increase efficiency, minimize potential human-induced errors, and reduce the turnaround time for protocol enhancements.\n\nThe development and integration of new tools would also likely trigger a learning curve among contributors, thereby raising the overall skill level and knowledge base within the Compound ecosystem. This skills enhancement, along with the more robust toolset, can further drive the quality of contributions, making the protocol even more secure and resilient.\n\nIn the long run, these reinforced security considerations are not only expected to bolster the protocol's integrity but also to fortify trust among users and stakeholders. After all, a more secure protocol translates to increased user confidence, ultimately resulting in a healthier, more vibrant ecosystem. So, by combining the formalization of contribution guidelines with the continued usage and enhancement of testing and security tools, we are setting the stage for a much more secure, efficient, and resilient protocol development process.",
+      "name": "Final Words",
+      "stepItems": [],
+      "uuid": "bc2dbb31-8a11-4e6a-9d64-92716e6d4a90"
     }
   ],
   "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/cfeebc65_11e7_4a3e_ac01_30b97e0a122a/1689865280215_compound_protocol_contribution.png",
