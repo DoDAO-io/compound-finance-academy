@@ -1,6 +1,6 @@
 categories: []
 content: Process for development and evaluation of protocol contributions
-created: '2023-07-20T16:32:33.096Z'
+created: '2023-07-20T16:57:27.031Z'
 guideType: onboarding
 key: protocol-contribution-process-compound
 name: Protocol Contribution Process
@@ -43,12 +43,15 @@ steps:
     stepItems: []
     uuid: 7fec5e88-722d-47ea-a0fa-d7c0c2ab7456
   - content: >+
-      5-Stage Process from Conception to Adoption for Refining Proposals
+      ## 5-Stage Process from Conception to Adoption for Refining Proposals
 
 
       This process includes stages for multiple refinements and feedback
       integration. The stages help to prepare proposals for varying audience
       review, and communication is advised throughout.
+
+
+
 
 
       ### 1. Idea Review
