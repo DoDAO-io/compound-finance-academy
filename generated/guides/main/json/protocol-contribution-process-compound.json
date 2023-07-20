@@ -1,7 +1,7 @@
 {
   "categories": [],
   "content": "Process for development and evaluation of protocol contributions",
-  "created": "2023-07-20T21:53:03.831Z",
+  "created": "2023-07-20T22:03:53.995Z",
   "guideType": "onboarding",
   "key": "protocol-contribution-process-compound",
   "name": "Protocol Contribution Process",
@@ -112,6 +112,40 @@
       "name": "Rationale",
       "stepItems": [],
       "uuid": "f2b71dd9-6329-42f3-9085-48dab20a6306"
+    },
+    {
+      "content": "",
+      "name": "Evaluation",
+      "stepItems": [
+        {
+          "answerKeys": [
+            "D"
+          ],
+          "choices": [
+            {
+              "content": "To make it easier for grant recipients to achieve necessary milestones",
+              "key": "A"
+            },
+            {
+              "content": "To eliminate the ambiguity of reporting development progress and quality control efforts",
+              "key": "B"
+            },
+            {
+              "content": "To establish regular, timely communication of evaluation criteria",
+              "key": "C"
+            },
+            {
+              "content": "All of the above",
+              "key": "D"
+            }
+          ],
+          "content": "What is the rationale for the contribution process?",
+          "type": "SingleChoice",
+          "uuid": "1cf6c0a9-efab-4bed-9d3d-a8595af13f8a",
+          "explanation": "The rationale for the contribution process is to establish quality control checkpoints, identify potential security risks, streamline the process for newcomers, minimize burden on existing contributors, accelerate evaluation of proposals, stimulate active participation, improve predictability, enhance transparency and accessibility, and provide direction for grant recipients."
+        }
+      ],
+      "uuid": "a9888543-1dac-41f8-9f62-e5dbcbddbfa9"
     },
     {
       "content": "The formalization of contribution guidelines for on-chain upgrades and deployments aims to significantly elevate the quality assurance standard for each contribution, thereby reinforcing the overall protocol's security. This process of creating a structured framework for contributions doesn't prescribe the usage of specific tools for achieving each requirement, but it is anticipated that much of the existing infrastructure in the Compound repositories, particularly the testing and security tools, will be employed.\n\nThis structured contribution process is expected to act as a catalyst for the development of additional testing and security tools for the Compound repositories. These tools would be designed to better streamline the contribution process, possibly by adding levels of automation. The goal is to increase efficiency, minimize potential human-induced errors, and reduce the turnaround time for protocol enhancements.\n\nThe development and integration of new tools would also likely trigger a learning curve among contributors, thereby raising the overall skill level and knowledge base within the Compound ecosystem. This skills enhancement, along with the more robust toolset, can further drive the quality of contributions, making the protocol even more secure and resilient.\n\nIn the long run, these reinforced security considerations are not only expected to bolster the protocol's integrity but also to fortify trust among users and stakeholders. After all, a more secure protocol translates to increased user confidence, ultimately resulting in a healthier, more vibrant ecosystem. So, by combining the formalization of contribution guidelines with the continued usage and enhancement of testing and security tools, we are setting the stage for a much more secure, efficient, and resilient protocol development process.",

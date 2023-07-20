@@ -1,6 +1,6 @@
 categories: []
 content: Process for development and evaluation of protocol contributions
-created: '2023-07-20T21:53:03.831Z'
+created: '2023-07-20T22:03:53.995Z'
 guideType: onboarding
 key: protocol-contribution-process-compound
 name: Protocol Contribution Process
@@ -301,6 +301,35 @@ steps:
     name: Rationale
     stepItems: []
     uuid: f2b71dd9-6329-42f3-9085-48dab20a6306
+  - content: ''
+    name: Evaluation
+    stepItems:
+      - answerKeys:
+          - D
+        choices:
+          - content: >-
+              To make it easier for grant recipients to achieve necessary
+              milestones
+            key: A
+          - content: >-
+              To eliminate the ambiguity of reporting development progress and
+              quality control efforts
+            key: B
+          - content: To establish regular, timely communication of evaluation criteria
+            key: C
+          - content: All of the above
+            key: D
+        content: What is the rationale for the contribution process?
+        type: SingleChoice
+        uuid: 1cf6c0a9-efab-4bed-9d3d-a8595af13f8a
+        explanation: >-
+          The rationale for the contribution process is to establish quality
+          control checkpoints, identify potential security risks, streamline the
+          process for newcomers, minimize burden on existing contributors,
+          accelerate evaluation of proposals, stimulate active participation,
+          improve predictability, enhance transparency and accessibility, and
+          provide direction for grant recipients.
+    uuid: a9888543-1dac-41f8-9f62-e5dbcbddbfa9
   - content: >-
       The formalization of contribution guidelines for on-chain upgrades and
       deployments aims to significantly elevate the quality assurance standard
