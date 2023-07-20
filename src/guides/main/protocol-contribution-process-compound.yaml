@@ -1,6 +1,6 @@
 categories: []
 content: Process for development and evaluation of protocol contributions
-created: '2023-07-20T22:03:53.995Z'
+created: '2023-07-20T22:05:23.575Z'
 guideType: onboarding
 key: protocol-contribution-process-compound
 name: Protocol Contribution Process
@@ -65,15 +65,15 @@ steps:
       stage end.
 
 
-      1. Start a discussion post in the Compound Forum with sufficient detail.
+      - Start a discussion post in the Compound Forum with sufficient detail.
 
-      2. Gauge community interest before dedicating effort to a contribution.
+      - Gauge community interest before dedicating effort to a contribution.
 
-      3. Refine the idea using community feedback.
+      - Refine the idea using community feedback.
 
-      4. Outline the scope and broad technical details of the solution.
+      - Outline the scope and broad technical details of the solution.
 
-      5. Optional: For additional feedback from CIP Editors, draft a CIP-style
+      - Optional: For additional feedback from CIP Editors, draft a CIP-style
       proposal, especially for complex design decisions.
 
 
@@ -84,15 +84,15 @@ steps:
       or existing contract updates.
 
 
-      1. Develop a draft contribution, including tests, for community developers
+      - Develop a draft contribution, including tests, for community developers
       to review.
 
-      2. Announce the proposal in the Compound Forum and optionally in the
+      - Announce the proposal in the Compound Forum and optionally in the
       #development Discord channel. Detail the contribution, its expected
       behavior, and repository location to invite feedback. Use "CIP-X:
       Development Review" as your forum post status.
 
-      3. Request an external audit if contract code is involved.
+      - Request an external audit if contract code is involved.
 
 
 
@@ -102,16 +102,16 @@ steps:
       feedback.
 
 
-      1. Submit a pull request and make additional commits as necessary.
+      - Submit a pull request and make additional commits as necessary.
 
-      2. Post revised contribution details with test and simulation results to
+      - Post revised contribution details with test and simulation results to
       the Compound Forum for review. Use “CIP-X: Community Review” to indicate
       your contribution status.
 
-      3. Provide a repository location and expected code freeze date to request
-      a final external audit estimate, if contract code is involved.
+      - Provide a repository location and expected code freeze date to request a
+      final external audit estimate, if contract code is involved.
 
-      4. Create reports of test and simulation results.
+      - Create reports of test and simulation results.
 
 
       ### 4. External Review
@@ -122,14 +122,14 @@ steps:
       review.
 
 
-      1. Submit the pull request and latest contract version's source control
+      - Submit the pull request and latest contract version's source control
       commit ID URL to the auditor.
 
-      2. Update the community on the latest testing and simulation results along
+      - Update the community on the latest testing and simulation results along
       with the audit status. Use "CIP-X: External Review" as your forum post
       status.
 
-      3. Share audit results and any other security recommendations with the
+      - Share audit results and any other security recommendations with the
       community.
 
 
@@ -139,20 +139,20 @@ steps:
       This concluding stage proposes the changes on-chain.
 
 
-      1. Post audit, generate test and simulation result reports based on the
+      - Post audit, generate test and simulation result reports based on the
       final code commit. Use “CIP-X: Final Review” as your forum post status.
 
-      2. Generate migration and proposal simulation results.
+      - Generate migration and proposal simulation results.
 
-      3. Submit a pull request against the official protocol repository to
+      - Submit a pull request against the official protocol repository to
       include changes.
 
-      4. Sign and execute the migration to submit the on-chain proposal.
+      - Sign and execute the migration to submit the on-chain proposal.
 
-      5. Announce the pull request with commit ID details and test and
-      simulation results to the community, indicating a pending proposal vote.
+      - Announce the pull request with commit ID details and test and simulation
+      results to the community, indicating a pending proposal vote.
 
-      6. After a successful vote and proposal execution, test the upgrade's
+      - After a successful vote and proposal execution, test the upgrade's
       effectiveness and merge the pull request.
 
 
