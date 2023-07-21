@@ -1,6 +1,6 @@
 categories: []
 content: Provides a thorough framework for anyone proposing a new asset
-created: '2023-07-21T21:01:55.985Z'
+created: '2023-07-21T21:37:32.208Z'
 guideType: onboarding
 key: compound-asset-listing-compound
 name: Compound Asset Listing
@@ -260,6 +260,35 @@ steps:
 
 
       ### External Token interactions
+
+
+      Compoun interacts with external asset contracts including ERC20 tokens
+      through various functions. Comet, an integral part of the system, employs
+      functions like `doTransferIn` and `doTransferOut`, relying on the
+      `transferFrom` and `transfer` functions of the ERC20 tokens, respectively.
+      The `doTransferIn` function is used by other Comet functions like
+      `supply`, `supplyTo`, `supplyFrom`, and `buyCollateral`, whereas
+      `doTransferOut` is called upon by functions like `withdraw`, `withdrawTo`,
+      `withdrawFrom`, `withdrawReserves`, and `buyCollateral`. Another function,
+      `approveThis`, enables the governor to approve any token within the
+      system. Additionally, `getPackedAssetInternal` and `getCollateralReserves`
+      utilize ERC20 functions to verify asset integrity and manage reserves.
+      These interactions ensure seamless transactions within the Compound
+      protocol.
+
+
+      Other components like `CometRewards` and `BaseBulker` also engage with
+      external contracts. CometRewards uses `doTransferOut` for token transfers,
+      and `setRewardConfig` to establish reward schemes. BaseBulker, on the
+      other hand, employs `sweepToken` for asset removal by an admin, and
+      `doTransferIn` to facilitate token transfers from a user. MainnetBulker, a
+      special case that lends out ETH against different collaterals, also
+      employs `doTransferIn` and `doTransferOut`, specifically for the tokens
+      steth and wsteth. Lastly, the GovernorBravoDelegate manages voting using
+      `castVoteInternal` and cancellation of proposals with the cancel function.
+      All these interactions demonstrate a robust and flexible system
+      architecture that allows for diverse asset management and protocol
+      governance within Compound.
 
 
       See
