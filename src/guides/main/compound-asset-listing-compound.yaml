@@ -1,6 +1,6 @@
 categories: []
 content: Provides a thorough framework for anyone proposing a new asset
-created: '2023-07-21T20:28:15.833Z'
+created: '2023-07-21T21:01:55.985Z'
 guideType: onboarding
 key: compound-asset-listing-compound
 name: Compound Asset Listing
@@ -167,7 +167,7 @@ steps:
     name: Checklist
     stepItems: []
     uuid: 80caee49-2dec-462d-8d6e-055cb800e673
-  - content: >
+  - content: >-
       ## Protocol Risks
 
       The protocol risks in the Compound asset listing involve multiple factors
@@ -257,6 +257,17 @@ steps:
       and external asset contracts. Various protocol contracts interact with
       ERC20 tokens, including cTokens, and relative functions interacting in
       Comet, CometRewards, BaseBulker, MainnetBulker, and GovernorBravoDelegate.
+
+
+      ### External Token interactions
+
+
+      See
+      [this](https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Risks.md)
+      link for full details. 
+
+
+      https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Risks.md
     name: Risks
     stepItems: []
     uuid: ee6f5cb5-ac53-4d48-af40-7b92163942ed
