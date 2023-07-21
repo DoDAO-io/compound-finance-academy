@@ -1,8 +1,8 @@
 id: audit-report-the-test-academy
 name: OZ Contracts - Audit Report
 excerpt: >-
-  This timeline presents a comprehensive record of the security audits conducted
-  on the OpenZeppelin Contracts
+  Captures a comprehensive record of the security audits conducted on the
+  OpenZeppelin Contracts
 content: >-
   Since Solidity's inception in 2016, OpenZeppelin Contracts has remained the
   preferred library for smart contract 
