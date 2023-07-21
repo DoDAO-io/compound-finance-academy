@@ -371,3 +371,5 @@ thumbnail: >-
   https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/cfeebc65_11e7_4a3e_ac01_30b97e0a122a/1689865280215_compound_protocol_contribution.png
 uuid: protocol-contribution-process-compound
 version: 1
+showIncorrectOnCompletion: true
+

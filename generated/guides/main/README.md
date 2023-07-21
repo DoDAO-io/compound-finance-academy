@@ -10,3 +10,4 @@
  | 6      | Build Comet Extension | How to build a new comet extension  |  [Link](markdown/build-comet-extension-compound.md) |
  | 7      | Compound III Liquidator | How to build Liquidator for the new version of Compound |  [Link](markdown/build-v3-liquidator-compound.md) |
  | 8      | Develop on Compound | For developers wishing to develop on Compound III |  [Link](markdown/develop-on-compound-compound.md) |
+ | 9      | Protocol Contribution Process | Process for development and evaluation of protocol contributions |  [Link](markdown/protocol-contribution-process-compound.md) |
