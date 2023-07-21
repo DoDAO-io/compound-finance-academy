@@ -1,6 +1,6 @@
 categories: []
 content: Provides a thorough framework for anyone proposing a new asset
-created: '2023-07-21T15:12:05.080Z'
+created: '2023-07-21T15:15:01.549Z'
 guideType: onboarding
 key: compound-asset-listing-compound
 name: Compound Asset Listing
@@ -57,6 +57,51 @@ steps:
     name: Introduction
     stepItems: []
     uuid: f17f46d5-26a4-436b-969a-2848b94dea8d
+  - content: >-
+      ### Process for New Asset Listing on Compoundv3
+
+      The first step in the new asset listing process on Compoundv3 is the
+      submission of a request for asset listing. A new market proposer must
+      review the Checklist and provide as much requested information as possible
+      in a forum post titled "Add market: {ASSET SYMBOL}" in the "New Markets"
+      category of the Compound forum.
+
+
+      Following the request, the next stage is the community analysis which
+      comprises of verification, risk analysis, and tooling and simulations.
+      Community member(s) oversee the review of the provided information,
+      ensuring its correctness and completeness. The community also evaluates
+      the market risks of the asset using available data, potentially utilizing
+      a scoring system. Gauntlet supplies a market risk assessment framework for
+      this stage. Finally, community member(s) execute the available test suite
+      and simulations against the contracts deployed on the target network.
+
+
+      The process advances to the finalization of deployment once the community
+      analysis is complete. Here, the promoter is required to deploy any
+      auxiliary contracts such as a price feed modifier and share the deployed
+      contract addresses in the same forum post. A formal on-chain proposal is
+      then drafted, including necessary parameters and explaining the reasoning
+      behind each proposed parameter value.
+
+
+      Optionally, the proposal undergoes an audit. This step is taken if the
+      community requests a review by security auditors, which can be performed
+      by OpenZeppelin or a third party hired by the proposal author.
+
+
+      Following the audit, the on-chain proposal is submitted for voting. If the
+      proposal fails, the forum post is updated with the results and provides a
+      platform for follow-up discussions.
+
+
+      The final stage of the process takes place post-launch. Parameters such as
+      the collateral factor are adjusted to safe levels and the reserve factor
+      is set to align with other assets. Additionally, optional borrow limits
+      can be set.
+    name: Process
+    stepItems: []
+    uuid: cf59c322-4a74-4b34-93fc-4b01f2400e21
   - content: >-
       The Compound Asset Listing Checklist provides a thorough framework for
       anyone proposing a new asset listing. First, general information about the
