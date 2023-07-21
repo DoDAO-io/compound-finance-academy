@@ -1,7 +1,13 @@
 id: security-updates-the-test-academy
 name: Security Updates
 excerpt: Important Security Updates and Checks implemented by OpenZeppelin
-content: Important Security Updates and Checks implemented by OpenZeppelin
+content: >-
+  This timeline presents a comprehensive overview of the crucial security
+  updates and checks enacted by OpenZeppelin, a leading force in creating
+  secure, auditable, and high-standard smart contracts. The document not only
+  shares information about all the rectified issues but also dives deeper into
+  the implications of these fixes, providing valuable insight into their effect
+  on overall system security. 
 publishStatus: ''
 events:
   - title: 4.9.1
