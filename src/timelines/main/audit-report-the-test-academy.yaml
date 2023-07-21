@@ -543,6 +543,9 @@ events:
           </tr>
       </table>
     fullDetails: |
+      ### Audit Information
+      v1.0.4 - Audit Performed by New Alchemy
+      
       ### Scope
       All Contracts
 
