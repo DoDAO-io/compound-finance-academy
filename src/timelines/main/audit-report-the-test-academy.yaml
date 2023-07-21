@@ -1,17 +1,36 @@
 id: audit-report-the-test-academy
 name: OZ Contracts - Audit Report
-excerpt: This timeline presents a comprehensive record of the security audits conducted on the OpenZeppelin Contracts
-content: |-
-  Since Solidity's inception in 2016, OpenZeppelin Contracts has remained the preferred library for smart contract 
-  development. Its widespread adoption spans from major projects handling billions of dollars daily to individual 
+excerpt: >-
+  Captures a comprehensive record of the security audits conducted on the
+  OpenZeppelin Contracts
+content: >-
+  Since Solidity's inception in 2016, OpenZeppelin Contracts has remained the
+  preferred library for smart contract 
+
+  development. Its widespread adoption spans from major projects handling
+  billions of dollars daily to individual 
+
   blockchain application creators.
 
-  The importance of auditing cannot be overstated. By subjecting OpenZeppelin Contracts to rigorous security 
-  practices, the safety and reliability of these smart contracts are ensured. The thorough security process 
-  not only safeguards the contracts themselves but also serves as a model for other crypto companies seeking to 
-  establish their security measures. Through testing and showcasing internal audit practices, a valuable reference 
-  example is offered to the broader security-conscious community in the crypto space.
-publishStatus: 'Live'
+  <br/>
+
+
+
+  The importance of auditing cannot be overstated. By subjecting OpenZeppelin
+  Contracts to rigorous security 
+
+  practices, the safety and reliability of these smart contracts are ensured.
+  The thorough security process 
+
+  not only safeguards the contracts themselves but also serves as a model for
+  other crypto companies seeking to 
+
+  establish their security measures. Through testing and showcasing internal
+  audit practices, a valuable reference 
+
+  example is offered to the broader security-conscious community in the crypto
+  space.
+publishStatus: Live
 events:
   - title: v4.9.0 - Audit performed by OpenZeppelin Security Research
     uuid: 5a63859f-b6be-4901-b283-8924fe8d4750
@@ -19,7 +38,7 @@ events:
     summary: |-
       ### Scope
       All 4.9 changes
-      
+
       ### Audit Report
       <table>
           <tr>
@@ -54,7 +73,7 @@ events:
     fullDetails: |-
       ### Audit Information
       v4.9.0 - Audit performed by OpenZeppelin Security Research
-      
+
       ### Scope
       All 4.9 changes
 
@@ -145,7 +164,7 @@ events:
     summary: |-
       ### Scope
       ERC4626 Tokenized Vaults
-      
+
       ### Audit Report
       <table>
           <tr>
@@ -180,7 +199,7 @@ events:
     fullDetails: |-
       ### Audit Information
       v4.8.0 - Audit performed by OpenZeppelin Security Research
-      
+
       ### Scope
       ERC4626 Tokenized Vaults
 
@@ -231,7 +250,7 @@ events:
     summary: |-
       ### Scope
       Checkpoints
-      
+
       ### Audit Report
       <table>
           <tr>
@@ -266,7 +285,7 @@ events:
     fullDetails: |-
       ### Audit Information
       v4.8.0 - Audit performed by OpenZeppelin Security Research
-      
+
       ### Scope
       Checkpoints
 
@@ -318,7 +337,7 @@ events:
     summary: |+
       ### Scope
       All Contracts
-      
+
       ### Audit Report
       <table>
           <tr>
@@ -511,7 +530,7 @@ events:
     summary: |-
       ### Scope
       All Contracts
-    
+
       ### Audit Report
       <table>
           <tr>
@@ -534,7 +553,7 @@ events:
     fullDetails: |
       ### Audit Information
       v1.0.4 - Audit Performed by New Alchemy
-      
+
       ### Scope
       All Contracts
 
