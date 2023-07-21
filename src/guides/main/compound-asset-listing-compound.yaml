@@ -1,6 +1,6 @@
 categories: []
 content: Provides a thorough framework for anyone proposing a new asset
-created: '2023-07-21T21:38:56.628Z'
+created: '2023-07-21T21:39:17.835Z'
 guideType: onboarding
 key: compound-asset-listing-compound
 name: Compound Asset Listing
@@ -54,12 +54,6 @@ steps:
       proposal submission, modifications to the checklist based on community
       needs, improvements in tooling, formal processes for community member
       roles in checklist verification, and creation of a scoring framework.
-
-
-      See
-      [this](https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Checklist.md)
-      link for the full checklist:
-      https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Checklist.md
     name: Introduction
     stepItems: []
     uuid: f17f46d5-26a4-436b-969a-2848b94dea8d
@@ -170,6 +164,12 @@ steps:
       the community check. All proposals must be first posted in the Compound
       forum New Markets category, and each proposal should relate solely to the
       listing of one token.
+
+
+      See
+      [this](https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Checklist.md)
+      link for the full checklist:
+      https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Checklist.md
     name: Checklist
     stepItems: []
     uuid: 80caee49-2dec-462d-8d6e-055cb800e673
