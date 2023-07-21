@@ -1,6 +1,6 @@
 categories: []
 content: Provides a thorough framework for anyone proposing a new asset
-created: '2023-07-21T15:15:01.549Z'
+created: '2023-07-21T15:23:01.965Z'
 guideType: onboarding
 key: compound-asset-listing-compound
 name: Compound Asset Listing
@@ -57,8 +57,15 @@ steps:
     name: Introduction
     stepItems: []
     uuid: f17f46d5-26a4-436b-969a-2848b94dea8d
-  - content: >-
+  - content: >+
       ### Process for New Asset Listing on Compoundv3
+
+
+      <div align="center">
+        <img style="max-height:400px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/compound_asset_listing_compound/1689952968995_new_asset_listing_process.png"/>
+      </div>
+
+
 
       The first step in the new asset listing process on Compoundv3 is the
       submission of a request for asset listing. A new market proposer must
@@ -99,6 +106,8 @@ steps:
       the collateral factor are adjusted to safe levels and the reserve factor
       is set to align with other assets. Additionally, optional borrow limits
       can be set.
+
+
     name: Process
     stepItems: []
     uuid: cf59c322-4a74-4b34-93fc-4b01f2400e21
