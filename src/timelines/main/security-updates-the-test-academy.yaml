@@ -8,10 +8,13 @@ events:
     uuid: afcfd093-aef3-4a8b-ba74-4eeac651dec8
     date: 2023-06-06T15:24:30.000Z
     summary: >-
-      ### Issue Fixed
+      ### Issue Fixed 
+
       Governor proposal creation may be blocked by frontrunning
 
-      ### Issue Impact
+
+      ### Issue Impact 
+
       By frontrunning the creation of a proposal, an attacker can become the
       proposer and gain the ability to cancel it. The attacker can do this
       repeatedly to try to prevent a proposal from being proposed at all. This
@@ -24,12 +27,13 @@ events:
     uuid: a141cf1e-bee1-404c-9149-1040bd58c78c
     date: 2023-04-13T15:30:01.000Z
     summary: >-
-      ### Issue Fixed
-      TransparentUpgradeableProxy clashing selector calls may not be
-      delegated
+      ### Issue Fixed 
+
+      TransparentUpgradeableProxy clashing selector calls may not be delegated
 
 
-      ### Issue Impact
+      ### Issue Impact 
+
       A function in the implementation contract may be inaccessible if its
       selector clashes with one of the proxy's own selectors. Specifically, if
       the clashing function has a different signature with incompatible ABI
@@ -43,11 +47,13 @@ events:
     uuid: 49266e70-6da2-45ad-98c1-24c3e7915cb3
     date: 2023-04-13T15:31:30.000Z
     summary: >-
-      ### Issue Fixed
+      ### Issue Fixed 
+
       GovernorCompatibilityBravo may trim proposal calldata
 
 
-      ### Issue Impact
+      ### Issue Impact 
+
       The proposal creation entrypoint (propose) in GovernorCompatibilityBravo
       allows the creation of proposals with a signatures array shorter than the
       calldatas array. This causes the additional elements of the latter to be
@@ -63,11 +69,13 @@ events:
     uuid: 22f3f5c3-f97f-42fb-a05b-00f5a9f7541e
     date: 2023-03-02T15:34:31.000Z
     summary: >-
-      ### Issue Fixed 
+      ### Issue Fixed  
+
       ERC721Consecutive incorrect balance update with batch of 1
 
 
-      ### Issue Impact
+      ### Issue Impact 
+
       The ERC721Consecutive contract designed for minting NFTs in batches does
       not update balances when a batch has size 1 and consists of a single
       token. Subsequent transfers from the receiver of that token may overflow
@@ -79,10 +87,13 @@ events:
     uuid: 0a3597af-659e-4371-9c4e-cfa94c82eeca
     date: 2022-08-10T15:36:14.000Z
     summary: >-
-      ### Issue Fixed
+      ### Issue Fixed 
+
       ECDSA signature malleability
 
+
       ### Issue Impact
+
       The functions ECDSA.recover and ECDSA.tryRecover are vulnerable to a kind
       of signature malleability due to accepting EIP-2098 compact signatures in
       addition to the traditional 65 byte signature format. This is only an
@@ -98,7 +109,8 @@ events:
       ### Issue Fixed
 
 
-      ### Issue Impact
+      ### Issue Impact 
+
       Contracts using the cross chain utilies for Arbitrum L2,
       CrossChainEnabledArbitrumL2 or LibArbitrumL2, will classify direct
       interactions of externally owned accounts (EOAs) as cross chain calls,
@@ -112,12 +124,14 @@ events:
     uuid: fcbd158c-253c-48ca-a0bf-6506cca4f3bb
     date: 2022-06-28T15:38:45.000Z
     summary: >-
-      ### Issue Fixed
+      ### Issue Fixed 
+
       GovernorVotesQuorumFraction updates to quorum may affect past defeated
       proposals
 
 
-      ### Issue Impact
+      ### Issue Impact 
+
       This issue concerns instances of Governor that use the module
       GovernorVotesQuorumFraction, a mechanism that determines quorum
       requirements as a percentage of the voting token's total supply. In
@@ -132,11 +146,13 @@ events:
     uuid: c77adb0b-2a54-4a2a-a766-67ee0c872332
     date: 2022-06-28T15:39:48.000Z
     summary: >-
-      ### Issue Fixed
+      ### Issue Fixed 
+
       ERC165Checker unbounded gas consumption
 
 
-      ### Issue Impact
+      ### Issue Impact 
+
       The target contract of an EIP-165 supportsInterface query can cause
       unbounded gas consumption by returning a lot of data, while it is
       generally assumed that this operation has a bounded cost.
@@ -147,11 +163,13 @@ events:
     uuid: ae385bb8-b67c-413c-bddd-5f102ba32367
     date: 2022-07-20T15:40:34.000Z
     summary: >-
-      ### Issue Fixed
+      ### Issue Fixed 
+
       SignatureChecker may revert on invalid EIP-1271 signers
 
 
-      ### Issue Impact
+      ### Issue Impact 
+
       SignatureChecker.isValidSignatureNow is not expected to revert. However,
       an incorrect assumption about Solidity 0.8's abi.decode allows some cases
       to revert, given a target contract that doesn't implement EIP-1271 as
@@ -163,11 +181,13 @@ events:
     uuid: d0b9f1f7-976c-43dc-9557-19f621698991
     date: 2022-07-20T15:41:30.000Z
     summary: >-
-      ### Issue Fixed
+      ### Issue Fixed 
+
       ERC165Checker may revert instead of returning false
 
 
-      ### Issue Impact
+      ### Issue Impact 
+
       ERC165Checker.supportsInterface is designed to always successfully return
       a boolean, and under no circumstance revert. However, an incorrect
       assumption about Solidity 0.8's abi.decode allows some cases to revert,
@@ -180,12 +200,14 @@ events:
     uuid: b9b59391-3d96-41ad-8c9d-ab4c6ce64965
     date: 2022-01-11T15:42:25.000Z
     summary: >-
-      ### Issue Fixed
+      ### Issue Fixed 
+
       GovernorCompatibilityBravo incorrect ABI encoding may lead to unexpected
       behavior
 
 
-      ### Issue Impact
+      ### Issue Impact 
+
       The GovernorCompatibilityBravo module may lead to the creation of
       governance proposals that execute function calls with incorrect arguments
       due to bad ABI encoding. This happens if the proposal is created using
@@ -206,10 +228,12 @@ events:
     date: 2021-12-14T15:43:38.000Z
     summary: >-
       ### Issue Fixed
+
       Initializer reentrancy may lead to double initialization
 
 
       ### Issue Impact
+
       Initializer functions that are invoked separate from contract creation
       (the most prominent example being minimal proxies) may be reentered if
       they make an untrusted non-view external call.
@@ -221,10 +245,12 @@ events:
     date: 2021-11-15T15:44:14.000Z
     summary: >-
       ### Issue Fixed
+
       ERC1155Supply vulnerability in OpenZeppelin Contracts
 
 
       ### Issue Impact
+
       When ERC1155 tokens are minted, a callback is invoked on the receiver of
       those tokens, as required by the spec. When including the ERC1155Supply
       extension, total supply is not updated until after the callback, thus
@@ -237,14 +263,16 @@ events:
     uuid: b82da1d3-e72f-4b7c-b22f-e6c5f7a930cc
     date: 2021-09-14T15:45:07.000Z
     summary: >-
-      ### Issue Fixed
+      ### Issue Fixed 
+
       UUPSUpgradeable vulnerability in OpenZeppelin Contracts
 
 
       ### Issue Impact
-      Upgradeable contracts using UUPSUpgradeable may be vulnerable to an
-      attack affecting uninitialized implementation contracts. We will update
-      this advisory with more information soon.
+
+      Upgradeable contracts using UUPSUpgradeable may be vulnerable to an attack
+      affecting uninitialized implementation contracts. We will update this
+      advisory with more information soon.
     fullDetails: ''
     moreLink: >-
       https://github.com/OpenZeppelin/openzeppelin-contracts/security/advisories/GHSA-5vp3-v4hc-gx76
@@ -253,10 +281,12 @@ events:
     date: 2021-08-26T15:46:21.000Z
     summary: >-
       ### Issue Fixed
+
       TimelockController vulnerability in OpenZeppelin Contracts
 
 
-      ### Issue Impact
+      ### Issue Impact 
+
       A vulnerability in TimelockController allowed an actor with the executor
       role to take immediate control of the timelock, by resetting the delay to
       0 and escalating privileges, thus gaining unrestricted access to assets
