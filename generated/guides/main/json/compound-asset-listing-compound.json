@@ -1,23 +1,16 @@
 {
   "categories": [],
   "content": "Provides a thorough framework for anyone proposing a new asset",
-  "created": "2023-07-21T14:45:05.988Z",
+  "created": "2023-07-21T15:10:07.944Z",
   "guideType": "onboarding",
   "key": "compound-asset-listing-compound",
   "name": "Compound Asset Listing",
   "publishStatus": "Live",
   "steps": [
     {
-      "content": "\nIntroduction Comments \n        ",
+      "content": "OpenZeppelin, in collaboration with Compound, has developed a structured process to streamline the listing of assets. Aiming to address Compound's security risks, this method is based on a review of past asset listing proposals and community discussions, and is influenced by procedures used by other protocols. The result of this endeavor is a detailed checklist to assess security risks and a step-by-step guide for asset listing proposals.\n\nTo employ this process, users must first familiarize themselves with the process guide, which details how to manage asset listings securely from start to finish. As part of the process, Gauntlet offers a free Market Risk Assessment Framework. The checklist serves as a requisite information sharing tool for the community, marking the first step in the Asset Listing Process. It is also crucial to review the risks to understand the reasoning behind our checklist, process, and potential integration issues.\n\nOur primary objective was to develop an initial process to guide the community in securely listing assets. The community is encouraged to review and suggest improvements to this work. Initially, we aimed to list main exploration results and summarize known risks of the Compound protocol. We produced a Risks document focusing on risks associated with external asset interaction. This document serves as a reminder for anyone evaluating new asset listings, detailing each risk category and how current designs might mitigate them.\n\nFollowing the risk analysis, we recognized the need to consider specific asset risks during listing. Consequently, we created a checklist of queries and information requests for use during the asset listing process. This checklist aims to address concerns specific to each asset and its integration. Prior to proposing an asset listing, the proposer must review this checklist and provide the requested information for a community check on potential integration issues. The final component of our process includes reviewing the risks, completing the checklist, and adhering to other intermediate steps.\n\nThis initiative is aimed at establishing a secure and structured asset listing process, with scope for community feedback and enhancements over time. Future improvement suggestions include automated integrations for mandatory checklist completion, checklist autocompletion to simplify proposal submission, modifications to the checklist based on community requirements, improvements in tooling, formalizing community member roles for checklist verification, and creation of a scoring framework",
       "name": "Introduction",
-      "stepItems": [
-        {
-          "label": "Full Name",
-          "required": false,
-          "type": "PublicShortInput",
-          "uuid": "b6375ac7-ed76-4318-8a95-8c73a0181ebc"
-        }
-      ],
+      "stepItems": [],
       "uuid": "f17f46d5-26a4-436b-969a-2848b94dea8d"
     },
     {
@@ -28,6 +21,6 @@
     }
   ],
   "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/26940879_c83d_4e43_a4a1_cc93f0eb68e2/1689950668246_new_asset_listing.png",
-  "uuid": "26940879-c83d-4e43-a4a1-cc93f0eb68e2",
+  "uuid": "compound-asset-listing-compound",
   "version": 1
 }
