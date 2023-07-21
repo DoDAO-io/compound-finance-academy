@@ -1,6 +1,6 @@
 categories: []
 content: Provides a thorough framework for anyone proposing a new asset
-created: '2023-07-21T21:37:32.208Z'
+created: '2023-07-21T21:38:03.963Z'
 guideType: onboarding
 key: compound-asset-listing-compound
 name: Compound Asset Listing
@@ -293,9 +293,7 @@ steps:
 
       See
       [this](https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Risks.md)
-      link for full details. 
-
-
+      link for full details:
       https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Risks.md
     name: Risks
     stepItems: []
