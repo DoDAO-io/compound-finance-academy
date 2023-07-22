@@ -1,6 +1,6 @@
 categories: []
 content: What is Pause Guardian and when and how its used?
-created: '2023-07-22T22:59:27.525Z'
+created: '2023-07-22T23:05:38.500Z'
 guideType: onboarding
 key: pause-gaurdian-compound
 name: Pause Gaurdian
@@ -417,6 +417,76 @@ steps:
     name: Responsibilities
     stepItems: []
     uuid: 157689fa-05a8-4224-822d-978883b838b6
+  - content: ''
+    name: Evaluation
+    stepItems:
+      - answerKeys:
+          - A
+        choices:
+          - content: Gauntlet
+            key: A
+          - content: OpenZeppelin
+            key: B
+          - content: Community
+            key: C
+          - content: Protocol Contributors
+            key: D
+        content: >-
+          Who provides guidance to Multisig Members for effectively managing
+          risks during an incident related to market conditions like Asset price
+          levels or COMP distribution?
+        type: SingleChoice
+        uuid: 5d0cf6df-81ec-4ba2-981e-eb8629d9112c
+        explanation: >+
+          Gauntlet guides Multisig Members in risk management during security
+          incidents, identifying threatening market conditions for Compound and
+          advising on interest rates, borrow/supply limits, and risk mitigation
+          actions. This guidance includes implementing pauses on specific
+          actions during potentially hazardous events.
+
+
+
+
+      - answerKeys:
+          - B
+        choices:
+          - content: Gauntlet
+            key: A
+          - content: OpenZeppelin
+            key: B
+          - content: Community
+            key: C
+          - content: Protocol Contributors
+            key: D
+        content: >-
+          Who is responsible for enhancing the security of the protocol by
+          developing, monitoring, and reviewing security alerts?
+        type: SingleChoice
+        uuid: 1cb22f67-a208-4a9c-8cc5-e5b796d05a2b
+        explanation: >-
+          OpenZeppelin is responsible for enhancing the security of the protocol
+          by developing, monitoring, and reviewing security alerts.
+      - answerKeys:
+          - D
+        choices:
+          - content: Gauntlet
+            key: A
+          - content: OpenZeppelin
+            key: B
+          - content: Community
+            key: C
+          - content: Multisig Members and OpenZeppelin
+            key: D
+        content: >-
+          Who bears the responsibility of initiating pauses on specific
+          functionalities in the event of a security incident?
+        type: SingleChoice
+        uuid: 41c6d761-087d-4d1e-8665-d0d98ed3572e
+        explanation: >-
+          Multisig Members and OpenZeppelin bear the responsibility of
+          initiating pauses on specific functionalities in the event of a
+          security incident.
+    uuid: 8049ca46-fe46-4276-8a52-04eaf984924d
 thumbnail: >-
   https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/a43df54b_fdbb_4836_91c8_175e343934bf/1690057485217_pause_guardian.png
 uuid: pause-gaurdian-compound
