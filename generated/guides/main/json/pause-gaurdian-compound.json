@@ -1,7 +1,7 @@
 {
   "categories": [],
   "content": "What is Pause Guardian and when and how its used?",
-  "created": "2023-07-22T22:45:04.337Z",
+  "created": "2023-07-22T22:56:08.669Z",
   "guideType": "onboarding",
   "key": "pause-gaurdian-compound",
   "name": "Pause Gaurdian",
@@ -14,16 +14,144 @@
       "uuid": "71aa6904-b78b-4e07-b417-72b1fb15d8b2"
     },
     {
+      "content": "",
+      "name": "Evaluation",
+      "stepItems": [
+        {
+          "answerKeys": [
+            "C"
+          ],
+          "choices": [
+            {
+              "content": "To increase the value of assets over time",
+              "key": "A"
+            },
+            {
+              "content": "To buy assets from a shop",
+              "key": "B"
+            },
+            {
+              "content": "To disable selected protocol functions in response to vulnerabilities or crisis situations",
+              "key": "C"
+            },
+            {
+              "content": "To buy assets for fun",
+              "key": "D"
+            }
+          ],
+          "content": "What is the role of Pause Guardian in DeFi protocols?",
+          "type": "SingleChoice",
+          "uuid": "b68f9c5a-f7e9-473e-803f-d96448fdd825",
+          "explanation": "The role of the Pause Guardian is to pause certain functionalities within the protocol when triggered by certain predefined conditions, such as stablecoin depegging significantly, invalid price feed, or potential contract bugs."
+        },
+        {
+          "answerKeys": [
+            "C"
+          ],
+          "choices": [
+            {
+              "content": "One signer creates and signs the transaction.",
+              "key": "A"
+            },
+            {
+              "content": "Two additional signers create and sign the transaction.",
+              "key": "B"
+            },
+            {
+              "content": "One signer creates and signs the transaction, two additional signers sign the transaction, and finally another signer signs and executes the transaction.",
+              "key": "C"
+            },
+            {
+              "content": "One signer signs the transaction, two additional signers sign the transaction, and finally another signer executes the transaction.",
+              "key": "D"
+            }
+          ],
+          "content": "What is the process of signing a transaction in Multisig?",
+          "type": "SingleChoice",
+          "uuid": "3222dd41-4066-48e8-8c39-98dcd211965d",
+          "explanation": "The process of signing a transaction in Multisig involves one signer creating and signing the transaction, followed by two additional signers signing the transaction. Finally, when ready to execute, another signer signs and executes the transaction."
+        },
+        {
+          "answerKeys": [
+            "A"
+          ],
+          "choices": [
+            {
+              "content": "30 minutes",
+              "key": "A"
+            },
+            {
+              "content": "1 hour",
+              "key": "B"
+            },
+            {
+              "content": "24 hours",
+              "key": "C"
+            },
+            {
+              "content": "7 days",
+              "key": "D"
+            }
+          ],
+          "content": "How long do Multisig Owners have to sign the transaction after its proposal?",
+          "type": "SingleChoice",
+          "uuid": "1cac62ea-70ac-4d6c-929b-f8679d38690e",
+          "explanation": "Multisig Owners are expected to sign the transaction within 30 minutes of its proposal."
+        }
+      ],
+      "uuid": "5a950d24-fd96-41ca-8679-c0759656b7b2"
+    },
+    {
       "content": "## Assets\n\nEach network hosts a dedicated Gnosis Safe multisig pause guardian that can be employed to perform pause functionality or modify configurations to minimize risk.\n\nThe threshold is set at 4/6, with signers from Gauntlet, Protocol Contributors, and Community Members. Once a safe is transferred to a new chain, the safe signers will carry out a signing ceremony. The transaction should not be executed until all six signers have signed it. Although it's ideal to test this on the Comet contract, it isn't strictly necessary as it can be tested separately at a later time.\n\n\n## Key Participants\n\nWithin the Compound Finance ecosystem, various stakeholders play diverse roles. The table below provides a brief description of these roles. It's important to note that the roles of these stakeholder groups can overlap.\n\n| Participant Group     | Main Role Within Compound    |\n| --------------------- | ---------------------------- |\n| Protocol Contributors | Operations and Development   |\n| OpenZeppelin          | Security Services            |\n| Gauntlet              | Risk Management              |\n| Multisig Members      | Contract Administrative Actions |\n| Community             | Governance                   |\n\nProtocol contributors encompass Compound Labs, community members, and other parties who are invested in Compound's operations and development.\n\n### Present Community Multisig Members\n\nThe table below lists the current members of the Community Multisig along with their respective addresses:\n\n| Member               | Address                                    |\n| -------------------- | ------------------------------------------ |\n| Paul L. (Gauntlet)   | 0xDD659911EcBD4458db07Ee7cDdeC79bf8F859AbC |\n| 0age (OpenSea)       | 0x7e4A8391C728fEd9069B2962699AB416628B19Fa |\n| arr00                | 0x2B384212EDc04Ae8bB41738D05BA20E33277bf33 |\n| blck                 | 0x54A37d93E57c5DA659F508069Cf65A381b61E189 |\n| Jared F.             | 0xF515DCb89e67bb5D52b857d11f6C0cC2aD7D0167 |\n| TennisBowling        | 0xC3AaE58Ab81663872dd36d73613eb295b167F546 |\n\n",
       "name": "Details",
       "stepItems": [],
       "uuid": "b86d9ce3-711d-4c01-b30d-cabe681f8009"
     },
     {
+      "content": "",
+      "name": "Evaluation",
+      "stepItems": [
+        {
+          "answerKeys": [
+            "A"
+          ],
+          "choices": [
+            {
+              "content": "Protocol Contributors, OpenZeppelin, Gauntlet, Multisig Members, and the Community",
+              "key": "A"
+            },
+            {
+              "content": "Protocol Contributors, OpenZeppelin, and Gauntlet",
+              "key": "B"
+            },
+            {
+              "content": "OpenZeppelin, Gauntlet, and Multisig Members",
+              "key": "C"
+            },
+            {
+              "content": "Multisig Members and the Community",
+              "key": "D"
+            }
+          ],
+          "content": "Who are the main stakeholders within the Compound Finance ecosystem?",
+          "type": "SingleChoice",
+          "uuid": "c6340e0e-e27a-4abe-8b2d-3a5a2aee492e",
+          "explanation": "The main stakeholders within the Compound Finance ecosystem include Protocol Contributors, OpenZeppelin, Gauntlet, Multisig Members, and the Community."
+        }
+      ],
+      "uuid": "14d0e7e9-f395-4f00-88ec-f3c553a2e3a7"
+    },
+    {
       "content": "# Use Cases for Pause Guardian\n\n## Depegging of Stablecoin\n\nIn the event where a stablecoin depegs, falling below 90% of its target value, and the asset price is hardcoded, certain measures are put in place. The first action that should be taken is the suspension of borrowing. A pause can be applied by altering the borrow caps instead of directly putting a halt to borrowing, if that is the more preferred method.\n\n## Inaccurate or Unavailable Price Feed\n\nShould a price feed become either incorrect or inaccessible, immediate actions are required. The primary action in such circumstances would be the suspension of liquidations, assuming that is necessary under the specific conditions.\n\n## Contract Bug of Indeterminate Nature\n\nGiven the broad range of potential contract bugs and their varying impacts on different parts of the protocol, diverse actions are needed. Initially, a pause on the affected functionality should be executed. Then, a fixed contract version should be developed and audited. A proposal for the upgraded contract should be submitted, incorporating an unpause in the proposal. Any pending non-critical proposals should be canceled. However, if the bug arose due to a recent upgrade, the affected functionality should be paused and a proposal to reverse the upgrade causing the bug should be submitted, also including an unpause in the proposal.\n\n## Problematic Upgrade of an Underlying Asset\n\nIf the implementation of an underlying asset within Compound has a security issue, appropriate steps should be taken. The first action is to pause the market for the problematic underlying asset. A proposal for a contract upgrade to address the vulnerability should then be submitted. Alternatively, cooperation with the team of the underlying asset may be sought to rectify the issue together.\n\n## Passed Malicious Governance Proposal\n\nIn scenarios where a malicious governance proposal passes, causing a range of potential contract bugs and affecting various parts of the protocol, certain actions are needed. If the proposal poses an immediate security threat to the protocol, all the affected functionalities within the protocol should be paused. Subsequently, a proposal to roll back the previous malicious proposal should be submitted.\n",
       "name": "Usase Cases",
       "stepItems": [],
       "uuid": "cfc1fa93-a985-44c7-ac1d-239f76178a65"
+    },
+    {
+      "content": "",
+      "name": "Evaluation",
+      "stepItems": [],
+      "uuid": "7d4600ef-39f8-4bb8-a76c-038adf404488"
     },
     {
       "content": "# Pause Guardian Responsibilities\nIn the face of a critical situation, the Compound community promptly coordinates with the appropriate stakeholder who can accurately assess the implications of the scenario. Here are some key categories and their respective assigned owners.\n\n## 1. Guiding Risk Management\nUnder the domain of **Risk Management Guidance**, Gauntlet, as the assigned owner, provides guidance to Multisig Members to effectively manage risks during a security incident. This ranges from identifying market conditions posing a risk to Compound, such as asset price levels, COMP distribution, and liquidity levels in borrowing and lending pools, to advising on interest rates and borrow/supply limits. Gauntlet also recommends risk mitigation strategies, especially concerning the implementation of pauses during risky situations.\n\n## 2. Ensuring Security Best Practices and Alerting\n**Security Best Practices and Alerting**, owned by OpenZeppelin, is focused on enhancing the security of the protocol. It involves developing, monitoring, and reviewing security alerts and conducting further investigations to determine if these alerts pose any threat to the protocol. OpenZeppelin also provides guidance on implementing best practices for the Pause Guardian's functionality.\n\n## 3. Auditing for Secure Operations\n**Audits** are an integral part of maintaining the protocol's integrity. The Community, Protocol Contributors, and OpenZeppelin, who share the responsibility, ensure that all contracts are audited before deployment. Although OpenZeppelin typically spearheads the audits, the community is encouraged to seek additional independent audits.\n\n## 4. Enforcing Pause in Case of Security Incidents\nThe **Pause** responsibility rests with the Multisig Members and OpenZeppelin. They bear the responsibility of initiating pauses on specific functionalities in the event of a security incident.\n\n## 5. Managing Unpause Process\nThe **Unpause** functionality, owned by the Community, plays a crucial role in resuming operations after a pause. In v2, the unpausing can only be accomplished by a community governance proposal and is subject to a 7-day governance process. However, in v3, the Pause Guardian Multisig can directly unpause without necessitating a governance proposal.\n\n## 6. Overseeing Contract Upgrades\nLastly, **Contract Upgrades** are vital for enhancing the protocol's security and functionality. Protocol Contributors are responsible for developing and testing contract upgrades, while OpenZeppelin provides guidance on mitigating security issues and performs audits on these upgrades, ensuring they meet security standards and resolve any potential concerns.",

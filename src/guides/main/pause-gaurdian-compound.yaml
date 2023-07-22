@@ -1,6 +1,6 @@
 categories: []
 content: What is Pause Guardian and when and how its used?
-created: '2023-07-22T22:45:04.337Z'
+created: '2023-07-22T22:56:08.669Z'
 guideType: onboarding
 key: pause-gaurdian-compound
 name: Pause Gaurdian
@@ -57,6 +57,74 @@ steps:
     name: Introduction
     stepItems: []
     uuid: 71aa6904-b78b-4e07-b417-72b1fb15d8b2
+  - content: ''
+    name: Evaluation
+    stepItems:
+      - answerKeys:
+          - C
+        choices:
+          - content: To increase the value of assets over time
+            key: A
+          - content: To buy assets from a shop
+            key: B
+          - content: >-
+              To disable selected protocol functions in response to
+              vulnerabilities or crisis situations
+            key: C
+          - content: To buy assets for fun
+            key: D
+        content: What is the role of Pause Guardian in DeFi protocols?
+        type: SingleChoice
+        uuid: b68f9c5a-f7e9-473e-803f-d96448fdd825
+        explanation: >-
+          The role of the Pause Guardian is to pause certain functionalities
+          within the protocol when triggered by certain predefined conditions,
+          such as stablecoin depegging significantly, invalid price feed, or
+          potential contract bugs.
+      - answerKeys:
+          - C
+        choices:
+          - content: One signer creates and signs the transaction.
+            key: A
+          - content: Two additional signers create and sign the transaction.
+            key: B
+          - content: >-
+              One signer creates and signs the transaction, two additional
+              signers sign the transaction, and finally another signer signs and
+              executes the transaction.
+            key: C
+          - content: >-
+              One signer signs the transaction, two additional signers sign the
+              transaction, and finally another signer executes the transaction.
+            key: D
+        content: What is the process of signing a transaction in Multisig?
+        type: SingleChoice
+        uuid: 3222dd41-4066-48e8-8c39-98dcd211965d
+        explanation: >-
+          The process of signing a transaction in Multisig involves one signer
+          creating and signing the transaction, followed by two additional
+          signers signing the transaction. Finally, when ready to execute,
+          another signer signs and executes the transaction.
+      - answerKeys:
+          - A
+        choices:
+          - content: 30 minutes
+            key: A
+          - content: 1 hour
+            key: B
+          - content: 24 hours
+            key: C
+          - content: 7 days
+            key: D
+        content: >-
+          How long do Multisig Owners have to sign the transaction after its
+          proposal?
+        type: SingleChoice
+        uuid: 1cac62ea-70ac-4d6c-929b-f8679d38690e
+        explanation: >-
+          Multisig Owners are expected to sign the transaction within 30 minutes
+          of its proposal.
+    uuid: 5a950d24-fd96-41ca-8679-c0759656b7b2
   - content: >+
       ## Assets
 
@@ -128,6 +196,30 @@ steps:
     name: Details
     stepItems: []
     uuid: b86d9ce3-711d-4c01-b30d-cabe681f8009
+  - content: ''
+    name: Evaluation
+    stepItems:
+      - answerKeys:
+          - A
+        choices:
+          - content: >-
+              Protocol Contributors, OpenZeppelin, Gauntlet, Multisig Members,
+              and the Community
+            key: A
+          - content: Protocol Contributors, OpenZeppelin, and Gauntlet
+            key: B
+          - content: OpenZeppelin, Gauntlet, and Multisig Members
+            key: C
+          - content: Multisig Members and the Community
+            key: D
+        content: Who are the main stakeholders within the Compound Finance ecosystem?
+        type: SingleChoice
+        uuid: c6340e0e-e27a-4abe-8b2d-3a5a2aee492e
+        explanation: >-
+          The main stakeholders within the Compound Finance ecosystem include
+          Protocol Contributors, OpenZeppelin, Gauntlet, Multisig Members, and
+          the Community.
+    uuid: 14d0e7e9-f395-4f00-88ec-f3c553a2e3a7
   - content: >
       # Use Cases for Pause Guardian
 
@@ -189,6 +281,10 @@ steps:
     name: Usase Cases
     stepItems: []
     uuid: cfc1fa93-a985-44c7-ac1d-239f76178a65
+  - content: ''
+    name: Evaluation
+    stepItems: []
+    uuid: 7d4600ef-39f8-4bb8-a76c-038adf404488
   - content: >-
       # Pause Guardian Responsibilities
 
