@@ -1,14 +1,14 @@
 {
   "categories": [],
   "content": "What is Pause Guardian and when and how its used?",
-  "created": "2023-07-22T20:41:05.386Z",
+  "created": "2023-07-22T22:25:34.763Z",
   "guideType": "onboarding",
   "key": "pause-gaurdian-compound",
   "name": "Pause Gaurdian",
   "publishStatus": "Live",
   "steps": [
     {
-      "content": "Pause Guardian\nThe Comptroller contract designates a Pause Guardian address capable of disabling protocol functionality. Used only in the event of an unforeseen vulnerability, the Pause Guardian has one and only one ability: to disable a select set of functions: Mint, Borrow, Transfer, and Liquidate. The Pause Guardian cannot unpause an action, nor can it ever prevent users from calling Redeem, or Repay Borrow to close positions and exit the protocol. COMP token-holders designate the Pause Guardian address, which is held by the Community Multi-Sig.\n\n\n",
+      "content": "What is Pause Guardian?\nPause Guardian is a safeguard mechanism within the Comptroller contract in many DeFi protocols. It's an address empowered to disable selected protocol functions such as Mint, Borrow, Transfer, and Liquidate, particularly in response to an unforeseen vulnerability or crisis situation. \n\nPause Gaurdian serves as an important risk management tool designed to preserve the integrity of the ecosystem during critical situations. This layer of protection ensures the system's stability and reduces the potential for loss during sudden market volatility or when the system faces unanticipated bugs or exploits.\n\nThe role of the Pause Guardian is to pause certain functionalities within the protocol when triggered by certain predefined conditions. This includes situations like when a stablecoin depegs significantly, an invalid price feed is received, or when a potential contract bug is detected. The purpose of this temporary pause is to prevent further detrimental actions until the situation can be fully assessed and remediated. It's a safety mechanism that bolsters the resilience of the protocol, safeguarding the investments of users within the ecosystem.\n\nThis critical role of the Pause Guardian is assigned by the COMP token-holders and is managed by the Community Multi-Sig, ensuring an additional layer of security for the ecosystem\n\n\n\n",
       "name": "Introduction",
       "stepItems": [],
       "uuid": "71aa6904-b78b-4e07-b417-72b1fb15d8b2"
@@ -18,6 +18,12 @@
       "name": "Usase Cases",
       "stepItems": [],
       "uuid": "cfc1fa93-a985-44c7-ac1d-239f76178a65"
+    },
+    {
+      "content": "# Pause Guardian Responsibilities\n\n## 1. Guiding Risk Management\nUnder the domain of **Risk Management Guidance**, Gauntlet, as the assigned owner, provides guidance to Multisig Members to effectively manage risks during a security incident. This ranges from identifying market conditions posing a risk to Compound, such as asset price levels, COMP distribution, and liquidity levels in borrowing and lending pools, to advising on interest rates and borrow/supply limits. Gauntlet also recommends risk mitigation strategies, especially concerning the implementation of pauses during risky situations.\n\n## 2. Ensuring Security Best Practices and Alerting\n**Security Best Practices and Alerting**, owned by OpenZeppelin, is focused on enhancing the security of the protocol. It involves developing, monitoring, and reviewing security alerts and conducting further investigations to determine if these alerts pose any threat to the protocol. OpenZeppelin also provides guidance on implementing best practices for the Pause Guardian's functionality.\n\n## 3. Auditing for Secure Operations\n**Audits** are an integral part of maintaining the protocol's integrity. The Community, Protocol Contributors, and OpenZeppelin, who share the responsibility, ensure that all contracts are audited before deployment. Although OpenZeppelin typically spearheads the audits, the community is encouraged to seek additional independent audits.\n\n## 4. Enforcing Pause in Case of Security Incidents\nThe **Pause** responsibility rests with the Multisig Members and OpenZeppelin. They bear the responsibility of initiating pauses on specific functionalities in the event of a security incident.\n\n## 5. Managing Unpause Process\nThe **Unpause** functionality, owned by the Community, plays a crucial role in resuming operations after a pause. In v2, the unpausing can only be accomplished by a community governance proposal and is subject to a 7-day governance process. However, in v3, the Pause Guardian Multisig can directly unpause without necessitating a governance proposal.\n\n## 6. Overseeing Contract Upgrades\nLastly, **Contract Upgrades** are vital for enhancing the protocol's security and functionality. Protocol Contributors are responsible for developing and testing contract upgrades, while OpenZeppelin provides guidance on mitigating security issues and performs audits on these upgrades, ensuring they meet security standards and resolve any potential concerns.",
+      "name": "Responsibilities",
+      "stepItems": [],
+      "uuid": "157689fa-05a8-4224-822d-978883b838b6"
     }
   ],
   "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/a43df54b_fdbb_4836_91c8_175e343934bf/1690057485217_pause_guardian.png",
