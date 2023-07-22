@@ -1,6 +1,6 @@
 categories: []
 content: Provides a thorough framework for anyone proposing a new asset
-created: '2023-07-22T20:14:06.803Z'
+created: '2023-07-22T20:22:45.563Z'
 guideType: onboarding
 key: compound-asset-listing-compound
 name: Compound Asset Listing
@@ -100,7 +100,7 @@ steps:
           The checklist in the Compound Asset Listing Process is used to address
           all concerns specific to each asset and its integration.
     uuid: b520c4f5-296f-40b0-b608-11aa328d4181
-  - content: >
+  - content: >-
       ### Process for New Asset Listing on Compoundv3
 
 
@@ -149,6 +149,13 @@ steps:
       the collateral factor are adjusted to safe levels and the reserve factor
       is set to align with other assets. Additionally, optional borrow limits
       can be set.
+
+
+
+      See
+      [this](https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Process.md)
+      link for the full details of the process:
+      https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Process.md 
     name: Process
     stepItems: []
     uuid: 6ffc45f1-aa1b-4aac-8909-67e55399cf71
