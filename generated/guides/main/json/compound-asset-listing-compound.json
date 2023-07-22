@@ -1,7 +1,7 @@
 {
   "categories": [],
   "content": "Provides a thorough framework for anyone proposing a new asset",
-  "created": "2023-07-22T20:07:15.646Z",
+  "created": "2023-07-22T20:14:06.803Z",
   "guideType": "onboarding",
   "key": "compound-asset-listing-compound",
   "name": "Compound Asset Listing",
@@ -86,33 +86,6 @@
       "stepItems": [
         {
           "answerKeys": [
-            "A"
-          ],
-          "choices": [
-            {
-              "content": "Verification of the provided information",
-              "key": "A"
-            },
-            {
-              "content": "Deployment of auxiliary contracts",
-              "key": "B"
-            },
-            {
-              "content": "Submission of a formal on-chain proposal",
-              "key": "C"
-            },
-            {
-              "content": "Adjustment of parameters post-launch",
-              "key": "D"
-            }
-          ],
-          "content": "What is the first step in the new asset listing process on Compoundv3?",
-          "type": "SingleChoice",
-          "uuid": "64d9c16f-08a6-466d-857d-06cc598bfb73",
-          "explanation": "The first step is the submission of a request for asset listing."
-        },
-        {
-          "answerKeys": [
             "C"
           ],
           "choices": [
@@ -175,10 +148,105 @@
       "uuid": "80caee49-2dec-462d-8d6e-055cb800e673"
     },
     {
+      "content": "",
+      "name": "Evaluation",
+      "stepItems": [
+        {
+          "answerKeys": [
+            "A"
+          ],
+          "choices": [
+            {
+              "content": "Information about the token's market cap and historical volatility",
+              "key": "A"
+            },
+            {
+              "content": "Information about the token's distribution among token holders",
+              "key": "B"
+            },
+            {
+              "content": "KYC Information of all the token token owners",
+              "key": "C"
+            },
+            {
+              "content": "Information about the all the protocols using the token",
+              "key": "D"
+            }
+          ],
+          "content": "What information is required in the first section of the Compound Asset Listing Checklist?",
+          "type": "SingleChoice",
+          "uuid": "4853d78d-b06b-4923-a3d2-4a260a16d32b",
+          "explanation": "The first section requires general information about the token asset, including the name, project description, potential benefits to the Compound community, and pertinent resources such as websites and social media links."
+        },
+        {
+          "answerKeys": [
+            "C"
+          ],
+          "choices": [
+            {
+              "content": "To assess the token's distribution among token holders",
+              "key": "A"
+            },
+            {
+              "content": "To evaluate the token's codebase and overall security posture",
+              "key": "B"
+            },
+            {
+              "content": "To analyze the token's market cap, historical volatility, and major smart contract balances",
+              "key": "C"
+            },
+            {
+              "content": "To explore the token's multi-chain strategy and contract behavior",
+              "key": "D"
+            }
+          ],
+          "content": "What is the purpose of the Market Risk Assessment section in the Compound Asset Listing Checklist?",
+          "type": "SingleChoice",
+          "uuid": "a513f6b9-e78a-46c6-b341-6632f32c1be6",
+          "explanation": "The Market Risk Assessment section requires information about the token's market cap, historical volatility, largest exchanges where it is listed, and major smart contract balances. It also includes information about the token's total supply and emission schedule."
+        }
+      ],
+      "uuid": "304f598b-4a67-421d-a05a-5c4508b2c0f3"
+    },
+    {
       "content": "## Protocol Risks\nThe protocol risks in the Compound asset listing involve multiple factors that are explained below\n\n### Codebase vulnerability\nThe smart contract contains potential bugs that could be exploited. To address this concern, the Compound team has thoroughly tested the codebase and subjected it to multiple rounds of audits.\n\nFailures in external integrations: Compound currently relies on Chainlink oracles to obtain price data. Any manipulations or inaccuracies in these oracles could result in price manipulations, which are discussed further in the market risk section.\n\n### Governance Risks\nGovernance risks involve problems like wrong governance actions or governance attacks. An example of the former is the execution of a proposal containing harmful transactions, such as a large-scale COMP distribution issue. To circumvent this, OpenZeppelin's relationship with Compound has been established to prevent proposals that could undermine the protocol.\n\nIn the case of governance attacks, there's a potential risk of large quantities of COMP being concentrated through loans or purchases in a few wallets, which could threaten the governance system. However, this is currently considered an unrealistic risk due to the lack of concrete examples.\n\n### Market Risks\nThe market risks, extensively analysed in Gauntlet's report, involve price manipulation, insolvency risk, non-incentivized liquidations, and a cascading effect of liquidations. If price manipulation occurs in a low liquidity market, it could lead to the liquidation of honest borrowers. Insolvency risk refers to a situation where the protocol's liabilities surpass its funds. A significant price crash could render liquidations unprofitable, leading to a dearth of incentivized liquidators. The cascade effect refers to a deflationary spiral caused by liquidations triggering more liquidations. To mitigate this, proposal #49 has been suggested.\n\n### Network Risks\nWith Compound smart contracts deployed on various networks, each having unique dynamics, security models, and asset pools, network risks become a consideration. By venturing into these networks, Compound assumes risks related to network design, evm compatibility, bridge security, and native vs bridged asset dynamics, among others.\n\n\n## Asset-Specific Risks\nAsset-specific risks must be dealt with in a structured manner. OpenZeppelin suggests a checklist for topics to be reviewed when onboarding new assets. This checklist is complemented by a comprehensive process for listing new assets.\n\n### Compatibility\nThis involves checking how extra asset features could potentially interfere with the ERC20 functions involved in Compound integration. Also, the degree of deviation of an asset from the ERC20 standard could affect the protocol's fundamental assumptions on how ERC20 tokens behave.\n\n### Compliance\nAn asset's level of decentralization needs to be considered since a highly centralized asset could lead to unexpected minting and failed transfers due to blacklisting features. Additionally, like all smart contracts, assets may contain bugs that could be exploited, potentially causing issues with Compound. Therefore, identifying these bugs and studying their implications becomes critical.\n\nLastly, it's crucial to note the specific interactions between Compound and external asset contracts. Various protocol contracts interact with ERC20 tokens, including cTokens, and relative functions interacting in Comet, CometRewards, BaseBulker, MainnetBulker, and GovernorBravoDelegate.\n\n### External Token interactions\n\nCompoun interacts with external asset contracts including ERC20 tokens through various functions. Comet, an integral part of the system, employs functions like `doTransferIn` and `doTransferOut`, relying on the `transferFrom` and `transfer` functions of the ERC20 tokens, respectively. The `doTransferIn` function is used by other Comet functions like `supply`, `supplyTo`, `supplyFrom`, and `buyCollateral`, whereas `doTransferOut` is called upon by functions like `withdraw`, `withdrawTo`, `withdrawFrom`, `withdrawReserves`, and `buyCollateral`. Another function, `approveThis`, enables the governor to approve any token within the system. Additionally, `getPackedAssetInternal` and `getCollateralReserves` utilize ERC20 functions to verify asset integrity and manage reserves. These interactions ensure seamless transactions within the Compound protocol.\n\nOther components like `CometRewards` and `BaseBulker` also engage with external contracts. CometRewards uses `doTransferOut` for token transfers, and `setRewardConfig` to establish reward schemes. BaseBulker, on the other hand, employs `sweepToken` for asset removal by an admin, and `doTransferIn` to facilitate token transfers from a user. MainnetBulker, a special case that lends out ETH against different collaterals, also employs `doTransferIn` and `doTransferOut`, specifically for the tokens steth and wsteth. Lastly, the GovernorBravoDelegate manages voting using `castVoteInternal` and cancellation of proposals with the cancel function. All these interactions demonstrate a robust and flexible system architecture that allows for diverse asset management and protocol governance within Compound.\n\nSee [this](https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Risks.md) link for full details: https://github.com/OpenZeppelin/compound-assets-listing/blob/master/Risks.md",
       "name": "Risks",
       "stepItems": [],
       "uuid": "ee6f5cb5-ac53-4d48-af40-7b92163942ed"
+    },
+    {
+      "content": "",
+      "name": "Evaluation",
+      "stepItems": [
+        {
+          "answerKeys": [
+            "D"
+          ],
+          "choices": [
+            {
+              "content": "Codebase vulnerability, governance risks, network risks, and asset-specific risks",
+              "key": "A"
+            },
+            {
+              "content": "Compliance risks, governance risks, network risks, and asset-specific risks",
+              "key": "B"
+            },
+            {
+              "content": "Codebase vulnerability, governance risks, and network risks",
+              "key": "C"
+            },
+            {
+              "content": "Price manipulation, insolvency risk, non-incentivized liquidations, and a cascading effect of liquidations",
+              "key": "D"
+            }
+          ],
+          "content": "What are the risks associated with market risks?",
+          "type": "SingleChoice",
+          "uuid": "5788b7b9-fbbd-4251-b1d6-4d44003eda61",
+          "explanation": "The risks associated with market risks include price manipulation, insolvency risk, non-incentivized liquidations, and a cascading effect of liquidations."
+        }
+      ],
+      "uuid": "bf783452-da99-4813-946f-b91cac265275"
     }
   ],
   "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/26940879_c83d_4e43_a4a1_cc93f0eb68e2/1689950668246_new_asset_listing.png",

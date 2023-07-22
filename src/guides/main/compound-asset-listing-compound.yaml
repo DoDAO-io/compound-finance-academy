@@ -1,6 +1,6 @@
 categories: []
 content: Provides a thorough framework for anyone proposing a new asset
-created: '2023-07-22T20:07:15.646Z'
+created: '2023-07-22T20:14:06.803Z'
 guideType: onboarding
 key: compound-asset-listing-compound
 name: Compound Asset Listing
@@ -156,21 +156,6 @@ steps:
     name: Evaluation
     stepItems:
       - answerKeys:
-          - A
-        choices:
-          - content: Verification of the provided information
-            key: A
-          - content: Deployment of auxiliary contracts
-            key: B
-          - content: Submission of a formal on-chain proposal
-            key: C
-          - content: Adjustment of parameters post-launch
-            key: D
-        content: What is the first step in the new asset listing process on Compoundv3?
-        type: SingleChoice
-        uuid: 64d9c16f-08a6-466d-857d-06cc598bfb73
-        explanation: The first step is the submission of a request for asset listing.
-      - answerKeys:
           - C
         choices:
           - content: Verification of the provided information
@@ -267,6 +252,54 @@ steps:
     name: Checklist
     stepItems: []
     uuid: 80caee49-2dec-462d-8d6e-055cb800e673
+  - content: ''
+    name: Evaluation
+    stepItems:
+      - answerKeys:
+          - A
+        choices:
+          - content: Information about the token's market cap and historical volatility
+            key: A
+          - content: Information about the token's distribution among token holders
+            key: B
+          - content: KYC Information of all the token token owners
+            key: C
+          - content: Information about the all the protocols using the token
+            key: D
+        content: >-
+          What information is required in the first section of the Compound
+          Asset Listing Checklist?
+        type: SingleChoice
+        uuid: 4853d78d-b06b-4923-a3d2-4a260a16d32b
+        explanation: >-
+          The first section requires general information about the token asset,
+          including the name, project description, potential benefits to the
+          Compound community, and pertinent resources such as websites and
+          social media links.
+      - answerKeys:
+          - C
+        choices:
+          - content: To assess the token's distribution among token holders
+            key: A
+          - content: To evaluate the token's codebase and overall security posture
+            key: B
+          - content: >-
+              To analyze the token's market cap, historical volatility, and
+              major smart contract balances
+            key: C
+          - content: To explore the token's multi-chain strategy and contract behavior
+            key: D
+        content: >-
+          What is the purpose of the Market Risk Assessment section in the
+          Compound Asset Listing Checklist?
+        type: SingleChoice
+        uuid: a513f6b9-e78a-46c6-b341-6632f32c1be6
+        explanation: >-
+          The Market Risk Assessment section requires information about the
+          token's market cap, historical volatility, largest exchanges where it
+          is listed, and major smart contract balances. It also includes
+          information about the token's total supply and emission schedule.
+    uuid: 304f598b-4a67-421d-a05a-5c4508b2c0f3
   - content: >-
       ## Protocol Risks
 
@@ -398,6 +431,34 @@ steps:
     name: Risks
     stepItems: []
     uuid: ee6f5cb5-ac53-4d48-af40-7b92163942ed
+  - content: ''
+    name: Evaluation
+    stepItems:
+      - answerKeys:
+          - D
+        choices:
+          - content: >-
+              Codebase vulnerability, governance risks, network risks, and
+              asset-specific risks
+            key: A
+          - content: >-
+              Compliance risks, governance risks, network risks, and
+              asset-specific risks
+            key: B
+          - content: Codebase vulnerability, governance risks, and network risks
+            key: C
+          - content: >-
+              Price manipulation, insolvency risk, non-incentivized
+              liquidations, and a cascading effect of liquidations
+            key: D
+        content: What are the risks associated with market risks?
+        type: SingleChoice
+        uuid: 5788b7b9-fbbd-4251-b1d6-4d44003eda61
+        explanation: >-
+          The risks associated with market risks include price manipulation,
+          insolvency risk, non-incentivized liquidations, and a cascading effect
+          of liquidations.
+    uuid: bf783452-da99-4813-946f-b91cac265275
 thumbnail: >-
   https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/26940879_c83d_4e43_a4a1_cc93f0eb68e2/1689950668246_new_asset_listing.png
 uuid: compound-asset-listing-compound
