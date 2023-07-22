@@ -1,0 +1,26 @@
+{
+  "categories": [],
+  "content": "What is Pause Guardian and when and how its used?",
+  "created": "2023-07-22T20:25:01.875Z",
+  "guideType": "onboarding",
+  "key": "pause-gaurdian-compound",
+  "name": "Pause Gaurdian",
+  "publishStatus": "Live",
+  "steps": [
+    {
+      "content": "\nIntroduction Comments \n        ",
+      "name": "Introduction",
+      "stepItems": [],
+      "uuid": "71aa6904-b78b-4e07-b417-72b1fb15d8b2"
+    },
+    {
+      "content": "",
+      "name": "Introduction Evaluation",
+      "stepItems": [],
+      "uuid": "cfc1fa93-a985-44c7-ac1d-239f76178a65"
+    }
+  ],
+  "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/a43df54b_fdbb_4836_91c8_175e343934bf/1690057485217_pause_guardian.png",
+  "uuid": "a43df54b-fdbb-4836-91c8-175e343934bf",
+  "version": 1
+}
