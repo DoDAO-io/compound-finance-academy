@@ -1,13 +1,13 @@
 categories: []
 content: What is Pause Guardian and when and how its used?
-created: '2023-07-22T22:36:32.801Z'
+created: '2023-07-22T22:44:23.080Z'
 guideType: onboarding
 key: pause-gaurdian-compound
 name: Pause Gaurdian
 publishStatus: Live
 steps:
   - content: >+
-      What is Pause Guardian?
+      ## What is Pause Guardian?
 
       Pause Guardian is a safeguard mechanism within the Comptroller contract in
       many DeFi protocols. It's an address empowered to disable selected
@@ -38,10 +38,104 @@ steps:
       additional layer of security for the ecosystem
 
 
+      ## Process of Signing
+
+
+      Multisig Owners are expected to sign the transaction within 30 minutes of
+      its proposal.
+
+       1. One signer creates and signs the transaction.
+       2. Two additional signers sign the transaction.
+       3. Finally, when ready to execute, another signer signs and executes the transaction.
+
+      Gas fees for the transaction execution can be covered with funds from the
+      operator faucet by executing the transaction via the operator faucet
+      relayer in Defender. 
+
+
 
     name: Introduction
     stepItems: []
     uuid: 71aa6904-b78b-4e07-b417-72b1fb15d8b2
+  - content: >+
+      ## Assets
+
+
+      Each network hosts a dedicated Gnosis Safe multisig pause guardian that
+      can be employed to perform pause functionality or modify configurations to
+      minimize risk.
+
+
+      To copy the multisig configuration to a new chain, the
+      ```create-safe-copy.js``` script provided by OpenZeppelin can be used. It
+      is located in the defender-multisig-setup/ folder of the [Compound Cross
+      Chain Pause
+      Demo](https://github.com/OpenZeppelin/compound-cross-chain-pause-demo/tree/main/defender-multisig-setup)
+      project.
+
+
+      The threshold is set at 4/6, with signers from Gauntlet, Protocol
+      Contributors, and Community Members. Once a safe is transferred to a new
+      chain, the safe signers will carry out a signing ceremony. The transaction
+      should not be executed until all six signers have signed it. Although it's
+      ideal to test this on the Comet contract, it isn't strictly necessary as
+      it can be tested separately at a later time.
+
+
+
+      ## Key Participants
+
+
+      Within the Compound Finance ecosystem, various stakeholders play diverse
+      roles. The table below provides a brief description of these roles. It's
+      important to note that the roles of these stakeholder groups can overlap.
+
+
+      | Participant Group     | Main Role Within Compound    |
+
+      | --------------------- | ---------------------------- |
+
+      | Protocol Contributors | Operations and Development   |
+
+      | OpenZeppelin          | Security Services            |
+
+      | Gauntlet              | Risk Management              |
+
+      | Multisig Members      | Contract Administrative Actions |
+
+      | Community             | Governance                   |
+
+
+      Protocol contributors encompass Compound Labs, community members, and
+      other parties who are invested in Compound's operations and development.
+
+
+      ### Present Community Multisig Members
+
+
+      The table below lists the current members of the Community Multisig along
+      with their respective addresses:
+
+
+      | Member               | Address                                    |
+
+      | -------------------- | ------------------------------------------ |
+
+      | Paul L. (Gauntlet)   | 0xDD659911EcBD4458db07Ee7cDdeC79bf8F859AbC |
+
+      | 0age (OpenSea)       | 0x7e4A8391C728fEd9069B2962699AB416628B19Fa |
+
+      | arr00                | 0x2B384212EDc04Ae8bB41738D05BA20E33277bf33 |
+
+      | blck                 | 0x54A37d93E57c5DA659F508069Cf65A381b61E189 |
+
+      | Jared F.             | 0xF515DCb89e67bb5D52b857d11f6C0cC2aD7D0167 |
+
+      | TennisBowling        | 0xC3AaE58Ab81663872dd36d73613eb295b167F546 |
+
+    name: Details
+    stepItems: []
+    uuid: b86d9ce3-711d-4c01-b30d-cabe681f8009
   - content: >
       # Use Cases for Pause Guardian
 
