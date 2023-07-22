@@ -1,26 +1,26 @@
 {
   "categories": [],
   "content": "What is Pause Guardian and when and how its used?",
-  "created": "2023-07-22T20:25:01.875Z",
+  "created": "2023-07-22T20:41:05.386Z",
   "guideType": "onboarding",
   "key": "pause-gaurdian-compound",
   "name": "Pause Gaurdian",
   "publishStatus": "Live",
   "steps": [
     {
-      "content": "\nIntroduction Comments \n        ",
+      "content": "Pause Guardian\nThe Comptroller contract designates a Pause Guardian address capable of disabling protocol functionality. Used only in the event of an unforeseen vulnerability, the Pause Guardian has one and only one ability: to disable a select set of functions: Mint, Borrow, Transfer, and Liquidate. The Pause Guardian cannot unpause an action, nor can it ever prevent users from calling Redeem, or Repay Borrow to close positions and exit the protocol. COMP token-holders designate the Pause Guardian address, which is held by the Community Multi-Sig.\n\n\n",
       "name": "Introduction",
       "stepItems": [],
       "uuid": "71aa6904-b78b-4e07-b417-72b1fb15d8b2"
     },
     {
-      "content": "",
-      "name": "Introduction Evaluation",
+      "content": "## Use Cases for Pause Guardian\n\n### Depegging of Stablecoin\n\nIn the event where a stablecoin depegs, falling below 90% of its target value, and the asset price is hardcoded, certain measures are put in place. The first action that should be taken is the suspension of borrowing. A pause can be applied by altering the borrow caps instead of directly putting a halt to borrowing, if that is the more preferred method.\n\n### Inaccurate or Unavailable Price Feed\n\nShould a price feed become either incorrect or inaccessible, immediate actions are required. The primary action in such circumstances would be the suspension of liquidations, assuming that is necessary under the specific conditions.\n\n### Contract Bug of Indeterminate Nature\n\nGiven the broad range of potential contract bugs and their varying impacts on different parts of the protocol, diverse actions are needed. Initially, a pause on the affected functionality should be executed. Then, a fixed contract version should be developed and audited. A proposal for the upgraded contract should be submitted, incorporating an unpause in the proposal. Any pending non-critical proposals should be canceled. However, if the bug arose due to a recent upgrade, the affected functionality should be paused and a proposal to reverse the upgrade causing the bug should be submitted, also including an unpause in the proposal.\n\n### Problematic Upgrade of an Underlying Asset\n\nIf the implementation of an underlying asset within Compound has a security issue, appropriate steps should be taken. The first action is to pause the market for the problematic underlying asset. A proposal for a contract upgrade to address the vulnerability should then be submitted. Alternatively, cooperation with the team of the underlying asset may be sought to rectify the issue together.\n\n### Passed Malicious Governance Proposal\n\nIn scenarios where a malicious governance proposal passes, causing a range of potential contract bugs and affecting various parts of the protocol, certain actions are needed. If the proposal poses an immediate security threat to the protocol, all the affected functionalities within the protocol should be paused. Subsequently, a proposal to roll back the previous malicious proposal should be submitted.\n",
+      "name": "Usase Cases",
       "stepItems": [],
       "uuid": "cfc1fa93-a985-44c7-ac1d-239f76178a65"
     }
   ],
   "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/a43df54b_fdbb_4836_91c8_175e343934bf/1690057485217_pause_guardian.png",
-  "uuid": "a43df54b-fdbb-4836-91c8-175e343934bf",
+  "uuid": "pause-gaurdian-compound",
   "version": 1
 }
