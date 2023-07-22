@@ -1,6 +1,6 @@
 categories: []
 content: What is Pause Guardian and when and how its used?
-created: '2023-07-22T22:25:34.763Z'
+created: '2023-07-22T22:33:00.184Z'
 guideType: onboarding
 key: pause-gaurdian-compound
 name: Pause Gaurdian
@@ -105,6 +105,11 @@ steps:
     uuid: cfc1fa93-a985-44c7-ac1d-239f76178a65
   - content: >-
       # Pause Guardian Responsibilities
+
+      In the face of a critical situation, the Compound community promptly
+      coordinates with the appropriate stakeholder who can accurately assess the
+      implications of the scenario. Here are some key categories and their
+      respective assigned owners.
 
 
       ## 1. Guiding Risk Management
