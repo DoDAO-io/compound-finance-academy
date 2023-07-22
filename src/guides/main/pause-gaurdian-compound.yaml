@@ -1,6 +1,6 @@
 categories: []
 content: What is Pause Guardian and when and how its used?
-created: '2023-07-22T22:56:08.669Z'
+created: '2023-07-22T22:59:27.525Z'
 guideType: onboarding
 key: pause-gaurdian-compound
 name: Pause Gaurdian
@@ -283,7 +283,72 @@ steps:
     uuid: cfc1fa93-a985-44c7-ac1d-239f76178a65
   - content: ''
     name: Evaluation
-    stepItems: []
+    stepItems:
+      - answerKeys:
+          - C
+        choices:
+          - content: Suspend liquidations
+            key: A
+          - content: Develop and audit a fixed contract version
+            key: B
+          - content: Suspend borrowing
+            key: C
+          - content: Submit a proposal to reverse the upgrade causing the bug
+            key: D
+        content: >-
+          What action should be taken in the event where a stablecoin depegs,
+          falling below 90% of its target value, and the asset price is
+          hardcoded?
+        type: SingleChoice
+        uuid: b7fbca20-776d-4e43-85bf-10386c3aeb22
+        explanation: >-
+          The first action that should be taken is the suspension of borrowing.
+          A pause can be applied by altering the borrow caps instead of directly
+          putting a halt to borrowing, if that is the more preferred method.
+      - answerKeys:
+          - A
+        choices:
+          - content: Suspend liquidations
+            key: A
+          - content: Submit a proposal for a contract upgrade
+            key: B
+          - content: Develop and audit a fixed contract version
+            key: C
+          - content: Pause the market for the problematic underlying asset
+            key: D
+        content: >-
+          What is the primary action to be taken if a price feed becomes
+          incorrect or inaccessible?
+        type: SingleChoice
+        uuid: 60e7a08f-0812-496b-a0bc-d61a544b4cc0
+        explanation: >-
+          The primary action in such circumstances would be the suspension of
+          liquidations, assuming that is necessary under the specific
+          conditions.
+      - answerKeys:
+          - B
+        choices:
+          - content: Develop and audit a fixed contract version
+            key: A
+          - content: >-
+              Pause the affected functionalities within the protocol and submit
+              a proposal to roll back the previous malicious proposal
+            key: B
+          - content: Suspend borrowing
+            key: C
+          - content: Submit a proposal to reverse the upgrade causing the bug
+            key: D
+        content: >-
+          What should be done if a malicious governance proposal passes, causing
+          a range of potential contract bugs and affecting various parts of the
+          protocol?
+        type: SingleChoice
+        uuid: c38d3631-c137-403a-b85d-cd97a60b1296
+        explanation: >-
+          If the proposal poses an immediate security threat to the protocol,
+          all the affected functionalities within the protocol should be paused.
+          Subsequently, a proposal to roll back the previous malicious proposal
+          should be submitted.
     uuid: 7d4600ef-39f8-4bb8-a76c-038adf404488
   - content: >-
       # Pause Guardian Responsibilities
