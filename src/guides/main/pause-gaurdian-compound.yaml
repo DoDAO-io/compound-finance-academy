@@ -1,6 +1,6 @@
 categories: []
 content: What is Pause Guardian and when and how its used?
-created: '2023-07-22T22:36:17.632Z'
+created: '2023-07-22T22:36:32.801Z'
 guideType: onboarding
 key: pause-gaurdian-compound
 name: Pause Gaurdian
@@ -57,7 +57,7 @@ steps:
       method.
 
 
-      ### Inaccurate or Unavailable Price Feed
+      ## Inaccurate or Unavailable Price Feed
 
 
       Should a price feed become either incorrect or inaccessible, immediate
