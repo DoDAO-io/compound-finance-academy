@@ -1,6 +1,6 @@
 categories: []
 content: What is Pause Guardian and when and how its used?
-created: '2023-07-22T22:33:00.184Z'
+created: '2023-07-22T22:36:17.632Z'
 guideType: onboarding
 key: pause-gaurdian-compound
 name: Pause Gaurdian
@@ -43,10 +43,10 @@ steps:
     stepItems: []
     uuid: 71aa6904-b78b-4e07-b417-72b1fb15d8b2
   - content: >
-      ## Use Cases for Pause Guardian
+      # Use Cases for Pause Guardian
 
 
-      ### Depegging of Stablecoin
+      ## Depegging of Stablecoin
 
 
       In the event where a stablecoin depegs, falling below 90% of its target
@@ -66,7 +66,7 @@ steps:
       specific conditions.
 
 
-      ### Contract Bug of Indeterminate Nature
+      ## Contract Bug of Indeterminate Nature
 
 
       Given the broad range of potential contract bugs and their varying impacts
@@ -80,7 +80,7 @@ steps:
       should be submitted, also including an unpause in the proposal.
 
 
-      ### Problematic Upgrade of an Underlying Asset
+      ## Problematic Upgrade of an Underlying Asset
 
 
       If the implementation of an underlying asset within Compound has a
@@ -91,7 +91,7 @@ steps:
       sought to rectify the issue together.
 
 
-      ### Passed Malicious Governance Proposal
+      ## Passed Malicious Governance Proposal
 
 
       In scenarios where a malicious governance proposal passes, causing a range
