@@ -1,7 +1,7 @@
 {
   "categories": [],
   "content": "Provides a thorough framework for anyone proposing a new asset",
-  "created": "2023-07-21T21:39:17.835Z",
+  "created": "2023-07-22T20:07:15.646Z",
   "guideType": "onboarding",
   "key": "compound-asset-listing-compound",
   "name": "Compound Asset Listing",
@@ -14,9 +14,158 @@
       "uuid": "f17f46d5-26a4-436b-969a-2848b94dea8d"
     },
     {
+      "content": "",
+      "name": "Evaluation",
+      "stepItems": [
+        {
+          "answerKeys": [
+            "B"
+          ],
+          "choices": [
+            {
+              "content": "To increase the value of assets over time",
+              "key": "A"
+            },
+            {
+              "content": "To address the security risks of Compound and ensure a secure and structured asset listing process",
+              "key": "B"
+            },
+            {
+              "content": "To decrease the value of assets over time",
+              "key": "C"
+            },
+            {
+              "content": "To buy assets for fun",
+              "key": "D"
+            }
+          ],
+          "content": "Why do we need the Compound Asset Listing Process?",
+          "type": "SingleChoice",
+          "uuid": "df29934e-b6a6-4641-996e-c03a0956a590",
+          "explanation": "The Compound Asset Listing Process is needed to address the security risks of Compound and ensure a secure and structured asset listing process."
+        },
+        {
+          "answerKeys": [
+            "A"
+          ],
+          "choices": [
+            {
+              "content": "To address all concerns specific to each asset and its integration",
+              "key": "A"
+            },
+            {
+              "content": "To increase the value of assets over time",
+              "key": "B"
+            },
+            {
+              "content": "To decrease the value of assets over time",
+              "key": "C"
+            },
+            {
+              "content": "To buy assets for fun",
+              "key": "D"
+            }
+          ],
+          "content": "What is the purpose of the checklist in the Compound Asset Listing Process?",
+          "type": "SingleChoice",
+          "uuid": "7c81d615-25e9-40b0-affa-a284cc4decb9",
+          "explanation": "The checklist in the Compound Asset Listing Process is used to address all concerns specific to each asset and its integration."
+        }
+      ],
+      "uuid": "b520c4f5-296f-40b0-b608-11aa328d4181"
+    },
+    {
       "content": "### Process for New Asset Listing on Compoundv3\n\n<div align=\"center\">\n  <img style=\"max-height:400px;margin-bottom:30px\" src=\"https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/compound_asset_listing_compound/1689953114048_new_asset_listing_process.png\"/>\n</div>\n\n\nThe first step in the new asset listing process on Compoundv3 is the submission of a request for asset listing. A new market proposer must review the Checklist and provide as much requested information as possible in a forum post titled \"Add market: {ASSET SYMBOL}\" in the \"New Markets\" category of the Compound forum.\n\nFollowing the request, the next stage is the community analysis which comprises of verification, risk analysis, and tooling and simulations. Community member(s) oversee the review of the provided information, ensuring its correctness and completeness. The community also evaluates the market risks of the asset using available data, potentially utilizing a scoring system. Gauntlet supplies a market risk assessment framework for this stage. Finally, community member(s) execute the available test suite and simulations against the contracts deployed on the target network.\n\nThe process advances to the finalization of deployment once the community analysis is complete. Here, the promoter is required to deploy any auxiliary contracts such as a price feed modifier and share the deployed contract addresses in the same forum post. A formal on-chain proposal is then drafted, including necessary parameters and explaining the reasoning behind each proposed parameter value.\n\nOptionally, the proposal undergoes an audit. This step is taken if the community requests a review by security auditors, which can be performed by OpenZeppelin or a third party hired by the proposal author.\n\nFollowing the audit, the on-chain proposal is submitted for voting. If the proposal fails, the forum post is updated with the results and provides a platform for follow-up discussions.\n\nThe final stage of the process takes place post-launch. Parameters such as the collateral factor are adjusted to safe levels and the reserve factor is set to align with other assets. Additionally, optional borrow limits can be set.\n",
       "name": "Process",
       "stepItems": [],
+      "uuid": "6ffc45f1-aa1b-4aac-8909-67e55399cf71"
+    },
+    {
+      "content": "",
+      "name": "Evaluation",
+      "stepItems": [
+        {
+          "answerKeys": [
+            "A"
+          ],
+          "choices": [
+            {
+              "content": "Verification of the provided information",
+              "key": "A"
+            },
+            {
+              "content": "Deployment of auxiliary contracts",
+              "key": "B"
+            },
+            {
+              "content": "Submission of a formal on-chain proposal",
+              "key": "C"
+            },
+            {
+              "content": "Adjustment of parameters post-launch",
+              "key": "D"
+            }
+          ],
+          "content": "What is the first step in the new asset listing process on Compoundv3?",
+          "type": "SingleChoice",
+          "uuid": "64d9c16f-08a6-466d-857d-06cc598bfb73",
+          "explanation": "The first step is the submission of a request for asset listing."
+        },
+        {
+          "answerKeys": [
+            "C"
+          ],
+          "choices": [
+            {
+              "content": "Verification of the provided information",
+              "key": "A"
+            },
+            {
+              "content": "Deployment of auxiliary contracts",
+              "key": "B"
+            },
+            {
+              "content": "Community analysis",
+              "key": "C"
+            },
+            {
+              "content": "Adjustment of parameters post-launch",
+              "key": "D"
+            }
+          ],
+          "content": "What is the next stage after the submission of a request for asset listing?",
+          "type": "SingleChoice",
+          "uuid": "6eabb524-5002-4317-be98-8789be7af4e8",
+          "explanation": "The next stage is the community analysis."
+        },
+        {
+          "answerKeys": [
+            "D"
+          ],
+          "choices": [
+            {
+              "content": "Verification of the provided information",
+              "key": "A"
+            },
+            {
+              "content": "Deployment of auxiliary contracts",
+              "key": "B"
+            },
+            {
+              "content": "Submission of a formal on-chain proposal",
+              "key": "C"
+            },
+            {
+              "content": "Adjustment of parameters post-launch",
+              "key": "D"
+            }
+          ],
+          "content": "What is the final stage of the asset listing process?",
+          "type": "SingleChoice",
+          "uuid": "932ff8f2-731b-44c0-a2eb-cba8ade95b69",
+          "explanation": "The final stage is the adjustment of parameters post-launch."
+        }
+      ],
       "uuid": "cf59c322-4a74-4b34-93fc-4b01f2400e21"
     },
     {
