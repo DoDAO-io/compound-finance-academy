@@ -1,7 +1,7 @@
 {
   "categories": [],
   "content": "This guide explains how to create an asset risk report",
-  "created": "2023-07-23T20:57:56.418Z",
+  "created": "2023-07-23T21:45:34.343Z",
   "guideType": "onboarding",
   "key": "asset-risk-report-compound",
   "name": "Asset Risk Report",
@@ -16,7 +16,35 @@
     {
       "content": "",
       "name": "Evaluation",
-      "stepItems": [],
+      "stepItems": [
+        {
+          "answerKeys": [
+            "D"
+          ],
+          "choices": [
+            {
+              "content": "To create a coherent document that guides the reader through the complexities of the token analysis",
+              "key": "A"
+            },
+            {
+              "content": "To explore and articulate the intricacies of token behavior all chains",
+              "key": "B"
+            },
+            {
+              "content": "To provide a summarized introduction of the token market conditions",
+              "key": "C"
+            },
+            {
+              "content": "To provide a comprehensive examination of the token, its functionality on various chains, and its overall implications for users",
+              "key": "D"
+            }
+          ],
+          "content": "What is the objective of the token report?",
+          "type": "SingleChoice",
+          "uuid": "9f643c11-36a2-4a97-b758-2e2057e7964e",
+          "explanation": "The objective of the token report is to provide a succinct, comprehensive examination of the token in question, its functionality on various chains, and its overall implications for users."
+        }
+      ],
       "uuid": "a51a4d30-2dd9-448c-8cea-bd8f15bedc59"
     },
     {
@@ -24,6 +52,121 @@
       "name": "Report Format",
       "stepItems": [],
       "uuid": "dc21da2a-b33a-4d4a-b1eb-302996ee48ce"
+    },
+    {
+      "content": "",
+      "name": "Evaluation",
+      "stepItems": [
+        {
+          "answerKeys": [
+            "B"
+          ],
+          "choices": [
+            {
+              "content": "To present a detailed breakdown of the token on each chain included in the report",
+              "key": "A"
+            },
+            {
+              "content": "To provide a brief, high-level summary of the report",
+              "key": "B"
+            },
+            {
+              "content": "To discuss the presence of DelegateCall functions in the token code",
+              "key": "C"
+            },
+            {
+              "content": "To investigate whether the token can be used in a flash loan",
+              "key": "D"
+            }
+          ],
+          "content": "What is the purpose of the Executive Overview section in a detailed report?",
+          "type": "SingleChoice",
+          "uuid": "5ff72ead-b380-47fe-ac4a-46f86839d70a",
+          "explanation": "The Executive Overview provides a brief, high-level summary of the report, introducing the token's name, uses, and the organization that originated it."
+        },
+        {
+          "answerKeys": [
+            "C"
+          ],
+          "choices": [
+            {
+              "content": "A detailed view of the token on its respective chain",
+              "key": "A"
+            },
+            {
+              "content": "A breakdown of the ERC-20 standard compliance for the token",
+              "key": "B"
+            },
+            {
+              "content": "A one-page review of every aspect examined for the token on a specific chain",
+              "key": "C"
+            },
+            {
+              "content": "An analysis of whether the token allows flash mints",
+              "key": "D"
+            }
+          ],
+          "content": "What does the Summary Page in a detailed report consist of?",
+          "type": "SingleChoice",
+          "uuid": "979e4d9e-049f-4fd4-9e72-71f1aa975365",
+          "explanation": "The Summary Page is a one-page review of every aspect examined for the token on a specific chain, providing a succinct summary of all points of investigation."
+        },
+        {
+          "answerKeys": [
+            "D"
+          ],
+          "choices": [
+            {
+              "content": "Whether the token contract can be paused or not",
+              "key": "A"
+            },
+            {
+              "content": "Whether the token contract adheres to the ERC-20 standard",
+              "key": "B"
+            },
+            {
+              "content": "Whether the token contract has math protection against overflows and underflows",
+              "key": "C"
+            },
+            {
+              "content": "Whether there's any blacklist code within the token contract",
+              "key": "D"
+            }
+          ],
+          "content": "What does the 'BlackListable' section in a detailed report explore?",
+          "type": "SingleChoice",
+          "uuid": "1f733341-8445-414d-936c-733d47fa3d9a",
+          "explanation": "The 'BlackListable' section explores if there's any blacklist code within the token contract, outlining its functionalities and which features it impacts if present."
+        },
+        {
+          "answerKeys": [
+            "A"
+          ],
+          "choices": [
+            {
+              "content": "If any fees are levied on the token transfer and the logic behind such fees",
+              "key": "A"
+            },
+            {
+              "content": "If the token contract can be paused or not",
+              "key": "B"
+            },
+            {
+              "content": "If the token contract adheres to the ERC-20 standard",
+              "key": "C"
+            },
+            {
+              "content": "If the token contract has math protection against overflows and underflows",
+              "key": "D"
+            }
+          ],
+          "content": "What does the 'Fees on transfer' section in a detailed report cover?",
+          "type": "SingleChoice",
+          "uuid": "b2a6bf3d-5122-4d6a-bd21-09d9668a6cc2",
+          "explanation": "The 'Fees on transfer' section covers if any fees are levied on the token transfer and details the logic behind such fees if they exist."
+        }
+      ],
+      "uuid": "719e30af-5768-430a-80c3-5648f32dcf30"
     },
     {
       "content": "Here is the sample of Executive Overview and Summary of USDC on Ethereum\n\n\n## Executive Overview\nUSDC is a centralized stable coin run by Circle Corporation.  It is highly permissioned. The token can be upgraded, paused and has blacklists.  This report covers USDC on Ethereum mainnet and Optimism.  We can add other chains upon request.\nUSDC on mainnet’s code is more complex than the ERC20 standard.  The code is upgradable it has changed 3 times, the latest on Aug 2020.  There is no timelock on upgrades, they are instantaneous.  Circle controls an active blacklist and can pause trading in USDC at any time.  The token can be used in flashloans.\n\n\n**Disclaimer**\nThe purpose of these reports is a succinct technical summary for devs and auditors when considering using a token on a chain.  It is designed to use their time more efficiently.  DeFiSafety’s team are analysts, not devs or auditors.  \n\n## Summary\nUSDC on Ethereum Mainnet Summary\n\n| Feature                | Details                                                                    |\n|------------------------|----------------------------------------------------------------------------|\n| Address                | [Link](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) |\n| Owner                  | [Link](https://etherscan.io/address/0x95ba4cf87d6723ad9c0db21737d862be80e93911) |\n| Protocol               | Circle Corporation                                                         |\n| GitHub                 | Not available                                                              |\n| Solidity Version       | ^0.6.1.2                                                                   |\n| Upgradeable            | YES                                                                        |\n| Pausable               | YES                                                                        |\n| BlackList              | YES                                                                        |\n| ERC20 Standard Compliant| Partially                                                                   |\n| Math Protection        | Yes (SafeMath 0.6.0)                                                       |\n| Mintable               | Yes                                                                        |\n| Burnable               | Yes                                                                        |\n| Rebasing               | No                                                                         |\n| Fees on Transfer       | No                                                                         |\n| DelegateCalls          | No                                                                         |\n| Flashloanable          | Yes                                                                        |\n| FlashMintable          | Yes                                                                        |",
