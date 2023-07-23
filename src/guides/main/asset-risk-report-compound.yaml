@@ -1,0 +1,53 @@
+categories: []
+content: This guide explains how to create an asset risk report
+created: '2023-07-23T20:12:30.911Z'
+guideType: onboarding
+key: asset-risk-report-compound
+name: Asset Risk Report
+publishStatus: Live
+steps:
+  - content: >-
+      This comprehensive guide is designed to equip any community member with
+      the necessary information and resources to independently draft a token
+      report. Each report will focus on one token across multiple chains,
+      detailing the specifics of its behavior, structure, and utilization on
+      each chain. 
+
+
+      The objective of the token report is to provide a succinct, comprehensive
+      examination of the token in question, its functionality on various chains,
+      and its overall implications for users. To achieve this, the report is
+      divided into several sections, each focusing on a specific aspect of the
+      token. From an Executive Overview, providing a summarized introduction, to
+      sections detailing various features like 'Upgradeable', 'Burnable', and
+      'FlashMintable' - all these components of the report play a vital role in
+      providing a holistic understanding of the token.
+
+
+      As a report writer, you are encouraged to present information in a clear
+      and concise manner, aiming to create a coherent document that effortlessly
+      guides the reader through the complexities of the token analysis. Each
+      section, be it the 'Summary Page', 'Details and Backup', or the
+      'Disclaimer', contributes to the overall understanding of the token's
+      properties and behavior. With this guide as your reference, you'll be
+      equipped to explore and articulate the intricacies of token behavior on
+      various chains, a fundamental aspect of understanding the dynamic world of
+      digital currencies.
+
+
+      The structure of the report is informed by the security recommendations
+      outlined by OpenZeppelin, as detailed in this
+      [guide](https://compound.education/guides/view/compound-asset-listing-compound/0)
+      and further elaborated in this [GitHub
+      repository](https://github.com/OpenZeppelin/compound-assets-listing).
+    name: Introduction
+    stepItems: []
+    uuid: 36414778-2497-4780-b120-ded7734958eb
+  - content: ''
+    name: Introduction Evaluation
+    stepItems: []
+    uuid: a51a4d30-2dd9-448c-8cea-bd8f15bedc59
+thumbnail: >-
+  https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/c78e2f3d_161d_44b7_b7c7_dba4ef7c627f/1690143126703_token_risk.png
+uuid: c78e2f3d-161d-44b7-b7c7-dba4ef7c627f
+version: 1
