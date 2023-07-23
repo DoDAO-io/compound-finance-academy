@@ -1,6 +1,6 @@
 categories: []
 content: This guide explains how to create an asset risk report
-created: '2023-07-23T20:56:59.719Z'
+created: '2023-07-23T20:57:56.418Z'
 guideType: onboarding
 key: asset-risk-report-compound
 name: Asset Risk Report
@@ -257,11 +257,16 @@ steps:
       2. [wBTC on Mainet and
       Opt](https://docs.google.com/document/d/13y6ZwJROyroNZzkYuVxDr76Y2oLzQD4B/edit)
 
-      3. [wEth on Mainet and Opt]
-      (https://docs.google.com/document/d/1SfuMdI_Wqlwgbetrg2G5FZlU4qqToX5i/edit?rtpof=true&sd=true)
+      3. [wEth on Mainet and
+      Opt](https://docs.google.com/document/d/1SfuMdI_Wqlwgbetrg2G5FZlU4qqToX5i/edit?rtpof=true&sd=true)
 
       4. [OPT on
       Opt](https://docs.google.com/document/d/1T8tYUXsgqwkiz3-06dyA5PG-cmLHou7b/edit)
+
+
+
+      Details to their proposal to create these reports can be found
+      [here](https://www.comp.xyz/t/grant-for-technical-risk-report-of-3-asset-listings/4105/6)
     name: Examples
     stepItems: []
     uuid: 29e8bb9f-a8ad-43a3-b911-cca417377f55

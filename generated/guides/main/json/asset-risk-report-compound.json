@@ -1,7 +1,7 @@
 {
   "categories": [],
   "content": "This guide explains how to create an asset risk report",
-  "created": "2023-07-23T20:56:59.719Z",
+  "created": "2023-07-23T20:57:56.418Z",
   "guideType": "onboarding",
   "key": "asset-risk-report-compound",
   "name": "Asset Risk Report",
@@ -32,7 +32,7 @@
       "uuid": "a6a971ae-494d-4ee5-89a1-d33746f82757"
     },
     {
-      "content": "Here is the list of reports that were created by DeFiSafety team\n\n1. [USDC on Mainnet and Opt](https://docs.google.com/document/d/13rWX_tiFVL-suiaih1MvGmvQMKd4YgZj/edit?rtpof=true&sd=true)\n2. [wBTC on Mainet and Opt](https://docs.google.com/document/d/13y6ZwJROyroNZzkYuVxDr76Y2oLzQD4B/edit)\n3. [wEth on Mainet and Opt] (https://docs.google.com/document/d/1SfuMdI_Wqlwgbetrg2G5FZlU4qqToX5i/edit?rtpof=true&sd=true)\n4. [OPT on Opt](https://docs.google.com/document/d/1T8tYUXsgqwkiz3-06dyA5PG-cmLHou7b/edit)",
+      "content": "Here is the list of reports that were created by DeFiSafety team\n\n1. [USDC on Mainnet and Opt](https://docs.google.com/document/d/13rWX_tiFVL-suiaih1MvGmvQMKd4YgZj/edit?rtpof=true&sd=true)\n2. [wBTC on Mainet and Opt](https://docs.google.com/document/d/13y6ZwJROyroNZzkYuVxDr76Y2oLzQD4B/edit)\n3. [wEth on Mainet and Opt](https://docs.google.com/document/d/1SfuMdI_Wqlwgbetrg2G5FZlU4qqToX5i/edit?rtpof=true&sd=true)\n4. [OPT on Opt](https://docs.google.com/document/d/1T8tYUXsgqwkiz3-06dyA5PG-cmLHou7b/edit)\n\n\nDetails to their proposal to create these reports can be found [here](https://www.comp.xyz/t/grant-for-technical-risk-report-of-3-asset-listings/4105/6)",
       "name": "Examples",
       "stepItems": [],
       "uuid": "29e8bb9f-a8ad-43a3-b911-cca417377f55"
