@@ -1,7 +1,7 @@
 {
   "categories": [],
   "content": "This guide explains how to create an asset risk report",
-  "created": "2023-07-23T20:12:30.911Z",
+  "created": "2023-07-23T20:17:18.941Z",
   "guideType": "onboarding",
   "key": "asset-risk-report-compound",
   "name": "Asset Risk Report",
@@ -15,12 +15,12 @@
     },
     {
       "content": "",
-      "name": "Introduction Evaluation",
+      "name": "Evaluation",
       "stepItems": [],
       "uuid": "a51a4d30-2dd9-448c-8cea-bd8f15bedc59"
     }
   ],
   "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/c78e2f3d_161d_44b7_b7c7_dba4ef7c627f/1690143126703_token_risk.png",
-  "uuid": "c78e2f3d-161d-44b7-b7c7-dba4ef7c627f",
+  "uuid": "asset-risk-report-compound",
   "version": 1
 }
