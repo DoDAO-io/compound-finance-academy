@@ -1,6 +1,6 @@
 categories: []
 content: Process for development and evaluation of protocol contributions
-created: '2023-07-20T22:05:23.575Z'
+created: '2023-07-24T15:56:16.978Z'
 guideType: onboarding
 key: protocol-contribution-process-compound
 name: Protocol Contribution Process
@@ -42,7 +42,7 @@ steps:
     name: Introduction
     stepItems: []
     uuid: 7fec5e88-722d-47ea-a0fa-d7c0c2ab7456
-  - content: >+
+  - content: >
       ### 5-Stage Process from Conception to Adoption for Refining Proposals
 
 
@@ -51,11 +51,9 @@ steps:
       review, and communication is advised throughout.
 
 
-
       <div align="center">
-        <img style="max-height:400px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/protocol_contribution_process_compound/1689889093217_compound_contribution_steps.png"/>
+        <img style="max-height:400px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/protocol_contribution_process_compound/1690214149729_contribution_process.png"/>
       </div>
-
 
 
       ### 1. Idea Review
@@ -154,12 +152,6 @@ steps:
 
       - After a successful vote and proposal execution, test the upgrade's
       effectiveness and merge the pull request.
-
-
-
-
-
-
     name: Contribution Process
     stepItems: []
     uuid: 0da0067d-30fc-4396-81b0-0432b12bfdad
@@ -371,5 +363,3 @@ thumbnail: >-
   https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/cfeebc65_11e7_4a3e_ac01_30b97e0a122a/1689865280215_compound_protocol_contribution.png
 uuid: protocol-contribution-process-compound
 version: 1
-showIncorrectOnCompletion: true
-
