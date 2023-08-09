@@ -32,44 +32,18 @@ content: >-
   space.
 publishStatus: Live
 events:
-  - title: v4.9.0 - Audit performed by OpenZeppelin Security Research
+  - title: OpenZeppelin Compound Protocol Security Initiatives Audit Log
     uuid: 5a63859f-b6be-4901-b283-8924fe8d4750
-    date: 2023-05-09T15:00:15.000Z
-    summary: |-
-      ### Scope
-      All 4.9 changes
+    date: 2021-12-21T15:00:15.000Z
+    summary: >
+      Initiative Overview
 
-      ### Audit Report
-      <table>
-          <tr>
-              <td width="200px">Issue Type</td>
-              <td width="200px">Issues Found</td>
-          </tr>
-          <tr>
-              <td>Total Issues</td>
-              <td >26 (18 resolved, 1 partially resolved)</td>
-          </tr>
-          <tr>
-              <td>Critical Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>High Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>Medium Severity</td>
-              <td>3 (2 resolved)</td>
-          </tr>
-          <tr>
-              <td>Low Severity</td>
-              <td>3 (3 resolved)</td>
-          </tr>
-          <tr>
-              <td>Notes &amp; Additional Info</td>
-              <td>20 (13 resolved, 1 partially resolved)</td>
-          </tr>
-      </table>
+      OpenZeppelin has been selected to provide Compound DAO security services,
+      including continuous audit, security advisory, and monitoring. Michael
+      Lewellen is acting as OpenZeppelin’s Protocol Security Advisor (PSA) for
+      the Compound community. The primary objectives are to audit existing
+      contracts, establish security processes, and develop an open monitoring
+      system.
     fullDetails: |-
       ### Audit Information
       v4.9.0 - Audit performed by OpenZeppelin Security Research
@@ -156,11 +130,10 @@ events:
 
       contracts/access/manager/IAuthority.sol
       ```
-    moreLink: >-
-      https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/audits/2023-05-v4.9.pdf
-  - title: v4.8.0 - Audit performed by OpenZeppelin Security Research
+    moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918
+  - title: Deployed Contracts Audit
     uuid: eb2b0562-d970-4ff2-855f-c3644d0d80a8
-    date: 2022-11-14T20:19:51.000Z
+    date: 2022-01-23T20:19:51.000Z
     summary: |-
       ### Scope
       ERC4626 Tokenized Vaults
@@ -242,8 +215,7 @@ events:
       contracts/utils/math/Math.sol
 
       ```
-    moreLink: >-
-      https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/audits/2022-10-ERC4626.pdf
+    moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918/2
   - title: v4.8.0 - Audit performed by OpenZeppelin Security Research
     uuid: 7e44fc63-ceb1-4098-a67b-293c0ea37175
     date: 2022-11-14T20:33:03.000Z
