@@ -134,87 +134,123 @@ events:
   - title: Deployed Contracts Audit
     uuid: eb2b0562-d970-4ff2-855f-c3644d0d80a8
     date: 2022-01-23T20:19:51.000Z
-    summary: |-
-      ### Scope
-      ERC4626 Tokenized Vaults
+    summary: >
+      <h2>Audit Summary</h2>
 
-      ### Audit Report
+
       <table>
-          <tr>
-              <td width="200px">Issue Type</td>
-              <td width="200px">Issues Found</td>
-          </tr>
-          <tr>
-              <td>Total Issues</td>
-              <td>8 (2 resolved, 1 partially resolved)</td>
-          </tr>
-          <tr>
-              <td>Critical Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>High Severity</td>
-              <td>1 (resolved in 4.9.0)</td>
-          </tr>
-          <tr>
-              <td>Medium Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>Low Severity</td>
-              <td>2 (1 resolved)</td>
-          </tr>
-          <tr>
-              <td>Notes &amp; Additional Info</td>
-              <td>5 (1 resolved, 1 partially resolved)</td>
-          </tr>
-      </table>
-    fullDetails: |-
-      ### Audit Information
-      v4.8.0 - Audit performed by OpenZeppelin Security Research
-
-      ### Scope
-      ERC4626 Tokenized Vaults
-
-      ### Audit Report
-      <table>
-          <tr>
-              <td width="200px">Issue Type</td>
-              <td width="200px">Issues Found</td>
-          </tr>
-          <tr>
-              <td>Total Issues</td>
-              <td>8 (2 resolved, 1 partially resolved)</td>
-          </tr>
-          <tr>
-              <td>Critical Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>High Severity</td>
-              <td>1 (resolved in 4.9.0)</td>
-          </tr>
-          <tr>
-              <td>Medium Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>Low Severity</td>
-              <td>2 (1 resolved)</td>
-          </tr>
-          <tr>
-              <td>Notes &amp; Additional Info</td>
-              <td>5 (1 resolved, 1 partially resolved)</td>
-          </tr>
+        <tr>
+          <th>Start Date</th>
+          <td>January 24, 2022</td>
+          <th>End Date</th>
+          <td>March 4, 2022</td>
+        </tr>
+        <tr>
+          <th>Language</th>
+          <td>Solidity</td>
+          <th>Total Issues</th>
+          <td>30</td>
+        </tr>
+        <tr>
+          <th>Critical</th>
+          <td colspan="2">1 (Resolved)</td>
+        </tr>
+        <tr>
+          <th>High</th>
+          <td colspan="2">0</td>
+        </tr>
+        <tr>
+          <th>Medium</th>
+          <td colspan="2">0</td>
+        </tr>
+        <tr>
+          <th>Low</th>
+          <td colspan="2">10</td>
+        </tr>
+        <tr>
+          <th>Notes</th>
+          <td colspan="3">19 Additional observations and recommendations provided for codebase improvement.</td>
+        </tr>
       </table>
 
-      ###  Files Audited
-      ```
-      contracts/token/ERC20/extensions/ERC4626.sol
 
-      contracts/utils/math/Math.sol
+      <h2>Details</h2>
 
-      ```
+      <p>Codebase primarily written in Solidity.</p>
+
+      <p>A total of 30 issues identified and categorized by severity.</p>
+
+      <p>Critical issue reported and fixed by TUSD team.</p>
+
+      <p>Several low-severity issues related to gas efficiency, code quality,
+      and documentation.</p>
+
+      <p>Additional observations and recommendations provided for codebase
+      improvement.</p>
+    fullDetails: >
+      Deployed Contracts Audit
+
+
+      Overview: Auditing deployed Compound contracts affecting governance
+      proposals. Establishes baseline knowledge.
+
+      Scope: All contracts except currently deployed CToken contracts.
+
+      Participants: Compound Labs team, community developers.
+
+      Timeline: Jan - Mar 2023.
+
+      Expected Outcome: Feedback and security recommendations for potential
+      improvements.
+
+      CToken Refactor Audit
+
+
+      Overview: Auditing refactored CToken contracts.
+
+      Scope: Refactoring of previously audited contracts.
+
+      Participants: Equilibria team (community grant).
+
+      Timeline: Jan - Mar 2023.
+
+      Expected Outcome: Resolution of issues found, report for community review
+      prior to governance proposals.
+
+      Security Advisory
+
+
+      Defining security measures for governance proposal changes.
+
+      Tooling recommendations for secure deployment.
+
+      Asset listing security guidance.
+
+      Additional measures including bug bounties, incident response, and
+      learnings from protocol audit.
+
+      Security Monitoring
+
+
+      Building Security Monitoring Dashboard for Compound.
+
+      Gathering requirements, selecting metrics and tools.
+
+      Utilizing Forta for real-time threat detection.
+
+      Sponsoring development of Forta agents.
+
+      Evolving solution iteratively with new metrics.
+
+      Community Participation
+
+      Sharing protocol change plans early.
+
+      Expressing security concerns to OpenZeppelin and community.
+
+      Leveraging OpenZeppelin resources for smart contract security education.
+
+      Providing feedback and suggestions for initiatives.
     moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918/2
   - title: v4.8.0 - Audit performed by OpenZeppelin Security Research
     uuid: 7e44fc63-ceb1-4098-a67b-293c0ea37175
