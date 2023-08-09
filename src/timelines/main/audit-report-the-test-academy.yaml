@@ -45,13 +45,7 @@ events:
       contracts, establish security processes, and develop an open monitoring
       system.
     fullDetails: |-
-      ### Audit Information
-      v4.9.0 - Audit performed by OpenZeppelin Security Research
-
-      ### Scope
-      All 4.9 changes
-
-      ### Audit Report
+      <h2>Audit Summary</h2>
       <table>
           <tr>
               <td width="200px">Issue Type</td>
@@ -135,6 +129,7 @@ events:
     uuid: eb2b0562-d970-4ff2-855f-c3644d0d80a8
     date: 2022-01-23T20:19:51.000Z
     summary: |-
+      <h2>Audit Summary</h2>
       <table>
         <tr>
           <th>Start Date</th>
@@ -246,10 +241,8 @@ events:
     uuid: 7e44fc63-ceb1-4098-a67b-293c0ea37175
     date: 2022-03-31T20:33:03.000Z
     summary: |-
-      ### Scope
-      Checkpoints
 
-      ### Audit Report
+      <h2>Audit Summary</h2>
       <table>
           <tr>
               <td width="200px">Issue Type</td>
@@ -397,7 +390,7 @@ events:
     uuid: d744efc2-0a81-4876-88fd-80b9281ff9f4
     date: 2022-06-16T20:24:00.000Z
     summary: |-
-      <h2>Findings and Proposed Actions</h2>
+      <h2>Audit Summary</h2>
 
       <table>
         <tr>
@@ -529,6 +522,7 @@ events:
     uuid: 9530aa81-dd5b-4f2a-b704-065cc9b9fe0f
     date: 2022-11-04T20:28:04.000Z
     summary: |-
+      <h2>Audit Summary</h2>
       <table>
         <tr>
           <th>Severity</th>
@@ -786,7 +780,7 @@ events:
     uuid: 001157cb-39ec-4534-be0b-18e0f7781f9a
     date: 2023-04-04T18:12:00.000Z
     summary: |-
-      <h2>Audit Report: Compound Arbitrum Bridge Receiver Audit</h2>
+      <h2>Audit Summary</h2>
 
       <table>
         <tr>
@@ -891,7 +885,7 @@ events:
     uuid: 4bb0933d-a295-4697-9285-366ac3959918
     date: 2023-05-30T18:14:23.000Z
     summary: |-
-      <h2>Audit Report: Comet Custom WBTC Price Feed Audit</h2>
+      <h2>Audit Summary</h2>
 
       <table>
         <tr>
