@@ -242,9 +242,9 @@ events:
 
       Providing feedback and suggestions for initiatives.
     moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918/2
-  - title: v4.8.0 - Audit performed by OpenZeppelin Security Research
+  - title: Compound UAV Oracle Upgrade Audit
     uuid: 7e44fc63-ceb1-4098-a67b-293c0ea37175
-    date: 2022-11-14T20:33:03.000Z
+    date: 2022-03-31T20:33:03.000Z
     summary: |-
       ### Scope
       Checkpoints
@@ -279,56 +279,120 @@ events:
               <td>Notes &amp; Additional Info</td>
               <td>4 (2 resolved)</td>
           </tr>
-      </table>
-    fullDetails: |-
-      ### Audit Information
-      v4.8.0 - Audit performed by OpenZeppelin Security Research
+      <h2>Codebase Issues</h2>
 
-      ### Scope
-      Checkpoints
-
-      ### Audit Report
       <table>
-          <tr>
-              <td width="200px">Issue Type</td>
-              <td width="200px">Issues Found</td>
-          </tr>
-          <tr>
-              <td>Total Issues</td>
-              <td>6 (3 resolved)</td>
-          </tr>
-          <tr>
-              <td>Critical Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>High Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>Medium Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>Low Severity</td>
-              <td>2 (1 resolved)</td>
-          </tr>
-          <tr>
-              <td>Notes &amp; Additional Info</td>
-              <td>4 (2 resolved)</td>
-          </tr>
+        <tr>
+          <th>Severity</th>
+          <th>Finding Description</th>
+          <th>Proposed Action & Timeline</th>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td>Oracle implementation not scalable due to code size limitations</td>
+          <td>Work with Compound to address by future iterations (Ongoing)</td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td>Inappropriate use of abi.encodePacked for asset symbol hashing</td>
+          <td>Consider modifying the implementation to avoid unnecessary use (Ongoing)</td>
+        </tr>
+        <tr>
+          <td>Low</td>
+          <td>Gas inefficiencies in for loops and function calls</td>
+          <td>Optimize gas usage by caching array lengths and other optimizations (Ongoing)</td>
+        </tr>
+
       </table>
 
-      ### Files Audited
-      ```
-      contracts/utils/math/SafeCast.sol
+      <h2>Notes & Additional Information</h2>
+      <p>Address docstrings, imports, naming, Solidity versions (Ongoing)</p>
+    fullDetails: >
+      Over April, OpenZeppelin concluded an audit of the new Open Oracle
+      upgrade. Upcoming audits include small PRs and a longer audit of
+      Compound's new protocol version, "Comet." We introduced a secure asset
+      listing process, reviewed security, and added security monitoring bots to
+      Discord.
 
-      contracts/utils/math/Math.sol
+      Initiative Updates
 
-      contracts/utils/Checkpoints.sol
-      ```
-    moreLink: >-
-      https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/audits/2022-10-Checkpoints.pdf
+      Protocol Audits
+
+      Audits Delivered:
+
+
+      Open Oracle Upgrade: Refactor allowing migration to Uniswap v3 liquidity
+      pools. No major issues found. Minor issues resolved by ChainLink team.
+      [Audit Report](Link to Audit Report)
+
+      Asset Listing Process:
+
+
+      Created a process and checklist for secure assessment of new assets.
+      Aiming to address integration and market risks.
+
+      Upcoming Audits:
+
+
+      Small PR changes from @arr00 starting May 9th.
+
+      Audit of Comet Compound Protocol by Compound Labs.
+
+      Propose new protocol changes for consideration.
+
+      Security Advisory - Asset Listings
+
+      Secure Asset Listing Process:
+
+
+      Initialization: Post with checklist information.
+
+      Community Check: Community verifies given information.
+
+      Risk Analysis: Assess market risks based on data.
+
+      Tooling and Simulations: Run specified tools to check contract
+      implementation.
+
+      Contract Deployment: Deploy contracts and provide addresses.
+
+      Proposal Draft: Draft governance proposal.
+
+      Audit (optional): Security audit, if requested.
+
+      Proposal Submission: Submit proposal for voting.
+
+      Post-Launch Parameter Update: Adjust parameters after proposal approval.
+
+      Security Monitoring
+
+      Discord Activity Feed:
+
+
+      Added security alerts to "Test For Alerts" Discord server.
+
+      Created separate channels for market, governance, and security alerts.
+
+      Forta Monitoring Agents:
+
+
+      Added detection bots to monitor transactions for security concerns.
+
+      Monitored Compound Community Multisig, low liquidity market attacks, and
+      cToken underlying asset changes.
+
+      Existing Forta Detection Bots:
+
+
+      Continued monitoring of GovernorBravo events, Compound distribution,
+      cToken transactions, large borrows governance, and oracle prices.
+
+      Future Dashboard:
+
+
+      Work in progress on a public Dune Analytics dashboard for Compound
+      activity and security alerts.
+    moreLink: https://drive.google.com/file/d/1usfoYjWtlvrf8Ca6akFDvITwHC-wk73Y/view
   - title: v2.0.0 - Audit performed by LevelK
     uuid: d744efc2-0a81-4876-88fd-80b9281ff9f4
     date: 2018-10-20T20:24:00.000Z
