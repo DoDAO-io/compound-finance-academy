@@ -32,211 +32,613 @@ content: >-
   space.
 publishStatus: Live
 events:
-  - title: OpenZeppelin Compound Protocol Security Initiatives Audit Log
-    uuid: 5a63859f-b6be-4901-b283-8924fe8d4750
-    date: 2021-12-21T15:00:15.000Z
-    summary: >
-      Initiative Overview
-
-      OpenZeppelin has been selected to provide Compound DAO security services,
-      including continuous audit, security advisory, and monitoring. Michael
-      Lewellen is acting as OpenZeppelin’s Protocol Security Advisor (PSA) for
-      the Compound community. The primary objectives are to audit existing
-      contracts, establish security processes, and develop an open monitoring
-      system.
-    fullDetails: |-
+  - title: 'Audit Report: Comet Custom WBTC Price Feed Audit'
+    uuid: 4bb0933d-a295-4697-9285-366ac3959918
+    date: 2023-05-30T18:14:23.000Z
+    summary: |-
       <h2>Audit Summary</h2>
+
       <table>
-          <tr>
-              <td width="200px">Issue Type</td>
-              <td width="200px">Issues Found</td>
-          </tr>
-          <tr>
-              <td>Total Issues</td>
-              <td >26 (18 resolved, 1 partially resolved)</td>
-          </tr>
-          <tr>
-              <td>Critical Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>High Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>Medium Severity</td>
-              <td>3 (2 resolved)</td>
-          </tr>
-          <tr>
-              <td>Low Severity</td>
-              <td>3 (3 resolved)</td>
-          </tr>
-          <tr>
-              <td>Notes &amp; Additional Info</td>
-              <td>20 (13 resolved, 1 partially resolved)</td>
-          </tr>
+        <tr>
+          <th>Auditing Firm</th>
+          <td>OpenZeppelin</td>
+        </tr>
+        <tr>
+          <th>Date of Audit</th>
+          <td>May 30, 2023</td>
+        </tr>
+        <tr>
+          <th>Repository Commit</th>
+          <td>d9c2f85 (Part of PR 737)</td>
+        </tr>
       </table>
 
+      <h2>Overview</h2>
 
-      ### Files Audited
-      ```
-      contracts/utils/StorageSlot.sol
+      <table>
+        <tr>
+          <th>Price Feed</th>
+          <td>Custom WBTC Price Feed for Comet</td>
+        </tr>
+        <tr>
+          <th>Functionality</th>
+          <td>Pricing WBTC more accurately using Chainlink's feeds</td>
+        </tr>
+        <tr>
+          <th>Goal</th>
+          <td>Addressing potential issues during market panic or catastrophe</td>
+        </tr>
+        <tr>
+          <th>Integration</th>
+          <td>WBTC/BTC and BTC/USD price feeds used</td>
+        </tr>
+        <tr>
+          <th>Quality Assurance</th>
+          <td>Both feeds are "Verified Feeds" by Chainlink</td>
+        </tr>
+        <tr>
+          <th>Recommendation</th>
+          <td>Monitor aggregators and node operators for healthy participation in price feeds</td>
+        </tr>
+      </table>
 
-      contracts/utils/governance/compatibility/GovernorCompatibilityBravo.sol
+      <h2>Findings</h2>
 
-      contracts/utils/governance/compatibility/IGovernorCompatibilityBravo.sol
+      <table>
+        <tr>
+          <th>Severity</th>
+          <th>Recommendations</th>
+        </tr>
+        <tr>
+          <td>Low</td>
+          <td>L01 Stale Oracle Prices Not Handled: Implement a method to handle stale price data and maintain accurate prices in the market</td>
+        </tr>
+        <tr>
+          <td>Note</td>
+          <td>N01 Unused Named Return Variables: Use or remove unused named return variables for better code readability</td>
+        </tr>
+        <tr>
+          <td>Note</td>
+          <td>N02 Constant Format: Declare constants using UPPER_CASE format for consistency</td>
+        </tr>
+      </table>
 
-      contracts/utils/governance/extensions/GovernorPreventLateQuorum.sol!
+      <h2>Notes & Recommendations</h2>
 
-      contracts/utils/governance/extensions/GovernorTimelockCompound.sol
+      <table>
+        <tr>
+          <th>Notes</th>
+          <td>L01 Stale Oracle Prices Not Handled: Acknowledged, not resolved. Stale price data risk should be properly handled. Consider implementing changes as part of a larger effort to re-design and improve the oracle system.</td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>N01 Unused Named Return Variables: Resolved in pull request #737 at commit bde60e1.</td>
+        </tr>
+        <tr>
+          <th>Notes</th>
+          <td>N02 Constant Format: Acknowledged, not resolved. Consider updating constants to follow the UPPER_CASE format convention for better consistency and readability.</td>
+        </tr>
+      </table>
+    fullDetails: >-
+      Compoundv3, referred to hereafter as Comet, uses Chainlink as its source
+      of asset prices. Currently, it prices WBTC using Chainlink's BTC price
+      feed. The idea being that the price of BTC should be close to the price of
+      WBTC and generally that is true. But in the case of market panic or
+      catastrophe, there is a chance that the price of WBTC could be drastically
+      different, creating issues or distortions in the protocol that could risk
+      user funds. The newly proposed price feed involves pricing WBTC more
+      accurately in those cases, using Chainlink's WBTC/BTC price feed in
+      conjunction with the BTC/USD price feed to create a WBTC/USD pricing
+      function.
 
-      contracts/utils/governance/extensions/GovernorVotesComp.sol
 
-      contracts/utils/governance/extensions/GovernorVotesQuorumFraction.sol
+      Of course, the purported gains in accuracy of the pricing function depend
+      on the resilience of the Chainlink network of aggregators and operators to
+      provide accurate data. Both of the price feeds to be integrated are
+      described by Chainlink as "Verified Feeds", the highest grade of quality
+      that they assign. However, we recommend independently monitoring the
+      health of these feeds to ensure they meet the standards set forth by the
+      Compound community.
 
-      contracts/utils/governance/extensions/GovernorVotes.sol
 
-      contracts/utils/governance/Governor.sol
+      Consider monitoring the number of aggregators and node operators that are
+      healthy and participating in these price feeds.
+    moreLink: https://gist.github.com/kacperrams/7242067e60392e4c96f9a01ba81a7026
+  - title: 'Audit Report: Compound Arbitrum Bridge Receiver Audit'
+    uuid: 001157cb-39ec-4534-be0b-18e0f7781f9a
+    date: 2023-04-04T18:12:00.000Z
+    summary: |-
+      <h2>Audit Summary</h2>
 
-      contracts/utils/governance/IGovernor.sol
+      <table>
+        <tr>
+          <th>Auditing Firm</th>
+          <td>OpenZeppelin</td>
+        </tr>
+        <tr>
+          <th>Date of Audit</th>
+          <td>April 4, 2023</td>
+        </tr>
+        <tr>
+          <th>Repository Commit</th>
+          <td>730d2d87</td>
+        </tr>
+      </table>
 
-      contracts/utils/governance/TimelockController.sol
+      <h2>System Overview</h2>
 
-      contracts/utils/governance/utils/IVotes.sol
+      <table>
+        <tr>
+          <th>In Scope</th>
+          <td>contracts/CometRewards.sol, contracts/bridges/arbitrum/AddressAliasHelper.sol, contracts/bridges/arbitrum/ArbitrumBridgeReceiver.sol</td>
+        </tr>
+        <tr>
+          <th>Deployment Target</th>
+          <td>Arbitrum (Optimistic Rollup)</td>
+        </tr>
+        <tr>
+          <th>Architecture</th>
+          <td>L1 Governor communicates with L2 contracts via bridge and Timelock</td>
+        </tr>
+        <tr>
+          <th>Interlinked Contracts</th>
+          <td>Receiver (message relay) and Timelock (execution control)</td>
+        </tr>
+      </table>
+    fullDetails: |-
+      <h2>Security Considerations & Trust Assumptions</h2>
 
-      contracts/utils/governance/utils/Votes.sol
+      <table>
+        <tr>
+          <th>Arbitrum Network</th>
+          <td>Reliance on optimistic rollup mechanism</td>
+        </tr>
+        <tr>
+          <th>Implicit Trust</th>
+          <td>Ecosystem roles (sequencer, validators, Arbitrum DAO)</td>
+        </tr>
+        <tr>
+          <th>Mainnet Governor Role</th>
+          <td>Origin of governance transactions on Arbitrum</td>
+        </tr>
+        <tr>
+          <th>Bridge Inoperability</th>
+          <td>No governance actions on deployed Arbitrum contracts</td>
+        </tr>
+        <tr>
+          <th>Security Monitoring</th>
+          <td>Stay informed about Arbitrum's security posture</td>
+        </tr>
+      </table>
 
-      contracts/token/ERC20/extensions/ERC20Votes.sol
+      <h2>Findings</h2>
 
-      contracts/token/ERC20/extensions/ERC4626.sol
+      <table>
+        <tr>
+          <th>Severity</th>
+          <th>Recommendations</th>
+        </tr>
+        <tr>
+          <td>Low</td>
+          <td>L-01 ETH Stuck in Receiver: Implement a sweeping mechanism for stuck ETH in the receiver</td>
+        </tr>
+      </table>
 
-      contracts/token/ERC721/extensions/ERC721Votes.sol
+      <h2>Notes & Monitoring Recommendations</h2>
 
-      contracts/access/AccessControlDefaultAdminRules.sol
+      <table>
+        <tr>
+          <th>Notes</th>
+          <td>N-01 Rewards Configuration: Consider allowing ERC-20 tokens with more decimals in rewards</td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>N-02 Solidity Compiler Version: Pin the Solidity compiler version to 0.8.15</td>
+        </tr>
+        <tr>
+          <th>Monitoring</th>
+          <td>Implement automated monitoring of contract activity on Arbitrum network</td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>Monitor events related to bridge messages and proposal execution</td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>Monitor retryable ticket queue on Arbitrum for correct handling of messages</td>
+        </tr>
+      </table>
+    moreLink: https://gist.github.com/antonleviathan/79d539469779c240ce694142957b0451
+  - title: 'OPENZEPPELIN SECURITY '
+    uuid: 018ac34b-994c-4147-be85-d5881a92fdbb
+    date: 2023-02-17T18:07:03.000Z
+    summary: |-
+      <h2>Audit Summary</h2>
 
-      contracts/access/IAccessControlDefaultAdminRules.sol
+      <table>
+        <tr>
+          <th>Severity</th>
+          <th>Finding Description</th>
+          <th>Proposed Action & Timeline</th>
+        </tr>
+        <tr>
+          <td>Recommendation</td>
+          <td>Unused getSupplyRate function</td>
+          <td>Consider whether to remove unused function (Action recommended)</td>
+        </tr>
+        <tr>
+          <td>Recommendation</td>
+          <td>Scaling approach change</td>
+          <td>Thoroughly test changes in scaling approach (Action recommended)</td>
+        </tr>
+        <tr>
+          <td>Recommendation</td>
+          <td>Utilization calculation with reserves</td>
+          <td>Evaluate the impact of reserves on utilization (Action recommended)</td>
+        </tr>
+        <tr>
+          <td>Recommendation</td>
+          <td>Scenario simulations and testing recommended</td>
+          <td>Run simulations and thorough testing (Action recommended)</td>
+        </tr>
+      </table>
 
-      contracts/access/manager/AccessManaged.sol
+      <h2>Summary</h2>
 
-      contracts/access/manager/AccessManagerAdapter.sol
+      <table>
+        <tr>
+          <th>Languages</th>
+          <td>Solidity</td>
+        </tr>
+        <tr>
+          <th>Total Issues</th>
+          <td>14 (4 resolved, 2 partially resolved)</td>
+        </tr>
+        <tr>
+          <th>Critical Severity Issues</th>
+          <td>0 (0 resolved)</td>
+        </tr>
+        <tr>
+          <th>High Severity Issues</th>
+          <td>0 (0 resolved)</td>
+        </tr>
+        <tr>
+          <th>Medium Severity Issues</th>
+          <td>2 (1 resolved)</td>
+        </tr>
+        <tr>
+          <th>Low Severity Issues</th>
+          <td>7 (3 resolved)</td>
+        </tr>
+        <tr>
+          <th>Notes & Additional Information</th>
+          <td>5 (0 resolved, 2 partially resolved)</td>
+        </tr>
+      </table>
+    fullDetails: >-
+      <h2>Scope</h2>
 
-      contracts/access/manager/AccessManager.sol
+      <p>Audited the compound-finance/comet repository at the
+      2eb33b5e8454dba148373b6cb64ede4f7436fad7 commit.</p>
 
-      contracts/access/manager/IAuthority.sol
-      ```
-    moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918
-  - title: Deployed Contracts Audit
-    uuid: eb2b0562-d970-4ff2-855f-c3644d0d80a8
-    date: 2022-01-23T20:19:51.000Z
+      <p>System Overview: Audit focused on communication infrastructure between
+      Compound Governor contract on Ethereum Mainnet and Polygon Network.</p>
+
+      <p>Security Considerations & Trust Assumptions: Interlinked contracts,
+      reliance on Polygon bridge security, trust in validators, potential delay
+      issues.</p>
+
+
+      <h2>Medium Severity Findings</h2>
+
+      <p>1. BaseBridgeReceiver localTimelock issue.</p>
+
+      <p>2. Proposal cancellation limitation.</p>
+
+
+      <h2>Low Severity Findings</h2>
+
+      <p>1. Reverted proposals not seen in Ethereum.</p>
+
+      <p>2. Inconsistent transaction expiry.</p>
+
+      <p>3. Inconsistent usage of uint across loops.</p>
+
+      <p>4. Missing indexed parameter in an event.</p>
+
+      <p>5. Lack of distinction between queued and ready-to-execute state.</p>
+
+      <p>6. Identical transactions executed inside the same proposal.</p>
+
+      <p>7. Unused return value from executeTransaction.</p>
+
+
+      <h2>Notes & Additional Information</h2>
+
+      <p>Inconsistent nomenclature, missing docstrings, non-explicit imports,
+      same configuration values as Mainnet deployment, inconsistency between
+      backlog and implementation.</p>
+    moreLink: https://blog.openzeppelin.com/compound-polygon-bridge-receiver-audit
+  - title: Audit of Compound Changes Performed by OpenZeppelin
+    uuid: 9530aa81-dd5b-4f2a-b704-065cc9b9fe0f
+    date: 2022-11-04T20:28:04.000Z
     summary: |-
       <h2>Audit Summary</h2>
       <table>
         <tr>
-          <th>Start Date</th>
-          <td>January 24, 2022</td>
+          <th>Severity</th>
+          <th>Finding Description</th>
+          <th>Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <th>End Date</th>
-          <td>March 4, 2022</td>
+          <td>Medium</td>
+          <td>The sweep function doesn't check if admin is sweeping COMP token</td>
+          <td>Address the issue (Action required)</td>
         </tr>
         <tr>
-          <th>Language</th>
-          <td>Solidity</td>
+          <td>Low</td>
+          <td>EIP20NonStandardInterface.transfer not checked for silent failure</td>
+          <td>Implement balance checks in transfer call (Action required)</td>
         </tr>
         <tr>
-          <th>Codebase</th>
-          <td>Primarily written in Solidity.</td>
+          <td>Low</td>
+          <td>Missing extension from ErrorReporter and ComptrollerInterface</td>
+          <td>Extend contract from required interfaces (Action required)</td>
         </tr>
         <tr>
-          <th>Total Issues</th>
-          <td>30</td>
+          <td>Low</td>
+          <td>Missing error string in require statement (line 20)</td>
+          <td>Add meaningful error message (Action required)</td>
         </tr>
         <tr>
-          <th>Critical</th>
-          <td>1 (Resolved)</td>
+          <td>Low</td>
+          <td>Missing named import syntax for contracts import</td>
+          <td>Use named import syntax for clarity (Action required)</td>
         </tr>
         <tr>
-          <th>High</th>
-          <td>0</td>
+          <td>Low</td>
+          <td>Outdated Solidity version used</td>
+          <td>Update to a newer Solidity version (Action required)</td>
         </tr>
         <tr>
-          <th>Medium</th>
-          <td>0</td>
+          <td>Low</td>
+          <td>Missing "_" prefix for admin functions (sweep)</td>
+          <td>Add "_" prefix for consistency (Action required)</td>
         </tr>
         <tr>
-          <th>Low</th>
-          <td>10</td>
+          <td>Low</td>
+          <td>Missing docstrings for sweep and _become functions</td>
+          <td>Add docstrings for clarity (Action required)</td>
         </tr>
         <tr>
-          <th>Notes</th>
-          <td>19 Additional observations and recommendations provided for codebase improvement.</td>
+          <td>Low</td>
+          <td>Incorrect visibility for sweep and _become functions</td>
+          <td>Set visibility to external (Action required)</td>
+        </tr>
+      </table>
+
+      <h2>PR177: Findings and Proposed Action</h2>
+
+      <table>
+        <tr>
+          <th>Severity</th>
+          <th>Finding Description</th>
+          <th>Proposed Action & Timeline</th>
+        </tr>
+        <tr>
+          <td>Low</td>
+          <td>Ether can still be sent to Governor via selfdestruct</td>
+          <td>Refactor code to handle eth through a receive payable function (Action required)</td>
         </tr>
       </table>
     fullDetails: >
-      Deployed Contracts Audit
+      OpenZeppelin has completed several audits over the last couple of months,
+      including Proposal 122 in preparation for the ETH Merge. They supported
+      the community’s response to the cETH Price Incident and published a
+      post-mortem for further security improvements. They’ve released new
+      monitoring capabilities for Compound V3, improved governance monitoring,
+      and on-chain proposal automation. They also intend to submit their next
+      compensation proposal for Q4 by the end of the week.
 
+      Protocol Audits
 
-      Overview: Auditing deployed Compound contracts affecting governance
-      proposals. Establishes baseline knowledge.
+      Audits Delivered
 
-      Scope: All contracts except currently deployed CToken contracts.
+      - PR516: Improvements to CometProxyAdmin and Configurator
 
-      Participants: Compound Labs team, community developers.
+      - New Interest Rate Model for cETH (Proposal 122)
 
-      Timeline: Jan - Mar 2023.
+      - PR14: Fixes for the UAV3 Upgrade
 
-      Expected Outcome: Feedback and security recommendations for potential
-      improvements.
+      Audit Backlog
 
-      CToken Refactor Audit
-
-
-      Overview: Auditing refactored CToken contracts.
-
-      Scope: Refactoring of previously audited contracts.
-
-      Participants: Equilibria team (community grant).
-
-      Timeline: Jan - Mar 2023.
-
-      Expected Outcome: Resolution of issues found, report for community review
-      prior to governance proposals.
+      - Compound V2 → V3 Migrator by Compound Labs
 
       Security Advisory
 
+      - Focus on supporting the response to the cETH Price Incident resulting
+      from the UAV V3 upgrade
 
-      Defining security measures for governance proposal changes.
+      - Collaborated with the community to ensure protocol safety during the
+      incident
 
-      Tooling recommendations for secure deployment.
+      - Published a post-mortem for transparency and security improvements
 
-      Asset listing security guidance.
+      - Upcoming focus on implementing security recommendations from the
+      post-mortem
 
-      Additional measures including bug bounties, incident response, and
-      learnings from protocol audit.
+      - Proposal simulations to become an explicit requirement for upgrades
+
+      - Implementation of a change management process for protocol codebases
+
+      - Exploration of measures to enable instant rollback of governance
+      upgrades
+
+      - Improvement of the protocol’s response capabilities through the Pause
+      Guardian
+
+      - Planning a security-focused community call in early October
 
       Security Monitoring
 
+      - Extended support for Compound V3
 
-      Building Security Monitoring Dashboard for Compound.
+      - Released ALPHA V3 Market Feed in Discord
 
-      Gathering requirements, selecting metrics and tools.
+      - Governance Feed Improvements
 
-      Utilizing Forta for real-time threat detection.
+      - Governance Proposal Automation
 
-      Sponsoring development of Forta agents.
+      - V3 Liquidatable Positions Bot in progress
 
-      Evolving solution iteratively with new metrics.
+      Q4 Compensation Proposal
 
-      Community Participation
+      - Next quarterly adjustment proposal to be submitted
 
-      Sharing protocol change plans early.
+      - Lump sum payment of $1M in COMP based on a weekly VWAP
 
-      Expressing security concerns to OpenZeppelin and community.
+      Request to the Community
 
-      Leveraging OpenZeppelin resources for smart contract security education.
+      - Informed about upcoming protocol changes needing audits
 
-      Providing feedback and suggestions for initiatives.
-    moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918/2
+      - Developers encouraged to read the cETH Price Incident Post-mortem
+
+      - Participation in a new security working group with meetings in early
+      October
+    moreLink: >-
+      https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/audits/2017-03.md
+  - title: OpenZeppelin Security Updates for June & July 2022
+    uuid: d744efc2-0a81-4876-88fd-80b9281ff9f4
+    date: 2022-06-16T20:24:00.000Z
+    summary: |-
+      <h2>Audit Summary</h2>
+
+      <table>
+        <tr>
+          <th>Finding</th>
+          <th>Proposed Action & Timeline</th>
+        </tr>
+        <tr>
+          <td>No ownership transfer mechanism</td>
+          <td>Address the issue (Action required)</td>
+        </tr>
+        <tr>
+          <td>Use of old Solidity version</td>
+          <td>Upgrade to a newer Solidity version (Action required)</td>
+        </tr>
+        <tr>
+          <td>Missing SPDX-License-Identifier</td>
+          <td>Add SPDX-License-Identifier (Action required)</td>
+        </tr>
+        <tr>
+          <td>Solidity version not pinned</td>
+          <td>Pin Solidity version for consistency (Action required)</td>
+        </tr>
+        <tr>
+          <td>Naming inconsistency for blocksPerYear</td>
+          <td>Rename blocksPerYear to BLOCKS_PER_YEAR (Action required)</td>
+        </tr>
+        <tr>
+          <td>Unclear imports</td>
+          <td>Use explicit imports (Action required)</td>
+        </tr>
+        <tr>
+          <td>Hardcoded values</td>
+          <td>Avoid hardcoded values, use predefined variables (Action required)</td>
+        </tr>
+        <tr>
+          <td>Docstring inconsistency</td>
+          <td>Correct docstrings to accurately reflect usage (Action required)</td>
+        </tr>
+        <tr>
+          <td>Inconsistent parameter naming</td>
+          <td>Maintain consistent parameter naming (Action required)</td>
+        </tr>
+        <tr>
+          <td>Error handling improvement</td>
+          <td>Express explicit errors for success or failure (Action required)</td>
+        </tr>
+      </table>
+    fullDetails: >
+      OpenZeppelin has completed several audits over the last couple of months,
+      including Proposal 122 in preparation for the ETH Merge. They supported
+      the community’s response to the cETH Price Incident and published a
+      post-mortem for further security improvements. They’ve released new
+      monitoring capabilities for Compound V3, improved governance monitoring,
+      and on-chain proposal automation. They also intend to submit their next
+      compensation proposal for Q4 by the end of the week.
+
+      Protocol Audits
+
+      Audits Delivered
+
+      - PR516: Improvements to CometProxyAdmin and Configurator
+
+      - New Interest Rate Model for cETH (Proposal 122)
+
+      - PR14: Fixes for the UAV3 Upgrade
+
+      Audit Backlog
+
+      - Compound V2 → V3 Migrator by Compound Labs
+
+      Security Advisory
+
+      - Focus on supporting the response to the cETH Price Incident resulting
+      from the UAV V3 upgrade
+
+      - Collaborated with the community to ensure protocol safety during the
+      incident
+
+      - Published a post-mortem for transparency and security improvements
+
+      - Upcoming focus on implementing security recommendations from the
+      post-mortem
+
+      - Proposal simulations to become an explicit requirement for upgrades
+
+      - Implementation of a change management process for protocol codebases
+
+      - Exploration of measures to enable instant rollback of governance
+      upgrades
+
+      - Improvement of the protocol’s response capabilities through the Pause
+      Guardian
+
+      - Planning a security-focused community call in early October
+
+      Security Monitoring
+
+      - Extended support for Compound V3
+
+      - Released ALPHA V3 Market Feed in Discord
+
+      - Governance Feed Improvements
+
+      - Governance Proposal Automation
+
+      - V3 Liquidatable Positions Bot in progress
+
+      Q4 Compensation Proposal
+
+      - Next quarterly adjustment proposal to be submitted
+
+      - Lump sum payment of $1M in COMP based on a weekly VWAP
+
+      Request to the Community
+
+      - Informed about upcoming protocol changes needing audits
+
+      - Developers encouraged to read the cETH Price Incident Post-mortem
+
+      - Participation in a new security working group with meetings in early
+      October
+
+      - Feedback on new monitoring and automation features
+
+      - Support for the upcoming Q4 Compensation Proposal
+    moreLink: >-
+      https://www.comp.xyz/t/openzeppelin-security-updates-for-june-july-2022/3446
   - title: Compound UAV Oracle Upgrade Audit
     uuid: 7e44fc63-ceb1-4098-a67b-293c0ea37175
     date: 2022-03-31T20:33:03.000Z
@@ -386,613 +788,211 @@ events:
       Work in progress on a public Dune Analytics dashboard for Compound
       activity and security alerts.
     moreLink: https://drive.google.com/file/d/1usfoYjWtlvrf8Ca6akFDvITwHC-wk73Y/view
-  - title: OpenZeppelin Security Updates for June & July 2022
-    uuid: d744efc2-0a81-4876-88fd-80b9281ff9f4
-    date: 2022-06-16T20:24:00.000Z
-    summary: |-
-      <h2>Audit Summary</h2>
-
-      <table>
-        <tr>
-          <th>Finding</th>
-          <th>Proposed Action & Timeline</th>
-        </tr>
-        <tr>
-          <td>No ownership transfer mechanism</td>
-          <td>Address the issue (Action required)</td>
-        </tr>
-        <tr>
-          <td>Use of old Solidity version</td>
-          <td>Upgrade to a newer Solidity version (Action required)</td>
-        </tr>
-        <tr>
-          <td>Missing SPDX-License-Identifier</td>
-          <td>Add SPDX-License-Identifier (Action required)</td>
-        </tr>
-        <tr>
-          <td>Solidity version not pinned</td>
-          <td>Pin Solidity version for consistency (Action required)</td>
-        </tr>
-        <tr>
-          <td>Naming inconsistency for blocksPerYear</td>
-          <td>Rename blocksPerYear to BLOCKS_PER_YEAR (Action required)</td>
-        </tr>
-        <tr>
-          <td>Unclear imports</td>
-          <td>Use explicit imports (Action required)</td>
-        </tr>
-        <tr>
-          <td>Hardcoded values</td>
-          <td>Avoid hardcoded values, use predefined variables (Action required)</td>
-        </tr>
-        <tr>
-          <td>Docstring inconsistency</td>
-          <td>Correct docstrings to accurately reflect usage (Action required)</td>
-        </tr>
-        <tr>
-          <td>Inconsistent parameter naming</td>
-          <td>Maintain consistent parameter naming (Action required)</td>
-        </tr>
-        <tr>
-          <td>Error handling improvement</td>
-          <td>Express explicit errors for success or failure (Action required)</td>
-        </tr>
-      </table>
-    fullDetails: >
-      OpenZeppelin has completed several audits over the last couple of months,
-      including Proposal 122 in preparation for the ETH Merge. They supported
-      the community’s response to the cETH Price Incident and published a
-      post-mortem for further security improvements. They’ve released new
-      monitoring capabilities for Compound V3, improved governance monitoring,
-      and on-chain proposal automation. They also intend to submit their next
-      compensation proposal for Q4 by the end of the week.
-
-      Protocol Audits
-
-      Audits Delivered
-
-      - PR516: Improvements to CometProxyAdmin and Configurator
-
-      - New Interest Rate Model for cETH (Proposal 122)
-
-      - PR14: Fixes for the UAV3 Upgrade
-
-      Audit Backlog
-
-      - Compound V2 → V3 Migrator by Compound Labs
-
-      Security Advisory
-
-      - Focus on supporting the response to the cETH Price Incident resulting
-      from the UAV V3 upgrade
-
-      - Collaborated with the community to ensure protocol safety during the
-      incident
-
-      - Published a post-mortem for transparency and security improvements
-
-      - Upcoming focus on implementing security recommendations from the
-      post-mortem
-
-      - Proposal simulations to become an explicit requirement for upgrades
-
-      - Implementation of a change management process for protocol codebases
-
-      - Exploration of measures to enable instant rollback of governance
-      upgrades
-
-      - Improvement of the protocol’s response capabilities through the Pause
-      Guardian
-
-      - Planning a security-focused community call in early October
-
-      Security Monitoring
-
-      - Extended support for Compound V3
-
-      - Released ALPHA V3 Market Feed in Discord
-
-      - Governance Feed Improvements
-
-      - Governance Proposal Automation
-
-      - V3 Liquidatable Positions Bot in progress
-
-      Q4 Compensation Proposal
-
-      - Next quarterly adjustment proposal to be submitted
-
-      - Lump sum payment of $1M in COMP based on a weekly VWAP
-
-      Request to the Community
-
-      - Informed about upcoming protocol changes needing audits
-
-      - Developers encouraged to read the cETH Price Incident Post-mortem
-
-      - Participation in a new security working group with meetings in early
-      October
-
-      - Feedback on new monitoring and automation features
-
-      - Support for the upcoming Q4 Compensation Proposal
-    moreLink: >-
-      https://www.comp.xyz/t/openzeppelin-security-updates-for-june-july-2022/3446
-  - title: Audit of Compound Changes Performed by OpenZeppelin
-    uuid: 9530aa81-dd5b-4f2a-b704-065cc9b9fe0f
-    date: 2022-11-04T20:28:04.000Z
+  - title: Deployed Contracts Audit
+    uuid: eb2b0562-d970-4ff2-855f-c3644d0d80a8
+    date: 2022-01-23T20:19:51.000Z
     summary: |-
       <h2>Audit Summary</h2>
       <table>
         <tr>
-          <th>Severity</th>
-          <th>Finding Description</th>
-          <th>Proposed Action & Timeline</th>
+          <th>Start Date</th>
+          <td>January 24, 2022</td>
         </tr>
         <tr>
-          <td>Medium</td>
-          <td>The sweep function doesn't check if admin is sweeping COMP token</td>
-          <td>Address the issue (Action required)</td>
+          <th>End Date</th>
+          <td>March 4, 2022</td>
         </tr>
         <tr>
-          <td>Low</td>
-          <td>EIP20NonStandardInterface.transfer not checked for silent failure</td>
-          <td>Implement balance checks in transfer call (Action required)</td>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>Missing extension from ErrorReporter and ComptrollerInterface</td>
-          <td>Extend contract from required interfaces (Action required)</td>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>Missing error string in require statement (line 20)</td>
-          <td>Add meaningful error message (Action required)</td>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>Missing named import syntax for contracts import</td>
-          <td>Use named import syntax for clarity (Action required)</td>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>Outdated Solidity version used</td>
-          <td>Update to a newer Solidity version (Action required)</td>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>Missing "_" prefix for admin functions (sweep)</td>
-          <td>Add "_" prefix for consistency (Action required)</td>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>Missing docstrings for sweep and _become functions</td>
-          <td>Add docstrings for clarity (Action required)</td>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>Incorrect visibility for sweep and _become functions</td>
-          <td>Set visibility to external (Action required)</td>
-        </tr>
-      </table>
-
-      <h2>PR177: Findings and Proposed Action</h2>
-
-      <table>
-        <tr>
-          <th>Severity</th>
-          <th>Finding Description</th>
-          <th>Proposed Action & Timeline</th>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>Ether can still be sent to Governor via selfdestruct</td>
-          <td>Refactor code to handle eth through a receive payable function (Action required)</td>
-        </tr>
-      </table>
-    fullDetails: >
-      OpenZeppelin has completed several audits over the last couple of months,
-      including Proposal 122 in preparation for the ETH Merge. They supported
-      the community’s response to the cETH Price Incident and published a
-      post-mortem for further security improvements. They’ve released new
-      monitoring capabilities for Compound V3, improved governance monitoring,
-      and on-chain proposal automation. They also intend to submit their next
-      compensation proposal for Q4 by the end of the week.
-
-      Protocol Audits
-
-      Audits Delivered
-
-      - PR516: Improvements to CometProxyAdmin and Configurator
-
-      - New Interest Rate Model for cETH (Proposal 122)
-
-      - PR14: Fixes for the UAV3 Upgrade
-
-      Audit Backlog
-
-      - Compound V2 → V3 Migrator by Compound Labs
-
-      Security Advisory
-
-      - Focus on supporting the response to the cETH Price Incident resulting
-      from the UAV V3 upgrade
-
-      - Collaborated with the community to ensure protocol safety during the
-      incident
-
-      - Published a post-mortem for transparency and security improvements
-
-      - Upcoming focus on implementing security recommendations from the
-      post-mortem
-
-      - Proposal simulations to become an explicit requirement for upgrades
-
-      - Implementation of a change management process for protocol codebases
-
-      - Exploration of measures to enable instant rollback of governance
-      upgrades
-
-      - Improvement of the protocol’s response capabilities through the Pause
-      Guardian
-
-      - Planning a security-focused community call in early October
-
-      Security Monitoring
-
-      - Extended support for Compound V3
-
-      - Released ALPHA V3 Market Feed in Discord
-
-      - Governance Feed Improvements
-
-      - Governance Proposal Automation
-
-      - V3 Liquidatable Positions Bot in progress
-
-      Q4 Compensation Proposal
-
-      - Next quarterly adjustment proposal to be submitted
-
-      - Lump sum payment of $1M in COMP based on a weekly VWAP
-
-      Request to the Community
-
-      - Informed about upcoming protocol changes needing audits
-
-      - Developers encouraged to read the cETH Price Incident Post-mortem
-
-      - Participation in a new security working group with meetings in early
-      October
-    moreLink: >-
-      https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/audits/2017-03.md
-  - title: 'OPENZEPPELIN SECURITY '
-    uuid: 018ac34b-994c-4147-be85-d5881a92fdbb
-    date: 2023-02-17T18:07:03.000Z
-    summary: |-
-      <h2>Audit Summary</h2>
-
-      <table>
-        <tr>
-          <th>Severity</th>
-          <th>Finding Description</th>
-          <th>Proposed Action & Timeline</th>
-        </tr>
-        <tr>
-          <td>Recommendation</td>
-          <td>Unused getSupplyRate function</td>
-          <td>Consider whether to remove unused function (Action recommended)</td>
-        </tr>
-        <tr>
-          <td>Recommendation</td>
-          <td>Scaling approach change</td>
-          <td>Thoroughly test changes in scaling approach (Action recommended)</td>
-        </tr>
-        <tr>
-          <td>Recommendation</td>
-          <td>Utilization calculation with reserves</td>
-          <td>Evaluate the impact of reserves on utilization (Action recommended)</td>
-        </tr>
-        <tr>
-          <td>Recommendation</td>
-          <td>Scenario simulations and testing recommended</td>
-          <td>Run simulations and thorough testing (Action recommended)</td>
-        </tr>
-      </table>
-
-      <h2>Summary</h2>
-
-      <table>
-        <tr>
-          <th>Languages</th>
+          <th>Language</th>
           <td>Solidity</td>
         </tr>
         <tr>
+          <th>Codebase</th>
+          <td>Primarily written in Solidity.</td>
+        </tr>
+        <tr>
           <th>Total Issues</th>
-          <td>14 (4 resolved, 2 partially resolved)</td>
+          <td>30</td>
         </tr>
         <tr>
-          <th>Critical Severity Issues</th>
-          <td>0 (0 resolved)</td>
+          <th>Critical</th>
+          <td>1 (Resolved)</td>
         </tr>
         <tr>
-          <th>High Severity Issues</th>
-          <td>0 (0 resolved)</td>
+          <th>High</th>
+          <td>0</td>
         </tr>
         <tr>
-          <th>Medium Severity Issues</th>
-          <td>2 (1 resolved)</td>
+          <th>Medium</th>
+          <td>0</td>
         </tr>
         <tr>
-          <th>Low Severity Issues</th>
-          <td>7 (3 resolved)</td>
+          <th>Low</th>
+          <td>10</td>
         </tr>
         <tr>
-          <th>Notes & Additional Information</th>
-          <td>5 (0 resolved, 2 partially resolved)</td>
+          <th>Notes</th>
+          <td>19 Additional observations and recommendations provided for codebase improvement.</td>
         </tr>
       </table>
-    fullDetails: >-
-      <h2>Scope</h2>
-
-      <p>Audited the compound-finance/comet repository at the
-      2eb33b5e8454dba148373b6cb64ede4f7436fad7 commit.</p>
-
-      <p>System Overview: Audit focused on communication infrastructure between
-      Compound Governor contract on Ethereum Mainnet and Polygon Network.</p>
-
-      <p>Security Considerations & Trust Assumptions: Interlinked contracts,
-      reliance on Polygon bridge security, trust in validators, potential delay
-      issues.</p>
+    fullDetails: >
+      Deployed Contracts Audit
 
 
-      <h2>Medium Severity Findings</h2>
+      Overview: Auditing deployed Compound contracts affecting governance
+      proposals. Establishes baseline knowledge.
 
-      <p>1. BaseBridgeReceiver localTimelock issue.</p>
+      Scope: All contracts except currently deployed CToken contracts.
 
-      <p>2. Proposal cancellation limitation.</p>
+      Participants: Compound Labs team, community developers.
 
+      Timeline: Jan - Mar 2023.
 
-      <h2>Low Severity Findings</h2>
+      Expected Outcome: Feedback and security recommendations for potential
+      improvements.
 
-      <p>1. Reverted proposals not seen in Ethereum.</p>
-
-      <p>2. Inconsistent transaction expiry.</p>
-
-      <p>3. Inconsistent usage of uint across loops.</p>
-
-      <p>4. Missing indexed parameter in an event.</p>
-
-      <p>5. Lack of distinction between queued and ready-to-execute state.</p>
-
-      <p>6. Identical transactions executed inside the same proposal.</p>
-
-      <p>7. Unused return value from executeTransaction.</p>
+      CToken Refactor Audit
 
 
-      <h2>Notes & Additional Information</h2>
+      Overview: Auditing refactored CToken contracts.
 
-      <p>Inconsistent nomenclature, missing docstrings, non-explicit imports,
-      same configuration values as Mainnet deployment, inconsistency between
-      backlog and implementation.</p>
-    moreLink: https://blog.openzeppelin.com/compound-polygon-bridge-receiver-audit
-  - title: 'Audit Report: Compound Arbitrum Bridge Receiver Audit'
-    uuid: 001157cb-39ec-4534-be0b-18e0f7781f9a
-    date: 2023-04-04T18:12:00.000Z
-    summary: |-
-      <h2>Audit Summary</h2>
+      Scope: Refactoring of previously audited contracts.
 
-      <table>
-        <tr>
-          <th>Auditing Firm</th>
-          <td>OpenZeppelin</td>
-        </tr>
-        <tr>
-          <th>Date of Audit</th>
-          <td>April 4, 2023</td>
-        </tr>
-        <tr>
-          <th>Repository Commit</th>
-          <td>730d2d87</td>
-        </tr>
-      </table>
+      Participants: Equilibria team (community grant).
 
-      <h2>System Overview</h2>
+      Timeline: Jan - Mar 2023.
 
-      <table>
-        <tr>
-          <th>In Scope</th>
-          <td>contracts/CometRewards.sol, contracts/bridges/arbitrum/AddressAliasHelper.sol, contracts/bridges/arbitrum/ArbitrumBridgeReceiver.sol</td>
-        </tr>
-        <tr>
-          <th>Deployment Target</th>
-          <td>Arbitrum (Optimistic Rollup)</td>
-        </tr>
-        <tr>
-          <th>Architecture</th>
-          <td>L1 Governor communicates with L2 contracts via bridge and Timelock</td>
-        </tr>
-        <tr>
-          <th>Interlinked Contracts</th>
-          <td>Receiver (message relay) and Timelock (execution control)</td>
-        </tr>
-      </table>
+      Expected Outcome: Resolution of issues found, report for community review
+      prior to governance proposals.
+
+      Security Advisory
+
+
+      Defining security measures for governance proposal changes.
+
+      Tooling recommendations for secure deployment.
+
+      Asset listing security guidance.
+
+      Additional measures including bug bounties, incident response, and
+      learnings from protocol audit.
+
+      Security Monitoring
+
+
+      Building Security Monitoring Dashboard for Compound.
+
+      Gathering requirements, selecting metrics and tools.
+
+      Utilizing Forta for real-time threat detection.
+
+      Sponsoring development of Forta agents.
+
+      Evolving solution iteratively with new metrics.
+
+      Community Participation
+
+      Sharing protocol change plans early.
+
+      Expressing security concerns to OpenZeppelin and community.
+
+      Leveraging OpenZeppelin resources for smart contract security education.
+
+      Providing feedback and suggestions for initiatives.
+    moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918/2
+  - title: OpenZeppelin Compound Protocol Security Initiatives Audit Log
+    uuid: 5a63859f-b6be-4901-b283-8924fe8d4750
+    date: 2021-12-21T15:00:15.000Z
+    summary: >
+      Initiative Overview
+
+      OpenZeppelin has been selected to provide Compound DAO security services,
+      including continuous audit, security advisory, and monitoring. Michael
+      Lewellen is acting as OpenZeppelin’s Protocol Security Advisor (PSA) for
+      the Compound community. The primary objectives are to audit existing
+      contracts, establish security processes, and develop an open monitoring
+      system.
     fullDetails: |-
-      <h2>Security Considerations & Trust Assumptions</h2>
-
-      <table>
-        <tr>
-          <th>Arbitrum Network</th>
-          <td>Reliance on optimistic rollup mechanism</td>
-        </tr>
-        <tr>
-          <th>Implicit Trust</th>
-          <td>Ecosystem roles (sequencer, validators, Arbitrum DAO)</td>
-        </tr>
-        <tr>
-          <th>Mainnet Governor Role</th>
-          <td>Origin of governance transactions on Arbitrum</td>
-        </tr>
-        <tr>
-          <th>Bridge Inoperability</th>
-          <td>No governance actions on deployed Arbitrum contracts</td>
-        </tr>
-        <tr>
-          <th>Security Monitoring</th>
-          <td>Stay informed about Arbitrum's security posture</td>
-        </tr>
-      </table>
-
-      <h2>Findings</h2>
-
-      <table>
-        <tr>
-          <th>Severity</th>
-          <th>Recommendations</th>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>L-01 ETH Stuck in Receiver: Implement a sweeping mechanism for stuck ETH in the receiver</td>
-        </tr>
-      </table>
-
-      <h2>Notes & Monitoring Recommendations</h2>
-
-      <table>
-        <tr>
-          <th>Notes</th>
-          <td>N-01 Rewards Configuration: Consider allowing ERC-20 tokens with more decimals in rewards</td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>N-02 Solidity Compiler Version: Pin the Solidity compiler version to 0.8.15</td>
-        </tr>
-        <tr>
-          <th>Monitoring</th>
-          <td>Implement automated monitoring of contract activity on Arbitrum network</td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>Monitor events related to bridge messages and proposal execution</td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>Monitor retryable ticket queue on Arbitrum for correct handling of messages</td>
-        </tr>
-      </table>
-    moreLink: https://gist.github.com/antonleviathan/79d539469779c240ce694142957b0451
-  - title: 'Audit Report: Comet Custom WBTC Price Feed Audit'
-    uuid: 4bb0933d-a295-4697-9285-366ac3959918
-    date: 2023-05-30T18:14:23.000Z
-    summary: |-
       <h2>Audit Summary</h2>
-
       <table>
-        <tr>
-          <th>Auditing Firm</th>
-          <td>OpenZeppelin</td>
-        </tr>
-        <tr>
-          <th>Date of Audit</th>
-          <td>May 30, 2023</td>
-        </tr>
-        <tr>
-          <th>Repository Commit</th>
-          <td>d9c2f85 (Part of PR 737)</td>
-        </tr>
+          <tr>
+              <td width="200px">Issue Type</td>
+              <td width="200px">Issues Found</td>
+          </tr>
+          <tr>
+              <td>Total Issues</td>
+              <td >26 (18 resolved, 1 partially resolved)</td>
+          </tr>
+          <tr>
+              <td>Critical Severity</td>
+              <td>0</td>
+          </tr>
+          <tr>
+              <td>High Severity</td>
+              <td>0</td>
+          </tr>
+          <tr>
+              <td>Medium Severity</td>
+              <td>3 (2 resolved)</td>
+          </tr>
+          <tr>
+              <td>Low Severity</td>
+              <td>3 (3 resolved)</td>
+          </tr>
+          <tr>
+              <td>Notes &amp; Additional Info</td>
+              <td>20 (13 resolved, 1 partially resolved)</td>
+          </tr>
       </table>
 
-      <h2>Overview</h2>
 
-      <table>
-        <tr>
-          <th>Price Feed</th>
-          <td>Custom WBTC Price Feed for Comet</td>
-        </tr>
-        <tr>
-          <th>Functionality</th>
-          <td>Pricing WBTC more accurately using Chainlink's feeds</td>
-        </tr>
-        <tr>
-          <th>Goal</th>
-          <td>Addressing potential issues during market panic or catastrophe</td>
-        </tr>
-        <tr>
-          <th>Integration</th>
-          <td>WBTC/BTC and BTC/USD price feeds used</td>
-        </tr>
-        <tr>
-          <th>Quality Assurance</th>
-          <td>Both feeds are "Verified Feeds" by Chainlink</td>
-        </tr>
-        <tr>
-          <th>Recommendation</th>
-          <td>Monitor aggregators and node operators for healthy participation in price feeds</td>
-        </tr>
-      </table>
+      ### Files Audited
+      ```
+      contracts/utils/StorageSlot.sol
 
-      <h2>Findings</h2>
+      contracts/utils/governance/compatibility/GovernorCompatibilityBravo.sol
 
-      <table>
-        <tr>
-          <th>Severity</th>
-          <th>Recommendations</th>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>L01 Stale Oracle Prices Not Handled: Implement a method to handle stale price data and maintain accurate prices in the market</td>
-        </tr>
-        <tr>
-          <td>Note</td>
-          <td>N01 Unused Named Return Variables: Use or remove unused named return variables for better code readability</td>
-        </tr>
-        <tr>
-          <td>Note</td>
-          <td>N02 Constant Format: Declare constants using UPPER_CASE format for consistency</td>
-        </tr>
-      </table>
+      contracts/utils/governance/compatibility/IGovernorCompatibilityBravo.sol
 
-      <h2>Notes & Recommendations</h2>
+      contracts/utils/governance/extensions/GovernorPreventLateQuorum.sol!
 
-      <table>
-        <tr>
-          <th>Notes</th>
-          <td>L01 Stale Oracle Prices Not Handled: Acknowledged, not resolved. Stale price data risk should be properly handled. Consider implementing changes as part of a larger effort to re-design and improve the oracle system.</td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>N01 Unused Named Return Variables: Resolved in pull request #737 at commit bde60e1.</td>
-        </tr>
-        <tr>
-          <th>Notes</th>
-          <td>N02 Constant Format: Acknowledged, not resolved. Consider updating constants to follow the UPPER_CASE format convention for better consistency and readability.</td>
-        </tr>
-      </table>
-    fullDetails: >-
-      Compoundv3, referred to hereafter as Comet, uses Chainlink as its source
-      of asset prices. Currently, it prices WBTC using Chainlink's BTC price
-      feed. The idea being that the price of BTC should be close to the price of
-      WBTC and generally that is true. But in the case of market panic or
-      catastrophe, there is a chance that the price of WBTC could be drastically
-      different, creating issues or distortions in the protocol that could risk
-      user funds. The newly proposed price feed involves pricing WBTC more
-      accurately in those cases, using Chainlink's WBTC/BTC price feed in
-      conjunction with the BTC/USD price feed to create a WBTC/USD pricing
-      function.
+      contracts/utils/governance/extensions/GovernorTimelockCompound.sol
 
+      contracts/utils/governance/extensions/GovernorVotesComp.sol
 
-      Of course, the purported gains in accuracy of the pricing function depend
-      on the resilience of the Chainlink network of aggregators and operators to
-      provide accurate data. Both of the price feeds to be integrated are
-      described by Chainlink as "Verified Feeds", the highest grade of quality
-      that they assign. However, we recommend independently monitoring the
-      health of these feeds to ensure they meet the standards set forth by the
-      Compound community.
+      contracts/utils/governance/extensions/GovernorVotesQuorumFraction.sol
 
+      contracts/utils/governance/extensions/GovernorVotes.sol
 
-      Consider monitoring the number of aggregators and node operators that are
-      healthy and participating in these price feeds.
-    moreLink: https://gist.github.com/kacperrams/7242067e60392e4c96f9a01ba81a7026
+      contracts/utils/governance/Governor.sol
+
+      contracts/utils/governance/IGovernor.sol
+
+      contracts/utils/governance/TimelockController.sol
+
+      contracts/utils/governance/utils/IVotes.sol
+
+      contracts/utils/governance/utils/Votes.sol
+
+      contracts/token/ERC20/extensions/ERC20Votes.sol
+
+      contracts/token/ERC20/extensions/ERC4626.sol
+
+      contracts/token/ERC721/extensions/ERC721Votes.sol
+
+      contracts/access/AccessControlDefaultAdminRules.sol
+
+      contracts/access/IAccessControlDefaultAdminRules.sol
+
+      contracts/access/manager/AccessManaged.sol
+
+      contracts/access/manager/AccessManagerAdapter.sol
+
+      contracts/access/manager/AccessManager.sol
+
+      contracts/access/manager/IAuthority.sol
+      ```
+    moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918
 admins: []
 tags: []
 priority: 50
