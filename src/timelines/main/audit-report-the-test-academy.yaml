@@ -36,24 +36,8 @@ events:
     uuid: 4bb0933d-a295-4697-9285-366ac3959918
     date: 2023-05-30T18:14:23.000Z
     summary: |-
-      <h2>Audit Summary</h2>
-
-      <table>
-        <tr>
-          <th>Auditing Firm</th>
-          <td>OpenZeppelin</td>
-        </tr>
-        <tr>
-          <th>Date of Audit</th>
-          <td>May 30, 2023</td>
-        </tr>
-        <tr>
-          <th>Repository Commit</th>
-          <td>d9c2f85 (Part of PR 737)</td>
-        </tr>
-      </table>
-
-      <h2>Overview</h2>
+      ### Overview
+      Date of Audit - May 30, 2023
 
       <table>
         <tr>
@@ -82,7 +66,7 @@ events:
         </tr>
       </table>
 
-      <h2>Findings</h2>
+      ### Findings
 
       <table>
         <tr>
@@ -103,7 +87,7 @@ events:
         </tr>
       </table>
 
-      <h2>Notes & Recommendations</h2>
+      ### Notes & Recommendations
 
       <table>
         <tr>
@@ -148,24 +132,9 @@ events:
     uuid: 001157cb-39ec-4534-be0b-18e0f7781f9a
     date: 2023-04-04T18:12:00.000Z
     summary: |-
-      <h2>Audit Summary</h2>
 
-      <table>
-        <tr>
-          <th>Auditing Firm</th>
-          <td>OpenZeppelin</td>
-        </tr>
-        <tr>
-          <th>Date of Audit</th>
-          <td>April 4, 2023</td>
-        </tr>
-        <tr>
-          <th>Repository Commit</th>
-          <td>730d2d87</td>
-        </tr>
-      </table>
-
-      <h2>System Overview</h2>
+      ### Overview
+      Date of Audit - April 4, 2023
 
       <table>
         <tr>
@@ -253,7 +222,7 @@ events:
     uuid: 018ac34b-994c-4147-be85-d5881a92fdbb
     date: 2023-02-17T18:07:03.000Z
     summary: |-
-      <h2>Audit Summary</h2>
+      ### Audit Summary
 
       <table>
         <tr>
@@ -283,7 +252,7 @@ events:
         </tr>
       </table>
 
-      <h2>Summary</h2>
+      ### Summary
 
       <table>
         <tr>
@@ -363,7 +332,7 @@ events:
     uuid: 9530aa81-dd5b-4f2a-b704-065cc9b9fe0f
     date: 2022-11-04T20:28:04.000Z
     summary: |-
-      <h2>Audit Summary</h2>
+      ### Audit Summary
       <table>
         <tr>
           <th>Severity</th>
@@ -417,7 +386,7 @@ events:
         </tr>
       </table>
 
-      <h2>PR177: Findings and Proposed Action</h2>
+      ### PR177: Findings and Proposed Action
 
       <table>
         <tr>
@@ -511,7 +480,7 @@ events:
     uuid: d744efc2-0a81-4876-88fd-80b9281ff9f4
     date: 2022-06-16T20:24:00.000Z
     summary: |-
-      <h2>Audit Summary</h2>
+      ### Audit Summary
 
       <table>
         <tr>
@@ -642,9 +611,8 @@ events:
   - title: Compound UAV Oracle Upgrade Audit
     uuid: 7e44fc63-ceb1-4098-a67b-293c0ea37175
     date: 2022-03-31T20:33:03.000Z
-    summary: |-
-
-      <h2>Audit Summary</h2>
+    summary: |
+      ### Audit Summary
       <table>
           <tr>
               <td width="200px">Issue Type</td>
@@ -674,7 +642,8 @@ events:
               <td>Notes &amp; Additional Info</td>
               <td>4 (2 resolved)</td>
           </tr>
-      <h2>Codebase Issues</h2>
+
+      ### Codebase Issues
 
       <table>
         <tr>
@@ -699,9 +668,6 @@ events:
         </tr>
 
       </table>
-
-      <h2>Notes & Additional Information</h2>
-      <p>Address docstrings, imports, naming, Solidity versions (Ongoing)</p>
     fullDetails: >
       Over April, OpenZeppelin concluded an audit of the new Open Oracle
       upgrade. Upcoming audits include small PRs and a longer audit of
@@ -792,7 +758,7 @@ events:
     uuid: eb2b0562-d970-4ff2-855f-c3644d0d80a8
     date: 2022-01-23T20:19:51.000Z
     summary: |-
-      <h2>Audit Summary</h2>
+      ### Audit Summary
       <table>
         <tr>
           <th>Start Date</th>
