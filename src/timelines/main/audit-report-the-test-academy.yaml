@@ -1,7 +1,7 @@
 id: audit-report-the-test-academy
 name: Contracts - Audit Report
 excerpt: >-
-  Captures a comprehensive record of the security audits conducted on the
+  Captures a comprehensive record of the security audits conducted by
   OpenZeppelin
 content: >-
   Since Solidity's inception in 2016, OpenZeppelin Contracts has remained the

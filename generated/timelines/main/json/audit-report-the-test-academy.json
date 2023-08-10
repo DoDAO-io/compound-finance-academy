@@ -1,7 +1,7 @@
 {
   "id": "audit-report-the-test-academy",
   "name": "Contracts - Audit Report",
-  "excerpt": "Captures a comprehensive record of the security audits conducted on the OpenZeppelin",
+  "excerpt": "Captures a comprehensive record of the security audits conducted by OpenZeppelin",
   "content": "Since Solidity's inception in 2016, OpenZeppelin Contracts has remained the preferred library for smart contract \ndevelopment. Its widespread adoption spans from major projects handling billions of dollars daily to individual \nblockchain application creators.\n<br/>\n\n\nThe importance of auditing cannot be overstated. By subjecting OpenZeppelin Contracts to rigorous security \npractices, the safety and reliability of these smart contracts are ensured. The thorough security process \nnot only safeguards the contracts themselves but also serves as a model for other crypto companies seeking to \nestablish their security measures. Through testing and showcasing internal audit practices, a valuable reference \nexample is offered to the broader security-conscious community in the crypto space.",
   "publishStatus": "Live",
   "events": [
