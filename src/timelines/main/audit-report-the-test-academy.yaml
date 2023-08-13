@@ -139,7 +139,7 @@ events:
       <table>
         <tr>
           <th width="200px">In Scope</th>
-          <td width="400px>contracts/CometRewards.sol, contracts/bridges/arbitrum/AddressAliasHelper.sol, contracts/bridges/arbitrum/ArbitrumBridgeReceiver.sol</td>
+          <td width="400px">contracts/CometRewards.sol, contracts/bridges/arbitrum/AddressAliasHelper.sol, contracts/bridges/arbitrum/ArbitrumBridgeReceiver.sol</td>
         </tr>
         <tr>
           <th>Deployment Target</th>
@@ -155,7 +155,7 @@ events:
         </tr>
       </table>
     fullDetails: |-
-      <h2>Security Considerations & Trust Assumptions</h2>
+      <h3>Security Considerations & Trust Assumptions</h3>
 
       <table>
         <tr>
@@ -180,7 +180,7 @@ events:
         </tr>
       </table>
 
-      <h2>Findings</h2>
+      <h3>Findings</h3>
 
       <table>
         <tr>
@@ -193,7 +193,7 @@ events:
         </tr>
       </table>
 
-      <h2>Notes & Monitoring Recommendations</h2>
+      <h3>Notes & Monitoring Recommendations</h3>
 
       <table>
         <tr>
@@ -227,13 +227,13 @@ events:
       <table>
         <tr>
           <th width="200px">Severity</th>
-          <th width="200px">Finding Description</th>
-          <th width="200px">Proposed Action & Timeline</th>
+          <td width="400px">Finding Description</th>
+          <th >Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <td width="400px">Recommendation</td>
-          <td width="400px">Unused getSupplyRate function</td>
-          <td width="400px">Consider whether to remove unused function (Action recommended)</td>
+          <td >Recommendation</td>
+          <td >Unused getSupplyRate function</td>
+          <td >Consider whether to remove unused function (Action recommended)</td>
         </tr>
         <tr>
           <td>Recommendation</td>
@@ -285,7 +285,7 @@ events:
         </tr>
       </table>
     fullDetails: >-
-      <h2>Scope</h2>
+      <h3>Scope</h3>
 
       <p>Audited the compound-finance/comet repository at the
       2eb33b5e8454dba148373b6cb64ede4f7436fad7 commit.</p>
@@ -336,13 +336,13 @@ events:
       <table>
         <tr>
           <th width="200px">Severity</th>
-          <th width="200px">Finding Description</th>
-          <th width="200px"> Proposed Action & Timeline</th>
+          <td width="400px">Finding Description</th>
+          <th> Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <td width="400px">Medium</td>
-          <td width="400px">The sweep function doesn't check if admin is sweeping COMP token</td>
-          <td  width="400px">Address the issue (Action required)</td>
+          <td >Medium</td>
+          <td>The sweep function doesn't check if admin is sweeping COMP token</td>
+          <td >Address the issue (Action required)</td>
         </tr>
         <tr>
           <td>Low</td>
@@ -391,13 +391,13 @@ events:
       <table>
         <tr>
           <th width="200px">Severity</th>
-          <th width="200px">Finding Description</th>
-          <th width="200px">Proposed Action & Timeline</th>
+          <td width="400px">Finding Description</th>
+          <th >Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <td width="400px">Low</td>
-          <td width="400px">Ether can still be sent to Governor via selfdestruct</td>
-          <td width="400px">Refactor code to handle eth through a receive payable function (Action required)</td>
+          <td >Low</td>
+          <td >Ether can still be sent to Governor via selfdestruct</td>
+          <td>Refactor code to handle eth through a receive payable function (Action required)</td>
         </tr>
       </table>
     fullDetails: >
@@ -485,10 +485,10 @@ events:
       <table>
         <tr>
           <th width="200px">Finding</th>
-          <th>Proposed Action & Timeline</th>
+          <td width="400px">Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <td width="400px">No ownership transfer mechanism</td>
+          <td>No ownership transfer mechanism</td>
           <td>Address the issue (Action required)</td>
         </tr>
         <tr>
@@ -615,7 +615,7 @@ events:
       ### Audit Summary
       <table>
           <tr>
-              <td width="400px">Issue Type</td>
+              <th width="200px">Issue Type</td>
               <td width="400px">Issues Found</td>
           </tr>
           <tr>
@@ -648,11 +648,11 @@ events:
       <table>
         <tr>
           <th width="200px">Severity</th>
-          <th>Finding Description</th>
+          <td width="400px">Finding Description</th>
           <th>Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <td width="400px">Medium</td>
+          <td >Medium</td>
           <td>Oracle implementation not scalable due to code size limitations</td>
           <td>Work with Compound to address by future iterations (Ongoing)</td>
         </tr>
@@ -879,10 +879,10 @@ events:
       contracts, establish security processes, and develop an open monitoring
       system.
     fullDetails: |-
-      <h2>Audit Summary</h2>
+      <h3>Audit Summary</h3>
       <table>
           <tr>
-              <td width="400px">Issue Type</td>
+              <th width="200px">Issue Type</td>
               <td width="400px">Issues Found</td>
           </tr>
           <tr>
