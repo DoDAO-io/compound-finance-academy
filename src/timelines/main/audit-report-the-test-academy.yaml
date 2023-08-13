@@ -32,7 +32,7 @@ content: >-
   space.
 publishStatus: Live
 events:
-  - title: 'Audit Report: Comet Custom WBTC Price Feed Audit'
+  - title: '### Audit Report: Comet Custom WBTC Price Feed Audit'
     uuid: 4bb0933d-a295-4697-9285-366ac3959918
     date: 2023-05-30T18:14:23.000Z
     summary: |-
@@ -138,8 +138,8 @@ events:
 
       <table>
         <tr>
-          <th>In Scope</th>
-          <td>contracts/CometRewards.sol, contracts/bridges/arbitrum/AddressAliasHelper.sol, contracts/bridges/arbitrum/ArbitrumBridgeReceiver.sol</td>
+          <th width="200px">In Scope</th>
+          <td width="400px>contracts/CometRewards.sol, contracts/bridges/arbitrum/AddressAliasHelper.sol, contracts/bridges/arbitrum/ArbitrumBridgeReceiver.sol</td>
         </tr>
         <tr>
           <th>Deployment Target</th>
@@ -226,14 +226,14 @@ events:
 
       <table>
         <tr>
-          <th>Severity</th>
-          <th>Finding Description</th>
-          <th>Proposed Action & Timeline</th>
+          <th width="200px">Severity</th>
+          <th width="200px">Finding Description</th>
+          <th width="200px">Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <td>Recommendation</td>
-          <td>Unused getSupplyRate function</td>
-          <td>Consider whether to remove unused function (Action recommended)</td>
+          <td width="400px">Recommendation</td>
+          <td width="400px">Unused getSupplyRate function</td>
+          <td width="400px">Consider whether to remove unused function (Action recommended)</td>
         </tr>
         <tr>
           <td>Recommendation</td>
@@ -256,8 +256,8 @@ events:
 
       <table>
         <tr>
-          <th>Languages</th>
-          <td>Solidity</td>
+          <th width="200px">Languages</th>
+          <td width="400px">Solidity</td>
         </tr>
         <tr>
           <th>Total Issues</th>
@@ -335,14 +335,14 @@ events:
       ### Audit Summary
       <table>
         <tr>
-          <th>Severity</th>
-          <th>Finding Description</th>
-          <th>Proposed Action & Timeline</th>
+          <th width="200px">Severity</th>
+          <th width="200px">Finding Description</th>
+          <th width="200px"> Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <td>Medium</td>
-          <td>The sweep function doesn't check if admin is sweeping COMP token</td>
-          <td>Address the issue (Action required)</td>
+          <td width="400px">Medium</td>
+          <td width="400px">The sweep function doesn't check if admin is sweeping COMP token</td>
+          <td  width="400px">Address the issue (Action required)</td>
         </tr>
         <tr>
           <td>Low</td>
@@ -390,14 +390,14 @@ events:
 
       <table>
         <tr>
-          <th>Severity</th>
-          <th>Finding Description</th>
-          <th>Proposed Action & Timeline</th>
+          <th width="200px">Severity</th>
+          <th width="200px">Finding Description</th>
+          <th width="200px">Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <td>Low</td>
-          <td>Ether can still be sent to Governor via selfdestruct</td>
-          <td>Refactor code to handle eth through a receive payable function (Action required)</td>
+          <td width="400px">Low</td>
+          <td width="400px">Ether can still be sent to Governor via selfdestruct</td>
+          <td width="400px">Refactor code to handle eth through a receive payable function (Action required)</td>
         </tr>
       </table>
     fullDetails: >
@@ -484,11 +484,11 @@ events:
 
       <table>
         <tr>
-          <th>Finding</th>
+          <th width="200px">Finding</th>
           <th>Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <td>No ownership transfer mechanism</td>
+          <td width="400px">No ownership transfer mechanism</td>
           <td>Address the issue (Action required)</td>
         </tr>
         <tr>
@@ -615,8 +615,8 @@ events:
       ### Audit Summary
       <table>
           <tr>
-              <td width="200px">Issue Type</td>
-              <td width="200px">Issues Found</td>
+              <td width="400px">Issue Type</td>
+              <td width="400px">Issues Found</td>
           </tr>
           <tr>
               <td>Total Issues</td>
@@ -647,12 +647,12 @@ events:
 
       <table>
         <tr>
-          <th>Severity</th>
+          <th width="200px">Severity</th>
           <th>Finding Description</th>
           <th>Proposed Action & Timeline</th>
         </tr>
         <tr>
-          <td>Medium</td>
+          <td width="400px">Medium</td>
           <td>Oracle implementation not scalable due to code size limitations</td>
           <td>Work with Compound to address by future iterations (Ongoing)</td>
         </tr>
@@ -761,8 +761,8 @@ events:
       ### Audit Summary
       <table>
         <tr>
-          <th>Start Date</th>
-          <td>January 24, 2022</td>
+          <th width="200px">Start Date</th>
+          <td width="400px">January 24, 2022</td>
         </tr>
         <tr>
           <th>End Date</th>
@@ -882,8 +882,8 @@ events:
       <h2>Audit Summary</h2>
       <table>
           <tr>
-              <td width="200px">Issue Type</td>
-              <td width="200px">Issues Found</td>
+              <td width="400px">Issue Type</td>
+              <td width="400px">Issues Found</td>
           </tr>
           <tr>
               <td>Total Issues</td>
