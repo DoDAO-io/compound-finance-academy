@@ -41,8 +41,8 @@ events:
 
       <table>
         <tr>
-          <th>Price Feed</th>
-          <td>Custom WBTC Price Feed for Comet</td>
+          <th width="200px">Price Feed</th>
+          <td width="400px">Custom WBTC Price Feed for Comet</td>
         </tr>
         <tr>
           <th>Functionality</th>
@@ -70,8 +70,8 @@ events:
 
       <table>
         <tr>
-          <th>Severity</th>
-          <th>Recommendations</th>
+          <th width="200px">Severity</th>
+          <th width="400px">Recommendations</th>
         </tr>
         <tr>
           <td>Low</td>
@@ -91,8 +91,8 @@ events:
 
       <table>
         <tr>
-          <th>Notes</th>
-          <td>L01 Stale Oracle Prices Not Handled: Acknowledged, not resolved. Stale price data risk should be properly handled. Consider implementing changes as part of a larger effort to re-design and improve the oracle system.</td>
+          <th width="200px">Notes</th>
+          <td width="400px">L01 Stale Oracle Prices Not Handled: Acknowledged, not resolved. Stale price data risk should be properly handled. Consider implementing changes as part of a larger effort to re-design and improve the oracle system.</td>
         </tr>
         <tr>
           <th></th>
