@@ -159,8 +159,8 @@ events:
 
       <table>
         <tr>
-          <th>Arbitrum Network</th>
-          <td>Reliance on optimistic rollup mechanism</td>
+          <th width="200px">Arbitrum Network</th>
+          <td width="400px">Reliance on optimistic rollup mechanism</td>
         </tr>
         <tr>
           <th>Implicit Trust</th>
@@ -184,8 +184,8 @@ events:
 
       <table>
         <tr>
-          <th>Severity</th>
-          <th>Recommendations</th>
+          <th width="200px">Severity</th>
+          <th width="400px">Recommendations</th>
         </tr>
         <tr>
           <td>Low</td>
@@ -197,8 +197,8 @@ events:
 
       <table>
         <tr>
-          <th>Notes</th>
-          <td>N-01 Rewards Configuration: Consider allowing ERC-20 tokens with more decimals in rewards</td>
+          <th width="200px">Notes</th>
+          <td width="400px">N-01 Rewards Configuration: Consider allowing ERC-20 tokens with more decimals in rewards</td>
         </tr>
         <tr>
           <th></th>
