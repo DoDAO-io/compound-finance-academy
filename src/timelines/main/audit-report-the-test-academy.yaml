@@ -217,8 +217,8 @@ events:
       <table>
         <tr>
           <th width="200px">Severity</th>
-          <td width="400px">Finding Description</th>
-          <th >Proposed Action & Timeline</th>
+          <td width="300px">Finding Description</th>
+          <th width="300px">Proposed Action & Timeline</th>
         </tr>
         <tr>
           <td >Recommendation</td>
@@ -326,8 +326,8 @@ events:
       <table>
         <tr>
           <th width="200px">Severity</th>
-          <td width="400px">Finding Description</th>
-          <th> Proposed Action & Timeline</th>
+          <td width="300px">Finding Description</th>
+          <th width="300px"> Proposed Action & Timeline</th>
         </tr>
         <tr>
           <td >Medium</td>
@@ -381,8 +381,8 @@ events:
       <table>
         <tr>
           <th width="200px">Severity</th>
-          <td width="400px">Finding Description</th>
-          <th >Proposed Action & Timeline</th>
+          <td width="300px">Finding Description</th>
+          <th width="300px">Proposed Action & Timeline</th>
         </tr>
         <tr>
           <td >Low</td>
@@ -475,7 +475,7 @@ events:
       <table>
         <tr>
           <th width="200px">Finding</th>
-          <td width="400px">Proposed Action & Timeline</th>
+          <td width="300px">Proposed Action & Timeline</th>
         </tr>
         <tr>
           <td>No ownership transfer mechanism</td>
