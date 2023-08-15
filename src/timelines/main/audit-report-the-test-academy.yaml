@@ -597,6 +597,115 @@ events:
       - Support for the upcoming Q4 Compensation Proposal
     moreLink: >-
       https://www.comp.xyz/t/openzeppelin-security-updates-for-june-july-2022/3446
+  - title: Compound III Audit
+    uuid: 041c152f-6e04-45f8-b3ac-9d6d109f536f
+    date: 2022-06-14T23:35:54.000Z
+    summary: >-
+      ### Overview
+
+      OpenZepplin audited a new upcoming version of the Compound lending
+      protocol developed by Compound Labs: “Compound III”, codenamed Comet in
+      this report. This new version will only contain one base asset and can
+      have multiple instances deployed on Ethereum Mainnet and other
+      EVM-compatible networks.
+
+
+      OpenZepplin audited the
+      [compound-finance/comet](https://github.com/compound-finance/comet)
+      repository at the
+      [0f1221967149115f50a09681eea9580879ee7720](https://github.com/compound-finance/comet/tree/0f1221967149115f50a09681eea9580879ee7720)
+      commit.
+
+
+      ### Findings
+
+      Below is a tabular representation of the security audit findings:
+
+
+      <table>
+          <tr>
+              <td width="200px">Severity Level</td>
+              <td width="300px">Finding Summary</td>
+              <td width="300px">Update &amp; Response</td>
+          </tr>
+          <tr>
+              <td>High</td>
+              <td>Locked assets in contracts</td>
+              <td>Partially fixed in commit 3681613. Team plans to add sweep functions to the Bulker. No plan to change Comet now.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>ERC20 tokens might get lost in Bulker contract</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>Medium</td>
+              <td>Governor can approve anyone to transfer assets within the Comet contract</td>
+              <td>Fixed in PR#414. Team acknowledged potential governance attack risks.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>Protocol may hold collateral assets in an unwanted manner</td>
+              <td>Acknowledged. Team intends to set targetReserves to a large value.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>Incorrect accounting of used gas</td>
+              <td>Acknowledged. Improved docstrings in commit 14fbc27.</td>
+          </tr>
+          <tr>
+              <td>Low</td>
+              <td>Everyone can deploy new Comet instances</td>
+              <td>Not fixed. Team acknowledges issue but sees no worth in complicating Configurator or altering CometFactory.clone().</td>
+          </tr>
+      </table>
+
+      This table captures the key findings, their severity, and the
+      responses/updates provided by the team.
+    fullDetails: |-
+      ### Contracts Audited
+
+      ```
+      - Comet.sol
+      - Bulker.sol
+      - CometConfiguration.sol
+      - CometCore.sol
+      - CometExt.sol
+      - CometExtInterface.sol
+      - CometFactory.sol
+      - CometInterface.sol
+      - CometMainInterface.sol
+      - CometMath.sol
+      - CometProxyAdmin.sol
+      - CometRewards.sol
+      - CometStorage.sol
+      - Configurator.sol
+      - ConfiguratorStorage.sol
+      - ERC20.sol
+      - IWETH9.sol
+      - TransparentUpgradeableConfiguratorProxy.sol
+      - vendor/
+          - access/
+              - Ownable.sol
+          - canonical-weth/
+              - contracts/WETH9.sol
+          - @chainlink/
+              - contracts/src/v0.8/interfaces/AggregatorV3Interface.sol
+          - interfaces/
+              - draft-IERC1822.sol
+          - proxy/
+              - Proxy.sol
+              - beacon/IBeacon.sol
+              - transparent/ProxyAdmin.sol
+              - transparent/TransparentUpgradeableProxy.sol
+              - ERC1967/ERC1967Proxy.sol
+              - ERC1967/ERC1967Upgrade.sol
+          - utils/
+              - Context.sol
+              - StorageSlot.sol
+              - Address.sol
+      ```
+    moreLink: https://blog.openzeppelin.com/compound-iii-audit
   - title: Compound UAV Oracle Upgrade Audit
     uuid: 7e44fc63-ceb1-4098-a67b-293c0ea37175
     date: 2022-03-31T20:33:03.000Z
