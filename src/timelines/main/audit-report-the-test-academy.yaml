@@ -600,7 +600,7 @@ events:
   - title: Compound III Audit
     uuid: 041c152f-6e04-45f8-b3ac-9d6d109f536f
     date: 2022-06-14T23:35:54.000Z
-    summary: >-
+    summary: >
       ### Overview
 
       OpenZepplin audited a new upcoming version of the Compound lending
@@ -620,7 +620,6 @@ events:
       ### Findings
 
       Below is a tabular representation of the security audit findings:
-
 
       <table>
           <tr>
@@ -659,10 +658,7 @@ events:
               <td>Not fixed. Team acknowledges issue but sees no worth in complicating Configurator or altering CometFactory.clone().</td>
           </tr>
       </table>
-
-      This table captures the key findings, their severity, and the
-      responses/updates provided by the team.
-    fullDetails: |-
+    fullDetails: |
       ### Contracts Audited
 
       ```
@@ -705,6 +701,46 @@ events:
               - StorageSlot.sol
               - Address.sol
       ```
+
+      ### Findings
+      Below is a tabular representation of the security audit findings:
+      <table>
+          <tr>
+              <td width="200px">Severity Level</td>
+              <td width="300px">Finding Summary</td>
+              <td width="300px">Update &amp; Response</td>
+          </tr>
+          <tr>
+              <td>High</td>
+              <td>Locked assets in contracts</td>
+              <td>Partially fixed in commit 3681613. Team plans to add sweep functions to the Bulker. No plan to change Comet now.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>ERC20 tokens might get lost in Bulker contract</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>Medium</td>
+              <td>Governor can approve anyone to transfer assets within the Comet contract</td>
+              <td>Fixed in PR#414. Team acknowledged potential governance attack risks.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>Protocol may hold collateral assets in an unwanted manner</td>
+              <td>Acknowledged. Team intends to set targetReserves to a large value.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>Incorrect accounting of used gas</td>
+              <td>Acknowledged. Improved docstrings in commit 14fbc27.</td>
+          </tr>
+          <tr>
+              <td>Low</td>
+              <td>Everyone can deploy new Comet instances</td>
+              <td>Not fixed. Team acknowledges issue but sees no worth in complicating Configurator or altering CometFactory.clone().</td>
+          </tr>
+      </table>
     moreLink: https://blog.openzeppelin.com/compound-iii-audit
   - title: Compound UAV Oracle Upgrade Audit
     uuid: 7e44fc63-ceb1-4098-a67b-293c0ea37175
