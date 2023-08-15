@@ -638,8 +638,8 @@ events:
       <table>
         <tr>
           <th width="200px">Severity</th>
-          <td width="400px">Finding Description</th>
-          <th>Proposed Action & Timeline</th>
+          <td width="300px">Finding Description</th>
+          <th width="300px">Proposed Action & Timeline</th>
         </tr>
         <tr>
           <td >Medium</td>
