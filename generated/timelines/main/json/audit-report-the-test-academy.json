@@ -1,6 +1,6 @@
 {
   "id": "audit-report-the-test-academy",
-  "name": "Contracts - Audit Report",
+  "name": "Compound Contracts - Audit Report",
   "excerpt": "Captures a comprehensive record of the security audits conducted by OpenZeppelin",
   "content": "OpenZeppelin, renowned for its expertise in blockchain security, has meticulously conducted a comprehensive series of security audits on the Compound protocol. These audits aimed to enhance the security and reliability of Compound. The audits encompassed an in-depth examination of smart contract functionalities, codebase intricacies, and interactions with external components. Through collaborative efforts with Compound's developers, vulnerabilities were identified, assessed, and mitigated to bolster the protocol's defenses against potential threats. The summary report encapsulates the audit's key findings, security assessments, and recommended improvements, reinforcing OpenZeppelin's dedication to fortifying the integrity of blockchain projects and the broader DeFi landscape.\n<br/>\n\n\n",
   "publishStatus": "Live",
