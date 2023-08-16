@@ -1247,7 +1247,7 @@ events:
       create an asset listing security checklist.
 
 
-      ### Audit Summary
+      ### Findings
 
       <table>
           <tr>
@@ -1303,26 +1303,33 @@ events:
           </tr>
           <tr>
                   <td>Critical</td>
-                  <td>XX</td> <!-- Replace XX with the number of Critical issues -->
+                  <td>0 (0 resolved)</td> 
               </tr>
               <tr>
                   <td>High</td>
-                  <td>XX</td> <!-- Replace XX with the number of High issues -->
+                  <td>0 (0 resolved)</td> 
               </tr>
               <tr>
                   <td>Medium</td>
-                  <td>XX</td> <!-- Replace XX with the number of Medium issues -->
+                  <td>1 (0 resolved)</td> 
               </tr>
               <tr>
                   <td>Low</td>
-                  <td>XX</td> <!-- Replace XX with the number of Low issues -->
+                  <td>4 (0 resolved)</td> 
               </tr>
+              <tr>
+                  <td>Notes & Additional Information</td>
+                  <td>12 (0 resolved)</td> 
+              </tr>
+
       </table>
+
 
 
       ### Details
 
-      <table border="1">
+
+      <table >
           <thead>
               <tr>
                   <th>Severity</th>
@@ -1368,6 +1375,7 @@ events:
                   <td>Fixed in commit 6b975.</td>
               </tr>
       <tr>
+          <td rowspan="2">Notes</td>
           <td>N-01</td>
           <td>Lack of explicit visibility in state variables</td>
           <td>The ethHash constant variable of the UniswapAnchoredView contract is implicitly using the default visibility (internal). To favor readability and explicitness, consider declaring the visibility of this constant.</td>
