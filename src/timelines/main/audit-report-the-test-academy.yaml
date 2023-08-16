@@ -24,98 +24,168 @@ events:
   - title: ' Audit Report: Comet Custom WBTC Price Feed Audit'
     uuid: 4bb0933d-a295-4697-9285-366ac3959918
     date: 2023-05-30T18:14:23.000Z
-    summary: |-
-      ### Overview
-      Date of Audit - May 30, 2023
+    summary: >-
+      ### Summary
 
-      <table>
-        <tr>
-          <th width="200px">Price Feed</th>
-          <td width="400px">Custom WBTC Price Feed for Comet</td>
-        </tr>
-        <tr>
-          <th>Functionality</th>
-          <td>Pricing WBTC more accurately using Chainlink's feeds</td>
-        </tr>
-        <tr>
-          <th>Goal</th>
-          <td>Addressing potential issues during market panic or catastrophe</td>
-        </tr>
-        <tr>
-          <th>Integration</th>
-          <td>WBTC/BTC and BTC/USD price feeds used</td>
-        </tr>
-        <tr>
-          <th>Quality Assurance</th>
-          <td>Both feeds are "Verified Feeds" by Chainlink</td>
-        </tr>
-        <tr>
-          <th>Recommendation</th>
-          <td>Monitor aggregators and node operators for healthy participation in price feeds</td>
-        </tr>
-      </table>
+      OpenZeppelin audited the WBTCPriceFeed.sol contract in the
+      compound-protocol/comet repository. The audit found issues with stale
+      oracle prices, unused named return variables, and constants not using the
+      recommended UPPER_CASE format. Some issues were addressed, while others
+      were acknowledged without immediate resolution.
+
 
       ### Findings
 
-      <table>
-        <tr>
-          <th width="200px">Severity</th>
-          <th width="400px">Recommendations</th>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>L01 Stale Oracle Prices Not Handled: Implement a method to handle stale price data and maintain accurate prices in the market</td>
-        </tr>
-        <tr>
-          <td>Note</td>
-          <td>N01 Unused Named Return Variables: Use or remove unused named return variables for better code readability</td>
-        </tr>
-        <tr>
-          <td>Note</td>
-          <td>N02 Constant Format: Declare constants using UPPER_CASE format for consistency</td>
-        </tr>
-      </table>
+      Count of Issues by Severity:
 
-      ### Notes & Recommendations
 
       <table>
-        <tr>
-          <th width="200px">Notes</th>
-          <td width="400px">L01 Stale Oracle Prices Not Handled: Acknowledged, not resolved. Stale price data risk should be properly handled. Consider implementing changes as part of a larger effort to re-design and improve the oracle system.</td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>N01 Unused Named Return Variables: Resolved in pull request #737 at commit bde60e1.</td>
-        </tr>
-        <tr>
-          <th>Notes</th>
-          <td>N02 Constant Format: Acknowledged, not resolved. Consider updating constants to follow the UPPER_CASE format convention for better consistency and readability.</td>
-        </tr>
+
+      <thead>
+
+      <tr>
+
+      <th width="200px>Severity</th>
+
+      <th width="400px>Count</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>Low</td>
+
+      <td>1</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Note</td>
+
+      <td>2</td>
+
+      </tr>
+
+      </tbody>
+
       </table>
     fullDetails: >-
-      Compoundv3, referred to hereafter as Comet, uses Chainlink as its source
-      of asset prices. Currently, it prices WBTC using Chainlink's BTC price
-      feed. The idea being that the price of BTC should be close to the price of
-      WBTC and generally that is true. But in the case of market panic or
-      catastrophe, there is a chance that the price of WBTC could be drastically
-      different, creating issues or distortions in the protocol that could risk
-      user funds. The newly proposed price feed involves pricing WBTC more
-      accurately in those cases, using Chainlink's WBTC/BTC price feed in
-      conjunction with the BTC/USD price feed to create a WBTC/USD pricing
-      function.
+      ### Summary
+
+      OpenZeppelin audited the WBTCPriceFeed.sol contract in the
+      compound-protocol/comet repository. The audit found issues with stale
+      oracle prices, unused named return variables, and constants not using the
+      recommended UPPER_CASE format. Some issues were addressed, while others
+      were acknowledged without immediate resolution.
 
 
-      Of course, the purported gains in accuracy of the pricing function depend
-      on the resilience of the Chainlink network of aggregators and operators to
-      provide accurate data. Both of the price feeds to be integrated are
-      described by Chainlink as "Verified Feeds", the highest grade of quality
-      that they assign. However, we recommend independently monitoring the
-      health of these feeds to ensure they meet the standards set forth by the
-      Compound community.
+      ### Findings
+
+      Count of Issues by Severity:
 
 
-      Consider monitoring the number of aggregators and node operators that are
-      healthy and participating in these price feeds.
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th width="200px>Severity</th>
+
+      <th width="400px>Count</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>Low</td>
+
+      <td>1</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Note</td>
+
+      <td>2</td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
+
+
+      ### Table of the Issues Found and Updates for Them
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th>Issue ID</th>
+
+      <th>Description</th>
+
+      <th>Update</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>L01</td>
+
+      <td>Stale Oracle Prices Not Handled</td>
+
+      <td>Acknowledged, not resolved. The Compound team stated: <em>Stale price
+      data is definitely a risk... would likely have to be introduced in a
+      larger effort...</em></td>
+
+      </tr>
+
+      <tr>
+
+      <td>N01</td>
+
+      <td>Unused named return variables</td>
+
+      <td>Resolved in <a
+      href="https://github.com/compound-finance/comet/pull/737">pull request
+      #737</a> at commit <a
+      href="https://github.com/compound-finance/comet/blob/bde60e14f65d6fcb2e97e58b3c6859a720505f5d/contracts/pricefeeds/WBTCPriceFeed.sol">bde60e1</a>.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N02</td>
+
+      <td>Constant not using <code>UPPER_CASE</code> format</td>
+
+      <td>Acknowledged, not resolved. The Compound team stated: <em>The Comet
+      repo has chosen to stylistically define... will be used here to remain
+      consistent...</em></td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
     moreLink: https://gist.github.com/kacperrams/7242067e60392e4c96f9a01ba81a7026
   - title: 'Audit Report: Compound Arbitrum Bridge Receiver Audit'
     uuid: 001157cb-39ec-4534-be0b-18e0f7781f9a
