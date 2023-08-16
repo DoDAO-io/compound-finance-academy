@@ -5,6 +5,7 @@ guideType: onboarding
 key: pause-gaurdian-compound
 name: Pause Gaurdian
 publishStatus: Live
+showIncorrectOnCompletion: true
 steps:
   - content: >+
       ## What is Pause Guardian?

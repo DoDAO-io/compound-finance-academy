@@ -21,11 +21,9 @@ The suggested structure not only accommodates input from a diverse range of cont
 
 This process includes stages for multiple refinements and feedback integration. The stages help to prepare proposals for varying audience review, and communication is advised throughout.
 
-
 <div align="center">
-  <img style="max-height:400px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/protocol_contribution_process_compound/1689889093217_compound_contribution_steps.png"/>
+  <img style="max-height:400px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/compound-eth-1/Guide/protocol_contribution_process_compound/1690214149729_contribution_process.png"/>
 </div>
-
 
 ### 1. Idea Review
 This initial stage is for idea sharing and community feedback integration. For grant applications, a refined idea should be ready for submission by stage end.
@@ -69,12 +67,6 @@ This concluding stage proposes the changes on-chain.
 - Sign and execute the migration to submit the on-chain proposal.
 - Announce the pull request with commit ID details and test and simulation results to the community, indicating a pending proposal vote.
 - After a successful vote and proposal execution, test the upgrade's effectiveness and merge the pull request.
-
-
-
-
-
-
 
 
     

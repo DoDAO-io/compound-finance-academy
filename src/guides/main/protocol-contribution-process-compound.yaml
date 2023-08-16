@@ -5,6 +5,7 @@ guideType: onboarding
 key: protocol-contribution-process-compound
 name: Protocol Contribution Process
 publishStatus: Live
+showIncorrectOnCompletion: true
 steps:
   - content: >-
       ### About this Guide

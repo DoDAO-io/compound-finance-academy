@@ -5,6 +5,7 @@ guideType: onboarding
 key: asset-risk-report-compound
 name: Asset Risk Report
 publishStatus: Live
+showIncorrectOnCompletion: true
 steps:
   - content: >-
       This comprehensive guide is designed to equip any community member with

@@ -5,6 +5,7 @@ guideType: onboarding
 key: compound-asset-listing-compound
 name: Compound Asset Listing
 publishStatus: Live
+showIncorrectOnCompletion: true
 steps:
   - content: >-
       In collaboration with Compound, OpenZeppelin has developed a structured

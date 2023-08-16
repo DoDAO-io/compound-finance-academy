@@ -11,3 +11,6 @@
  | 7      | Compound III Liquidator | How to build Liquidator for the new version of Compound |  [Link](markdown/build-v3-liquidator-compound.md) |
  | 8      | Develop on Compound | For developers wishing to develop on Compound III |  [Link](markdown/develop-on-compound-compound.md) |
  | 9      | Protocol Contribution Process | Process for development and evaluation of protocol contributions |  [Link](markdown/protocol-contribution-process-compound.md) |
+ | 10      | Compound Asset Listing | Provides a thorough framework for anyone proposing a new asset |  [Link](markdown/compound-asset-listing-compound.md) |
+ | 11      | Pause Gaurdian | What is Pause Guardian and when and how its used? |  [Link](markdown/pause-gaurdian-compound.md) |
+ | 12      | Asset Risk Report | This guide explains how to create an asset risk report |  [Link](markdown/asset-risk-report-compound.md) |
