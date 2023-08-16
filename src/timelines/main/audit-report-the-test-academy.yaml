@@ -1829,6 +1829,46 @@ events:
           </tbody>
       </table>
     fullDetails: >-
+      ### Overview
+
+      The Compound team's new view for the Open Price Feed has been audited,
+      which incorporates an integration with Uniswap V2. The system enables a
+      trusted reporter to post asset prices on-chain, anchored by Uniswap V2
+      prices, ensuring reporter's limited ability to manipulate. Although there
+      are no critical or high-severity issues, multiple medium and low-severity
+      concerns were identified.
+
+
+      ### Findings
+
+      <table >
+          <thead>
+              <tr>
+                  <th width="200px">Severity</th>
+                  <th width="400px">Count</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Critical</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>High</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>Medium</td>
+                  <td>8</td>
+              </tr>
+              <tr>
+                  <td>Low</td>
+                  <td>8</td>
+              </tr>
+          </tbody>
+      </table>
+
+
       <h3>Issues</h3>
 
       <table>
