@@ -21,6 +21,265 @@ content: >+
 
 publishStatus: Live
 events:
+  - title: 'Audit Report: Compound V2 DSR Integration'
+    uuid: eddc0012-cc43-4817-81ef-8bce22a6e8bb
+    date: 2023-05-03T01:26:48.000Z
+    summary: >+
+      ### Overview
+
+      The OpenZeppelin team investigated security concerns in Maker's proposal
+      for Compound to use the Dai Savings Rate (DSR) again. The initial
+      discussion occurred on Compound's forum, and Maker's proposal draft is in
+      the compound-finance/comet repository (commit c83f84e). While this commit
+      affects only one file, the security assessment covers all impacted files,
+      mainly from Compound's compound-protocol repository. Note that the
+      reviewed version might differ from an official proposal due to potential
+      changes.
+
+
+      ### Findings
+
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th width="200px">Severity Level</th>
+
+      <th width="400px">Count of Issues</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>Critical</td>
+
+      <td>0 (0 resolved)</td>
+
+      </tr>
+
+      <tr>
+
+      <td>High</td>
+
+      <td>0 (0 resolved)</td>
+
+      </tr>
+
+
+      <tr>
+
+      <td>Medium</td>
+
+      <td>1 (0 resolved, 1 partially resolved)</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Low</td>
+
+      <td>1 (0 resolved)</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Note</td>
+
+      <td>1 (0 resolved)</td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
+
+
+
+
+
+
+    fullDetails: >
+      ### Overview
+
+      The OpenZeppelin team investigated security concerns in Maker's proposal
+      for Compound to use the Dai Savings Rate (DSR) again. The initial
+      discussion occurred on Compound's forum, and Maker's proposal draft is in
+      the compound-finance/comet repository (commit c83f84e). While this commit
+      affects only one file, the security assessment covers all impacted files,
+      mainly from Compound's compound-protocol repository. Note that the
+      reviewed version might differ from an official proposal due to potential
+      changes.
+
+
+      ### Findings
+
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th width="200px">Severity Level</th>
+
+      <th width="400px">Count of Issues</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>Critical</td>
+
+      <td>0 (0 resolved)</td>
+
+      </tr>
+
+      <tr>
+
+      <td>High</td>
+
+      <td>0 (0 resolved)</td>
+
+      </tr>
+
+
+      <tr>
+
+      <td>Medium</td>
+
+      <td>1 (0 resolved, 1 partially resolved)</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Low</td>
+
+      <td>1 (0 resolved)</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Note</td>
+
+      <td>1 (0 resolved)</td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
+
+
+
+      ### Contracts Audited
+
+
+      ```
+
+      compound-finance/comet
+
+      └── deployments/mainnet/usdc/migrations/1673462854_v2_dai_dsr_restore.ts
+
+      compound-finance/compound-protocol
+
+      ├── contracts
+
+      │ ├── CDaiDelegate.sol
+
+      │ ├── DAIInterestRateModelV3.sol
+
+      │ └── CErc20Delegator.sol
+
+      └── spec/certora/contracts/mcd
+
+      ├── Dai.sol
+
+      ├── join.sol
+
+      └── Pot.sol
+
+      ```
+
+
+      ### Table of the issues found and updates for them
+
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th width="200px">Issue Number</th>
+
+      <th width="300px">Description</th>
+
+      <th width="300px">Status / Updates</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>M-01</td>
+
+      <td>Old block rate is hardcoded in calculations affecting the accuracy of
+      system calculations.</td>
+
+      <td>Partially resolved in PR #231; parameters updated but requires
+      community consensus before the governance vote.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L-01</td>
+
+      <td>Lack of validation when setting the interest rate, potentially leading
+      to silent transaction failures.</td>
+
+      <td>Acknowledged; MakerDAO team will validate the script as part of the
+      proposal. Advised for Compound community to verify final addresses.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N-01</td>
+
+      <td>Typographical error in the deployed CDaiDelegate contract.</td>
+
+      <td>Acknowledged but not resolved; MakerDAO team believes the effort to
+      fix does not match the benefit of changing a comment.</td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
+
+      <p>Note: The provided text was summarized and organized into the requested
+      format. It's important to ensure that the summary and tables accurately
+      represent the original content before using them for decision-making or
+      dissemination.</p>
+    moreLink: https://drive.google.com/file/d/1bfKZ4cvIjUo70B_4ULe08eFMxx7PA-fk/view
   - title: ' Audit Report: Comet Custom WBTC Price Feed Audit'
     uuid: 4bb0933d-a295-4697-9285-366ac3959918
     date: 2023-05-30T18:14:23.000Z
