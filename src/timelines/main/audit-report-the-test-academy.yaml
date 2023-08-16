@@ -658,28 +658,64 @@ events:
               <td>Not fixed. Team acknowledges issue but sees no worth in complicating Configurator or altering CometFactory.clone().</td>
           </tr>
       </table>
-    fullDetails: |
+    fullDetails: >
+      ### Overview
+
+      OpenZepplin audited a new upcoming version of the Compound lending
+      protocol developed by Compound Labs: “Compound III”, codenamed Comet in
+      this report. This new version will only contain one base asset and can
+      have multiple instances deployed on Ethereum Mainnet and other
+      EVM-compatible networks.
+
+
+      OpenZepplin audited the
+      [compound-finance/comet](https://github.com/compound-finance/comet)
+      repository at the
+      [0f1221967149115f50a09681eea9580879ee7720](https://github.com/compound-finance/comet/tree/0f1221967149115f50a09681eea9580879ee7720)
+      commit.
+
+
       ### Contracts Audited
 
+
       ```
+
       - Comet.sol
+
       - Bulker.sol
+
       - CometConfiguration.sol
+
       - CometCore.sol
+
       - CometExt.sol
+
       - CometExtInterface.sol
+
       - CometFactory.sol
+
       - CometInterface.sol
+
       - CometMainInterface.sol
+
       - CometMath.sol
+
       - CometProxyAdmin.sol
+
       - CometRewards.sol
+
       - CometStorage.sol
+
       - Configurator.sol
+
       - ConfiguratorStorage.sol
+
       - ERC20.sol
+
       - IWETH9.sol
+
       - TransparentUpgradeableConfiguratorProxy.sol
+
       - vendor/
           - access/
               - Ownable.sol
@@ -702,8 +738,11 @@ events:
               - Address.sol
       ```
 
+
       ### Findings
+
       Below is a tabular representation of the security audit findings:
+
       <table>
           <tr>
               <td width="200px">Severity Level</td>
@@ -742,6 +781,86 @@ events:
           </tr>
       </table>
     moreLink: https://blog.openzeppelin.com/compound-iii-audit
+  - title: Audit of Compound Changes  - PR193 & PR177
+    uuid: da0e8047-34d1-4013-a107-2a6b1fe4684a
+    date: 2022-05-11T23:58:37.000Z
+    summary: >-
+      ### Summary
+
+      Audit for Compound Changes by OpenZeppelin highlighted concerns in
+      [PR193](https://github.com/compound-finance/compound-protocol/pull/193)
+      regarding unchecked transfers, naming conventions, and outdated Solidity
+      versions. In
+      [PR177](https://github.com/compound-finance/compound-protocol/pull/177), a
+      potential risk of ethers being irretrievably locked in the Governor was
+      identified. Both PRs contain several areas needing remediation or
+      attention.
+
+
+      ### Findings
+
+
+      Here's a concise table of the audit findings:
+
+      <table>
+          <tr>
+              <td width="200px">PR Link</td>
+              <td width="300px">Code ID</td>
+              <td width="300px">Finding Summary</td>
+          </tr>
+          <tr>
+              <td>[PR193](https://github.com/compound-finance/compound-protocol/pull/193)</td>
+              <td>M01</td>
+              <td>`sweep` function doesn&#39;t check for sweeping COMP token.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>L01</td>
+              <td>Unchecked silent fail inside `EIP20NonStandardInterface.transfer`.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>L02</td>
+              <td>Unused imports: `ErrorReporter` &amp; `ComptrollerInterface`.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>N01</td>
+              <td>Missing error string in require statement in line 20.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>N02</td>
+              <td>Absence of named import syntax for contracts.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>N03</td>
+              <td>Outdated, unpinned Solidity version.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>N04</td>
+              <td>Missing &quot;_&quot; prefix for admin functions as per Compound convention.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>N05</td>
+              <td>Missing docstrings for `sweep` and `_become`.</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>N06</td>
+              <td>Recommended visibility for `sweep` and `_become` to be external.</td>
+          </tr>
+          <tr>
+              <td>[PR177](https://github.com/compound-finance/compound-protocol/pull/177)</td>
+              <td>L01</td>
+              <td>Risk of ethers being locked when sent to Governor using selfdestruct.</td>
+          </tr>
+      </table>
+    fullDetails: ''
+    moreLink: https://gist.github.com/cylon56/752f9061713a8d737e526fdce4b85f1f
   - title: Compound UAV Oracle Upgrade Audit
     uuid: 7e44fc63-ceb1-4098-a67b-293c0ea37175
     date: 2022-03-31T20:33:03.000Z
