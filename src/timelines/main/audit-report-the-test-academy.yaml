@@ -1805,6 +1805,133 @@ events:
       </table>
     moreLink: >-
       https://blog.openzeppelin.com/compound-open-price-feed-uniswap-integration-audit
+  - title: 'Audit Report: Tether Integration'
+    uuid: a4897aaa-a10a-459e-8596-0b61442c10ed
+    date: 2020-04-26T12:05:53.000Z
+    summary: >-
+      ### Overview
+
+      The Compound team's integration of Tether’s USDT token into the
+      PriceOracleProxy contract, along with other codebase modifications,
+      underwent a thorough security audit. No critical or high severity issues
+      were identified; however, recommendations for medium and low severity
+      issues were made. Monitoring of USDT and USDC real market prices was
+      emphasized, and the overall code quality was commended as clean and
+      well-organized.
+
+
+      ### Findings
+
+      Table with the count of the issues by severity:
+
+      <table>
+          <thead>
+              <tr>
+                  <th width="200px">Severity</th>
+                  <th width="400px">Count</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Critical</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>High</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>Medium</td>
+                  <td>1</td>
+              </tr>
+              <tr>
+                  <td>Low</td>
+                  <td>3</td>
+              </tr>
+          </tbody>
+      </table>
+    fullDetails: >
+      ### Overview
+
+      The Compound team's integration of Tether’s USDT token into the
+      PriceOracleProxy contract, along with other codebase modifications,
+      underwent a thorough security audit. No critical or high severity issues
+      were identified; however, recommendations for medium and low severity
+      issues were made. Monitoring of USDT and USDC real market prices was
+      emphasized, and the overall code quality was commended as clean and
+      well-organized.
+
+
+      ### Findings
+
+      Table with the count of the issues by severity:
+
+      <table>
+          <thead>
+              <tr>
+                  <th width="200px">Severity</th>
+                  <th width="400px">Count</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Critical</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>High</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>Medium</td>
+                  <td>1</td>
+              </tr>
+              <tr>
+                  <td>Low</td>
+                  <td>3</td>
+              </tr>
+          </tbody>
+      </table>
+
+
+      ### Table of the issues found and updates for them:
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Issue ID</th>
+                  <th>Severity</th>
+                  <th>Description</th>
+                  <th>Recommendation</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>M01</td>
+                  <td>Medium</td>
+                  <td>Undocumented assembly blocks in the CErc20Delegator contract.</td>
+                  <td>Consider extensive documentation for the assembly blocks to improve clarity and trust.</td>
+              </tr>
+              <tr>
+                  <td>L01</td>
+                  <td>Low</td>
+                  <td>Price manipulation possible in SimplePriceOracle due to lack of access control.</td>
+                  <td>Highlight its deployment only on testnets and ensure this through comments or code checks.</td>
+              </tr>
+              <tr>
+                  <td>L02</td>
+                  <td>Low</td>
+                  <td>Lack of indexed parameters in PricePosted event.</td>
+                  <td>Consider indexing the asset parameter for efficient event searches.</td>
+              </tr>
+              <tr>
+                  <td>L03</td>
+                  <td>Low</td>
+                  <td>The SAI Price is unchangeable after SCD shutdown, posing potential risks.</td>
+                  <td>Monitor SAI's price and possibly switch to a real-time oracle or restrict further borrowing if divergences occur.</td>
+              </tr>
+          </tbody>
+      </table>
   - title: 'Audit Report: Multicollateral DAI and DSR Integration'
     uuid: ff8cdf56-4534-437a-9778-ba88933c1682
     date: 2020-02-10T02:54:46.000Z
