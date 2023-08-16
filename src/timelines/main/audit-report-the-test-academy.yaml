@@ -256,10 +256,19 @@ events:
         </tr>
       </table>
     fullDetails: >-
+      ### Overview
+
+      Compound Finance's comet repository, focused on bridging Ethereum Mainnet
+      and Polygon for its v3 protocol, was audited. While the infrastructure
+      presents reduced attack surfaces due to interlinked contracts, concerns
+      were raised on potential vulnerabilities like rendering the
+      BaseBridgeReceiver inoperable, inability to cancel proposals, and
+      unidirectional message paths. Several issues were acknowledged but left
+      unresolved, and some were addressed in pull requests.
+
+
       ### Contracts Audited
-
-      ```
-
+        ```
       - contracts/bridges/BaseBridgeReceiver.sol
 
       - contracts/bridges/polygon/PolygonBridgeReceiver.sol
@@ -275,46 +284,46 @@ events:
 
       <h3>Scope</h3>
 
-      <p>Audited the compound-finance/comet repository at the
-      2eb33b5e8454dba148373b6cb64ede4f7436fad7 commit.</p>
+      Audited the compound-finance/comet repository at the
+      2eb33b5e8454dba148373b6cb64ede4f7436fad7 commit.
 
-      <p>System Overview: Audit focused on communication infrastructure between
-      Compound Governor contract on Ethereum Mainnet and Polygon Network.</p>
+      System Overview: Audit focused on communication infrastructure between
+      Compound Governor contract on Ethereum Mainnet and Polygon Network.
 
-      <p>Security Considerations & Trust Assumptions: Interlinked contracts,
+      Security Considerations & Trust Assumptions: Interlinked contracts,
       reliance on Polygon bridge security, trust in validators, potential delay
-      issues.</p>
+      issues.
 
 
-      <h2>Medium Severity Findings</h2>
+      <h3>Medium Severity Findings</h3>
 
-      <p>1. BaseBridgeReceiver localTimelock issue.</p>
+      1. BaseBridgeReceiver localTimelock issue.
 
-      <p>2. Proposal cancellation limitation.</p>
+      2. Proposal cancellation limitation.
 
 
       <h2>Low Severity Findings</h2>
 
-      <p>1. Reverted proposals not seen in Ethereum.</p>
+      1. Reverted proposals not seen in Ethereum.
 
-      <p>2. Inconsistent transaction expiry.</p>
+      2. Inconsistent transaction expiry.
 
-      <p>3. Inconsistent usage of uint across loops.</p>
+      3. Inconsistent usage of uint across loops.
 
-      <p>4. Missing indexed parameter in an event.</p>
+      4. Missing indexed parameter in an event.
 
-      <p>5. Lack of distinction between queued and ready-to-execute state.</p>
+      5. Lack of distinction between queued and ready-to-execute state.
 
-      <p>6. Identical transactions executed inside the same proposal.</p>
+      6. Identical transactions executed inside the same proposal.
 
-      <p>7. Unused return value from executeTransaction.</p>
+      7. Unused return value from executeTransaction.
 
 
-      <h2>Notes & Additional Information</h2>
+      <h3>Notes & Additional Information</h3>
 
-      <p>Inconsistent nomenclature, missing docstrings, non-explicit imports,
-      same configuration values as Mainnet deployment, inconsistency between
-      backlog and implementation.</p>
+      Inconsistent nomenclature, missing docstrings, non-explicit imports, same
+      configuration values as Mainnet deployment, inconsistency between backlog
+      and implementation.
     moreLink: https://blog.openzeppelin.com/compound-polygon-bridge-receiver-audit
   - title: Audit of Compound Changes Performed by OpenZeppelin
     uuid: 9530aa81-dd5b-4f2a-b704-065cc9b9fe0f
