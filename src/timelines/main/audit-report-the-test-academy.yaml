@@ -1434,6 +1434,377 @@ events:
       contracts/access/manager/IAuthority.sol
       ```
     moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918
+  - title: 'Audit Report:  Open Price Feed – Uniswap Integration'
+    uuid: ac07bb59-c47d-4522-8fbe-6ba6bcfb3dd4
+    date: 2020-07-16T02:05:35.000Z
+    summary: >-
+      ### Overview
+
+      The Compound team's new view for the Open Price Feed has been audited,
+      which incorporates an integration with Uniswap V2. The system enables a
+      trusted reporter to post asset prices on-chain, anchored by Uniswap V2
+      prices, ensuring reporter's limited ability to manipulate. Although there
+      are no critical or high-severity issues, multiple medium and low-severity
+      concerns were identified.
+
+
+      ### Findings
+
+      <table >
+          <thead>
+              <tr>
+                  <th width="200px">Severity</th>
+                  <th width="400px">Count</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Critical</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>High</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>Medium</td>
+                  <td>8</td>
+              </tr>
+              <tr>
+                  <td>Low</td>
+                  <td>8</td>
+              </tr>
+          </tbody>
+      </table>
+    fullDetails: >-
+      <h3>Issues</h3>
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th>ID</th>
+
+      <th>Description</th>
+
+      <th>Severity</th>
+
+      <th>Recommendation</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>L01</td>
+
+      <td>No overflow checks in price calculation</td>
+
+      <td>Medium</td>
+
+      <td>Implement SafeMath or similar logic.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L02</td>
+
+      <td>Events not capturing enough information</td>
+
+      <td>Medium</td>
+
+      <td>Augment event emissions.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L03</td>
+
+      <td>Functions can be external</td>
+
+      <td>Medium</td>
+
+      <td>Change visibility from public to external.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L04</td>
+
+      <td>No use of latest Solidity version</td>
+
+      <td>Medium</td>
+
+      <td>Upgrade to the latest version.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L05</td>
+
+      <td>Potential division by zero</td>
+
+      <td>Medium</td>
+
+      <td>Add guards against zero denominators.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L06</td>
+
+      <td>Absence of function revert messages</td>
+
+      <td>Low</td>
+
+      <td>Add revert messages.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L07</td>
+
+      <td>Misleading naming</td>
+
+      <td>Low</td>
+
+      <td>Refactor to more intuitive names.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L08</td>
+
+      <td>Usage of selfdestruct</td>
+
+      <td>Low</td>
+
+      <td>Consider its implications.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L09</td>
+
+      <td>Lack of indexed parameters in events</td>
+
+      <td>Low</td>
+
+      <td>Index parameters of the concerned events.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L10</td>
+
+      <td>Lack of event emissions</td>
+
+      <td>Low</td>
+
+      <td>Emit the necessary event after the required operation.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L11</td>
+
+      <td>Missing docstrings</td>
+
+      <td>Low</td>
+
+      <td>Add relevant docstrings in NatSpec format.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L12</td>
+
+      <td>Erroneous comments</td>
+
+      <td>Low</td>
+
+      <td>Update the misleading comments.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>L13</td>
+
+      <td>Constructor’s parameter order mismatch</td>
+
+      <td>Low</td>
+
+      <td>Align parameter order with the specification.</td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
+
+      <h3>Notes &amp; Additional Information</h3>
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th>ID</th>
+
+      <th>Description</th>
+
+      <th>Recommendation</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>N01</td>
+
+      <td>Prone-to-error implementation in UniswapConfig contract</td>
+
+      <td>Favor better data structures over many individual state
+      variables.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N02</td>
+
+      <td>Implicit upcasting of uint112 variable</td>
+
+      <td>Explicitly cast variables for clarity.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N03</td>
+
+      <td>Code repetition</td>
+
+      <td>Factor out repetitive functions into libraries.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N04</td>
+
+      <td>Copied code from Uniswap V2 Periphery repository</td>
+
+      <td>Import directly and attribute authors.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N05</td>
+
+      <td>Missing units</td>
+
+      <td>Clarify units in docstrings or inline comments.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N06</td>
+
+      <td>Redundant boolean check</td>
+
+      <td>Remove redundant boolean comparisons.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N07</td>
+
+      <td>Constants not declared explicitly</td>
+
+      <td>Declare magic values as named constants.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N08</td>
+
+      <td>Naming</td>
+
+      <td>Adopt more descriptive and consistent naming.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N09</td>
+
+      <td>Inconsistent use of uint and uint256 types</td>
+
+      <td>Favor consistent usage of type declarations.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N10</td>
+
+      <td>Typographical errors</td>
+
+      <td>Correct the typographical errors.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N11</td>
+
+      <td>Lack of explicit visibility in state variables</td>
+
+      <td>Declare state variables' visibility explicitly.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N12</td>
+
+      <td>Unnecessary public visibility in functions</td>
+
+      <td>Change visibility from public to external where applicable.</td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
+    moreLink: >-
+      https://blog.openzeppelin.com/compound-open-price-feed-uniswap-integration-audit
   - title: 'Audit Report: Multicollateral DAI and DSR Integration'
     uuid: ff8cdf56-4534-437a-9778-ba88933c1682
     date: 2020-02-10T02:54:46.000Z
