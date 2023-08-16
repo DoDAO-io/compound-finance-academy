@@ -1325,8 +1325,8 @@ events:
       </table>
 
 
-
       ### Details
+
 
       <table>
           <thead>
@@ -1440,7 +1440,7 @@ events:
       </table>
 
     moreLink: https://drive.google.com/file/d/1usfoYjWtlvrf8Ca6akFDvITwHC-wk73Y/view
-  - title: Deployed Contracts Audit
+  - title: 'Audit Report: Deployed Contracts Audit'
     uuid: eb2b0562-d970-4ff2-855f-c3644d0d80a8
     date: 2022-01-23T20:19:51.000Z
     summary: |-
