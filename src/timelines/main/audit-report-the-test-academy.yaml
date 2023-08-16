@@ -1276,7 +1276,7 @@ events:
               </tr>
 
       </table>
-    fullDetails: >
+    fullDetails: >+
       ### Overview
 
       As part of OpenZeppelin's Security Partnership with Compound, OZ have
@@ -1328,8 +1328,7 @@ events:
 
       ### Details
 
-
-      <table >
+      <table>
           <thead>
               <tr>
                   <th>Severity</th>
@@ -1344,11 +1343,11 @@ events:
                   <td rowspan="2">Medium</td>
                   <td>M-01</td>
                   <td>Oracle implementation is not scalable</td>
-                  <td>Acknowledged. In the words of Chainlink's team "We acknowledge that this is an issue, and the Compound community is also aware. We are continually working with Compound on future oracle architectures that aren't limited by code size".</td>
+                  <td>Acknowledged. Chainlink: "We are working with Compound on future oracle architectures".</td>
               </tr>
               <tr>
                   <td>M-02</td>
-                  <td>Innecessary and dangerous use of abi.encodePacked functionality</td>
+                  <td>Dangerous use of abi.encodePacked</td>
                   <td>Fixed in commits 2df57c7 and 8126681.</td>
               </tr>
 
@@ -1357,16 +1356,16 @@ events:
                   <td rowspan="4">Low</td>
                   <td>L-01</td>
                   <td>Gas inefficiencies</td>
-                  <td>Partially fixed in PR 9 and the latest commit related to this issue was 0ce0e94. The third item is not going to be fix as the community feels comfortable with this design decision because they can verify that the code hasn't changed between deployments.</td>
+                  <td>Partially fixed in PR 9.</td>
               </tr>
               <tr>
                   <td>L-02</td>
                   <td>Ownership cannot be abandoned</td>
-                  <td>Not fixed. In the words of Chainlink team "Won't change as Compound community is against this and consensus was reached on this mechanism a while ago with the community. We don't want to open up this discussion again".</td>
+                  <td>Not fixed. Chainlink: "Won't change as Compound community is against this".</td>
               </tr>
               <tr>
                   <td>L-03</td>
-                  <td>Failover might be incorrectly activated</td>
+                  <td>Failover issues</td>
                   <td>Fixed in commit a5cf8.</td>
               </tr>
               <tr>
@@ -1374,104 +1373,72 @@ events:
                   <td>Unchecked downcast</td>
                   <td>Fixed in commit 6b975.</td>
               </tr>
-      <tr>
-          <td rowspan="2">Notes</td>
-          <td>N-01</td>
-          <td>Lack of explicit visibility in state variables</td>
-          <td>The ethHash constant variable of the UniswapAnchoredView contract is implicitly using the default visibility (internal). To favor readability and explicitness, consider declaring the visibility of this constant.</td>
-          <td>Fixed in commit 07f6da1.</td>
-      </tr>
 
-
-      <tr>
-          <td>N-02</td>
-          <td>Constants not declared explicitly</td>
-          <td>There are several occurrences of literal values with unexplained meaning in the codebase...</td>
-          <td>Developers should define a constant variable for every magic value used...</td>
-      </tr>
-
-
-      <tr>
-          <td>N-03</td>
-          <td>Missing, inconsistent or incorrect docstrings</td>
-          <td>There are some places in the codebase where docstrings are either missing...</td>
-          <td>Partially fixed in 0fc7f.</td>
-      </tr>
-
-
-      <tr>
-          <td>N-04</td>
-          <td>Missing error strings</td>
-          <td>Lines 45 and 54 of the UniswapLib.FullMath library revert with an empty error string...</td>
-          <td>Not fixed. Reason is that Chainlink's team doesn't want to change externally imported code.</td>
-      </tr>
-
-
-      <tr>
-          <td>N-05</td>
-          <td>pendingOwner has no getter</td>
-          <td>The pendingOwner variable of the Ownable contract is missing any helper function to retrieve its value...</td>
-          <td>Not fixed. In the words of Chainlink team " pendingOwner is from an imported contract so we would rather not change it".</td>
-      </tr>
-
-
-      <tr>
-          <td>N-06</td>
-          <td>Naming issues hinder code understanding and readability</td>
-          <td>To favor explicitness and readability, several parts of the contracts may benefit from better naming...</td>
-          <td>Partially fixed in commit 65051...</td>
-      </tr>
-
-
-      <tr>
-          <td>N-07</td>
-          <td>Improper imports style</td>
-          <td>Non-explicit imports are used throughout all protocol contracts...</td>
-          <td>Partially fixed in commit 8df32...</td>
-      </tr>
-
-
-      <tr>
-          <td>N-08</td>
-          <td>Outdated Solidity versions</td>
-          <td>The version of Solidity used throughout the codebase is outdated and is not pinned...</td>
-          <td>Not fixed. Chainlink's team prefers to stick with the current version...</td>
-      </tr>
-
-
-      <tr>
-          <td>N-09</td>
-          <td>Typos</td>
-          <td>Across the codebase there are different typos...</td>
-          <td>Partially fixed in commit 0cedb.</td>
-      </tr>
-
-
-      <tr>
-          <td>N-10</td>
-          <td>Use of implicit uint type</td>
-          <td>Across the codebase, there's an inconsistent use of uint and uint256 data types...</td>
-          <td>Fixed in commit 75f4a.</td>
-      </tr>
-
-
-      <tr>
-          <td>N-11</td>
-          <td>Unclear mulDiv function</td>
-          <td>The mulDiv function of the UniswapLib seems to be inspired from the official Uniswap's FullMath library...</td>
-          <td>Not fixed. In the words of Chainlink team " mulDiv is from an imported contract. We would also rather not change it".</td>
-      </tr>
-
-
-      <tr>
-          <td>N-12</td>
-          <td>Unused variables</td>
-          <td>The MIN_SQRT_RATIO and MAX_SQRT_RATIO variables of the UniswapLib.TickMath library are not used anywhere in the codebase...</td>
-          <td>Not fixed. Chainlink's team is not changing externally imported code.</td>
-      </tr>
-
+              <!-- Notes -->
+              <tr>
+                  <td rowspan="12">Notes</td>
+                  <td>N-01</td>
+                  <td>Visibility issues in state variables</td>
+                  <td>Fixed in commit 07f6da1.</td>
+              </tr>
+              <tr>
+                  <td>N-02</td>
+                  <td>Constants not explicit</td>
+                  <td>Should define constants for magic values.</td>
+              </tr>
+              <tr>
+                  <td>N-03</td>
+                  <td>Docstrings issues</td>
+                  <td>Partially fixed in 0fc7f.</td>
+              </tr>
+              <tr>
+                  <td>N-04</td>
+                  <td>Missing error strings</td>
+                  <td>Not fixed. Chainlink doesn't want to change external code.</td>
+              </tr>
+              <tr>
+                  <td>N-05</td>
+                  <td>pendingOwner has no getter</td>
+                  <td>Not fixed. Chainlink: "pendingOwner is from an imported contract".</td>
+              </tr>
+              <tr>
+                  <td>N-06</td>
+                  <td>Naming issues</td>
+                  <td>Partially fixed in commit 65051.</td>
+              </tr>
+              <tr>
+                  <td>N-07</td>
+                  <td>Imports style issues</td>
+                  <td>Partially fixed in commit 8df32.</td>
+              </tr>
+              <tr>
+                  <td>N-08</td>
+                  <td>Outdated Solidity versions</td>
+                  <td>Not fixed. Chainlink prefers current version.</td>
+              </tr>
+              <tr>
+                  <td>N-09</td>
+                  <td>Typographical errors</td>
+                  <td>Partially fixed in commit 0cedb.</td>
+              </tr>
+              <tr>
+                  <td>N-10</td>
+                  <td>Implicit uint use</td>
+                  <td>Fixed in commit 75f4a.</td>
+              </tr>
+              <tr>
+                  <td>N-11</td>
+                  <td>Unclear mulDiv function</td>
+                  <td>Not fixed. Chainlink: "mulDiv is from an imported contract".</td>
+              </tr>
+              <tr>
+                  <td>N-12</td>
+                  <td>Unused variables</td>
+                  <td>Not fixed. Chainlink doesn't change external code.</td>
+              </tr>
           </tbody>
       </table>
+
     moreLink: https://drive.google.com/file/d/1usfoYjWtlvrf8Ca6akFDvITwHC-wk73Y/view
   - title: Deployed Contracts Audit
     uuid: eb2b0562-d970-4ff2-855f-c3644d0d80a8
