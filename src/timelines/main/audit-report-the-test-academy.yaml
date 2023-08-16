@@ -25,7 +25,7 @@ events:
     uuid: 4bb0933d-a295-4697-9285-366ac3959918
     date: 2023-05-30T18:14:23.000Z
     summary: >-
-      ### Summary
+      ### Overview
 
       OpenZeppelin audited the WBTCPriceFeed.sol contract in the
       compound-protocol/comet repository. The audit found issues with stale
