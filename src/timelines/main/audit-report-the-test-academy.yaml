@@ -316,6 +316,31 @@ events:
 
       <tr>
 
+      <td>Critical</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>High</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Medium</td>
+
+      <td>0</td>
+
+      </tr>
+
+
+      <tr>
+
       <td>Low</td>
 
       <td>1</td>
@@ -1006,7 +1031,7 @@ events:
   - title: Audit of Compound Changes  - PR193 & PR177
     uuid: da0e8047-34d1-4013-a107-2a6b1fe4684a
     date: 2022-05-11T23:58:37.000Z
-    summary: >-
+    summary: >
       ### Summary
 
       Audit for Compound Changes by OpenZeppelin highlighted concerns in
@@ -1020,6 +1045,125 @@ events:
 
 
       ### Findings
+
+      Count of Issues by Severity:
+
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th width="200px">Severity</th>
+
+      <th width="400px">Count</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>Critical</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>High</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+            <td>Medium (M)</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Low (L)</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Negligible (N)</td>
+            <td>6</td>
+          </tr>
+      </tbody>
+
+      </table>
+    fullDetails: >-
+      ### Summary
+
+      Audit for Compound Changes by OpenZeppelin highlighted concerns in
+      [PR193](https://github.com/compound-finance/compound-protocol/pull/193)
+      regarding unchecked transfers, naming conventions, and outdated Solidity
+      versions. In
+      [PR177](https://github.com/compound-finance/compound-protocol/pull/177), a
+      potential risk of ethers being irretrievably locked in the Governor was
+      identified. Both PRs contain several areas needing remediation or
+      attention.
+
+
+      ### Findings
+
+      Count of Issues by Severity:
+
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th width="200px">Severity</th>
+
+      <th width="400px">Count</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>Critical</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>High</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+            <td>Medium (M)</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Low (L)</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Negligible (N)</td>
+            <td>6</td>
+          </tr>
+      </tbody>
+
+      </table>
+
+
+      ### Details
 
 
       Here's a concise table of the audit findings:
@@ -1081,7 +1225,6 @@ events:
               <td>Risk of ethers being locked when sent to Governor using selfdestruct.</td>
           </tr>
       </table>
-    fullDetails: ''
     moreLink: https://gist.github.com/cylon56/752f9061713a8d737e526fdce4b85f1f
   - title: Compound UAV Oracle Upgrade Audit
     uuid: 7e44fc63-ceb1-4098-a67b-293c0ea37175
@@ -1341,99 +1484,6 @@ events:
 
       Providing feedback and suggestions for initiatives.
     moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918/2
-  - title: OpenZeppelin Compound Protocol Security Initiatives Audit Log
-    uuid: 5a63859f-b6be-4901-b283-8924fe8d4750
-    date: 2021-12-21T15:00:15.000Z
-    summary: >
-      Initiative Overview
-
-      OpenZeppelin has been selected to provide Compound DAO security services,
-      including continuous audit, security advisory, and monitoring. Michael
-      Lewellen is acting as OpenZeppelin’s Protocol Security Advisor (PSA) for
-      the Compound community. The primary objectives are to audit existing
-      contracts, establish security processes, and develop an open monitoring
-      system.
-    fullDetails: |-
-      <h3>Audit Summary</h3>
-      <table>
-          <tr>
-              <th width="200px">Issue Type</td>
-              <td width="400px">Issues Found</td>
-          </tr>
-          <tr>
-              <td>Total Issues</td>
-              <td >26 (18 resolved, 1 partially resolved)</td>
-          </tr>
-          <tr>
-              <td>Critical Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>High Severity</td>
-              <td>0</td>
-          </tr>
-          <tr>
-              <td>Medium Severity</td>
-              <td>3 (2 resolved)</td>
-          </tr>
-          <tr>
-              <td>Low Severity</td>
-              <td>3 (3 resolved)</td>
-          </tr>
-          <tr>
-              <td>Notes &amp; Additional Info</td>
-              <td>20 (13 resolved, 1 partially resolved)</td>
-          </tr>
-      </table>
-
-
-      ### Files Audited
-      ```
-      contracts/utils/StorageSlot.sol
-
-      contracts/utils/governance/compatibility/GovernorCompatibilityBravo.sol
-
-      contracts/utils/governance/compatibility/IGovernorCompatibilityBravo.sol
-
-      contracts/utils/governance/extensions/GovernorPreventLateQuorum.sol!
-
-      contracts/utils/governance/extensions/GovernorTimelockCompound.sol
-
-      contracts/utils/governance/extensions/GovernorVotesComp.sol
-
-      contracts/utils/governance/extensions/GovernorVotesQuorumFraction.sol
-
-      contracts/utils/governance/extensions/GovernorVotes.sol
-
-      contracts/utils/governance/Governor.sol
-
-      contracts/utils/governance/IGovernor.sol
-
-      contracts/utils/governance/TimelockController.sol
-
-      contracts/utils/governance/utils/IVotes.sol
-
-      contracts/utils/governance/utils/Votes.sol
-
-      contracts/token/ERC20/extensions/ERC20Votes.sol
-
-      contracts/token/ERC20/extensions/ERC4626.sol
-
-      contracts/token/ERC721/extensions/ERC721Votes.sol
-
-      contracts/access/AccessControlDefaultAdminRules.sol
-
-      contracts/access/IAccessControlDefaultAdminRules.sol
-
-      contracts/access/manager/AccessManaged.sol
-
-      contracts/access/manager/AccessManagerAdapter.sol
-
-      contracts/access/manager/AccessManager.sol
-
-      contracts/access/manager/IAuthority.sol
-      ```
-    moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918
   - title: 'Audit Report: Governor Bravo'
     uuid: 0891236a-28dc-4b0c-8b4c-faf835b6d002
     date: 2021-02-12T13:15:08.000Z
