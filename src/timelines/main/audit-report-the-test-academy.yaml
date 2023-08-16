@@ -465,6 +465,132 @@ events:
       October
     moreLink: >-
       https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/audits/2017-03.md
+  - title: Compound Changes - cETH IRM
+    uuid: 13e0442d-d72c-4537-ad23-dc1cdc852e7d
+    date: 2022-09-03T00:10:18.000Z
+    summary: >
+      ### Overview:
+
+      Compound's proposed ETH Interest Rate Model changes, ahead of the Merge,
+      involve the adaptation of the `LegacyJumpRateModelV2` to the legacy cToken
+      cETH contract. The adjustments include a new block time assumption and
+      transitioning from a single rate to a jump model. The new interest model,
+      upon deployment, will have its ownership shifted to the Timelock, with
+      cETH getting updated via `_setInterestRateModel`.
+
+
+      ### Audit Findings
+
+      Certainly! Here's a table showing the number of Low and Medium findings
+      based on the audit:
+
+
+      ### Findings Severity Count Table:
+
+
+      <table>
+          <tr>
+              <td width="200px">Severity</td>
+              <td width="400px">Count</td>
+          </tr>
+          <tr>
+              <td>Low</td>
+              <td>9</td>
+          </tr>
+          <tr>
+              <td>Medium</td>
+              <td>3</td>
+          </tr>
+      </table>
+
+
+      Total findings: 12.
+    fullDetails: >
+      ### Overview:
+
+      Compound's proposed ETH Interest Rate Model changes, ahead of the Merge,
+      involve the adaptation of the `LegacyJumpRateModelV2` to the legacy cToken
+      cETH contract. The adjustments include a new block time assumption and
+      transitioning from a single rate to a jump model. The new interest model,
+      upon deployment, will have its ownership shifted to the Timelock, with
+      cETH getting updated via `_setInterestRateModel`.
+
+
+      ### Findings Table:
+
+      <table>
+          <tr>
+              <td width="200px">No.</td>
+              <td width="300px">Issue</td>
+              <td width="300px">Severity</td>
+          </tr>
+          <tr>
+              <td>1</td>
+              <td>Ownership of the contract can&#39;t be transferred.</td>
+              <td>Medium</td>
+          </tr>
+          <tr>
+              <td>2</td>
+              <td>Old solidity version used.</td>
+              <td>Low</td>
+          </tr>
+          <tr>
+              <td>3</td>
+              <td>Missing SPDX-License-Identifier.</td>
+              <td>Low</td>
+          </tr>
+          <tr>
+              <td>4</td>
+              <td>Solidity version is not pinned.</td>
+              <td>Low</td>
+          </tr>
+          <tr>
+              <td>5</td>
+              <td>Incorrect naming convention for `blocksPerYear`.</td>
+              <td>Low</td>
+          </tr>
+          <tr>
+              <td>6</td>
+              <td>Imports are not explicit.</td>
+              <td>Low</td>
+          </tr>
+          <tr>
+              <td>7</td>
+              <td>Hardcoded `1e18` instead of predefined variable.</td>
+              <td>Low</td>
+          </tr>
+          <tr>
+              <td>8</td>
+              <td>`reserves` parameter discrepancy in docstrings.</td>
+              <td>Low</td>
+          </tr>
+          <tr>
+              <td>9</td>
+              <td>Inconsistent code style for input parameters.</td>
+              <td>Low</td>
+          </tr>
+          <tr>
+              <td>10</td>
+              <td>Hardcoded `0` used for `getBorrowRate` errors.</td>
+              <td>Low</td>
+          </tr>
+          <tr>
+              <td>11</td>
+              <td>Redundant `getSupplyRate` function not used in cETH contract.</td>
+              <td>Low</td>
+          </tr>
+          <tr>
+              <td>12</td>
+              <td>Scaling down of yearly rates in the new model should be tested for numerical accuracy.</td>
+              <td>Medium</td>
+          </tr>
+          <tr>
+              <td>13</td>
+              <td>New utilization calculations now account for reserves, impacting the utilization rate calculation.</td>
+              <td>Medium</td>
+          </tr>
+      </table>
+    moreLink: https://gist.github.com/cylon56/f835800252fd580846c06d3d213ff1ba
   - title: OpenZeppelin Security Updates for June & July 2022
     uuid: d744efc2-0a81-4876-88fd-80b9281ff9f4
     date: 2022-06-16T20:24:00.000Z
