@@ -905,127 +905,133 @@ events:
               <td>Not fixed. Team acknowledges issue but sees no worth in complicating Configurator or altering CometFactory.clone().</td>
           </tr>
       </table>
-    fullDetails: >
-      ### Overview
-
-      OpenZepplin audited a new upcoming version of the Compound lending
-      protocol developed by Compound Labs: “Compound III”, codenamed Comet in
-      this report. This new version will only contain one base asset and can
-      have multiple instances deployed on Ethereum Mainnet and other
-      EVM-compatible networks.
-
-
-      OpenZepplin audited the
-      [compound-finance/comet](https://github.com/compound-finance/comet)
-      repository at the
-      [0f1221967149115f50a09681eea9580879ee7720](https://github.com/compound-finance/comet/tree/0f1221967149115f50a09681eea9580879ee7720)
-      commit.
-
-
-      ### Contracts Audited
-
-
-      ```
-
-      - Comet.sol
-
-      - Bulker.sol
-
-      - CometConfiguration.sol
-
-      - CometCore.sol
-
-      - CometExt.sol
-
-      - CometExtInterface.sol
-
-      - CometFactory.sol
-
-      - CometInterface.sol
-
-      - CometMainInterface.sol
-
-      - CometMath.sol
-
-      - CometProxyAdmin.sol
-
-      - CometRewards.sol
-
-      - CometStorage.sol
-
-      - Configurator.sol
-
-      - ConfiguratorStorage.sol
-
-      - ERC20.sol
-
-      - IWETH9.sol
-
-      - TransparentUpgradeableConfiguratorProxy.sol
-
-      - vendor/
-          - access/
-              - Ownable.sol
-          - canonical-weth/
-              - contracts/WETH9.sol
-          - @chainlink/
-              - contracts/src/v0.8/interfaces/AggregatorV3Interface.sol
-          - interfaces/
-              - draft-IERC1822.sol
-          - proxy/
-              - Proxy.sol
-              - beacon/IBeacon.sol
-              - transparent/ProxyAdmin.sol
-              - transparent/TransparentUpgradeableProxy.sol
-              - ERC1967/ERC1967Proxy.sol
-              - ERC1967/ERC1967Upgrade.sol
-          - utils/
-              - Context.sol
-              - StorageSlot.sol
-              - Address.sol
-      ```
-
-
-      ### Findings
-
-      Below is a tabular representation of the security audit findings:
-
-      <table>
+    fullDetails: |
+      ### Details
+      <table border="1">
+        <thead>
           <tr>
-              <td width="200px">Severity Level</td>
-              <td width="300px">Finding Summary</td>
-              <td width="300px">Update &amp; Response</td>
+            <th>Severity</th>
+            <th>Issue</th>
+            <th>Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>High Severity</td>
+            <td>Locked assets in contracts</td>
+            <td>Partially fixed in commit 3681613. “We think it’s a good idea to add sweep functions to the Bulker to prevent funds from being locked in there. As for Comet, we purposely made the receive function payable in case we ever wanted to support a payable function in CometExt. Doing so allows us to add a payable function to CometExt without having to also upgrade Comet. Since Comet is upgradeable, I don’t think we need to support a way to sweep ETH out of the contract right off the bat”.</td>
           </tr>
           <tr>
-              <td>High</td>
-              <td>Locked assets in contracts</td>
-              <td>Partially fixed in commit 3681613. Team plans to add sweep functions to the Bulker. No plan to change Comet now.</td>
+            <td>Medium Severity</td>
+            <td>governor can approve anyone to transfer the base and collateral assets within the Comet contract</td>
+            <td>Fixed. “The main intention for approveThis is to allow governance to transfer out any ERC20s accidentally sent to Comet. However, as OpenZeppelin has noted, this will likely require a governance attack. We’d like to point out that in the case of a governance attack, the attacker would not even need approveThis to steal user funds as they could upgrade the implementation of Comet to whatever they please.”</td>
           </tr>
           <tr>
-              <td></td>
-              <td>ERC20 tokens might get lost in Bulker contract</td>
-              <td></td>
+            <td>Medium Severity</td>
+            <td>The protocol may end up holding collateral assets in an unwanted manner</td>
+            <td>Acknowledged. “We intend for targetReserves to be a pretty large value so the protocol can use liquidations to build up a sizable reserve. Once reserves have reached targetReserves, we believe it may be advantageous for the protocol to start HODLing the collateral assets. We’ve run backtesting simulations to identify this as the best strategy for the protocol to build up reserves, but this strategy can definitely change as we conduct more research around liquidation auction strategies.”</td>
           </tr>
           <tr>
-              <td>Medium</td>
-              <td>Governor can approve anyone to transfer assets within the Comet contract</td>
-              <td>Fixed in PR#414. Team acknowledged potential governance attack risks.</td>
+            <td>Medium Severity</td>
+            <td>Incorrect accounting of used gas</td>
+            <td>Acknowledged. The team has improved docstrings in commit 14fbc27.</td>
           </tr>
-          <tr>
-              <td></td>
-              <td>Protocol may hold collateral assets in an unwanted manner</td>
-              <td>Acknowledged. Team intends to set targetReserves to a large value.</td>
-          </tr>
-          <tr>
-              <td></td>
-              <td>Incorrect accounting of used gas</td>
-              <td>Acknowledged. Improved docstrings in commit 14fbc27.</td>
-          </tr>
-          <tr>
-              <td>Low</td>
+      <tr>
+              <td>Low Severity</td>
               <td>Everyone can deploy new Comet instances</td>
-              <td>Not fixed. Team acknowledges issue but sees no worth in complicating Configurator or altering CometFactory.clone().</td>
+              <td>Not fixed. The team acknowledge the issue...</td>
           </tr>
+          <tr>
+              <td>Low Severity</td>
+              <td>Gas inefficiencies</td>
+              <td>Partially fixed in commit 90ca4d0.</td>
+          </tr>
+          <tr>
+              <td>Low Severity</td>
+              <td>Inconvenient use of immutable keyword</td>
+              <td>Fixed in commits 43b5502 and 4d1c1a4.</td>
+          </tr>
+          <tr>
+              <td>Low Severity</td>
+              <td>Logic contracts initialization allowed</td>
+              <td>Fixed in commit 79f59e5.</td>
+          </tr>
+          <tr>
+              <td>Low Severity</td>
+              <td>Missing validations</td>
+              <td>Partially fixed in PR 455, merged commit bf20ccf...</td>
+          </tr>
+      <tr>
+            <td>Low</td>
+            <td>Incorrect or missing docstrings</td>
+            <td>Partially fixed in commit 9227075. Docstring was only changed in the Configurator contract.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Lack of indexed parameters</td>
+            <td>Fixed in commit 7124b98.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Contracts folder is not properly organized</td>
+            <td>Acknowledged. No changes at this time.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>rewardsClaimed can be mixed between different tokens</td>
+            <td>Fixed in commit ced8026.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Naming issues</td>
+            <td>Partially fixed in commit b5a64d0.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Use of Global imports</td>
+            <td>Acknowledged. No refactoring planned.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Potential front-run</td>
+            <td>Scenario added in PR#431 for testing.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Potential reentrancies</td>
+            <td>Acknowledged. Emphasis on testing, static analysis or code changes.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Repetitive code</td>
+            <td>Acknowledged. Organizational decisions based on clarity, code size, gas cost.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Typos</td>
+            <td>Fixed in commit a1bd99f.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Unnecessary return values</td>
+            <td>Acknowledged. Used for handoff control flow.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Lack of explicitness on data type sizes</td>
+            <td>Partially fixed in PR#421 and PR#454.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>PRICE_SCALE constant is not used</td>
+            <td>Acknowledged. Used via the priceScale function.</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>Wrong value emitted in event</td>
+            <td>Fixed in commit edc5a0a.</td>
+          </tr>
+        </tbody>
       </table>
     moreLink: https://blog.openzeppelin.com/compound-iii-audit
   - title: Audit of Compound Changes  - PR193 & PR177
