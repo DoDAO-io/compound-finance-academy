@@ -1465,7 +1465,7 @@ events:
 
       <th width="200px">Severity</th>
 
-      <thwidth="400px">Issue Count</th>
+      <th width="400px">Issue Count</th>
 
       </tr>
 
@@ -1536,7 +1536,7 @@ events:
 
       <th width="200px">Severity</th>
 
-      <thwidth="400px">Issue Count</th>
+      <th width="400px">Issue Count</th>
 
       </tr>
 
@@ -1640,6 +1640,7 @@ events:
       </tbody>
 
       </table>
+    moreLink: null
 admins: []
 tags: []
 priority: 50
