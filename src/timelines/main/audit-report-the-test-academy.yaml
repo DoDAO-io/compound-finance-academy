@@ -120,91 +120,130 @@ events:
   - title: 'Audit Report: Compound Arbitrum Bridge Receiver Audit'
     uuid: 001157cb-39ec-4534-be0b-18e0f7781f9a
     date: 2023-04-04T18:12:00.000Z
-    summary: |-
+    summary: >+
 
       ### Overview
-      Date of Audit - April 4, 2023
+
+      OpenZeppelin audited the compound-finance/comet repository, targeting its
+      recent deployment to the Arbitrum network. The audit encompassed key files
+      linked to the Arbitrum Bridge Receiver. While most issues from past
+      deployments were addressed, some new concerns emerged during this review.
+
+
+      ### Findings
 
       <table>
-        <tr>
-          <th width="200px">In Scope</th>
-          <td width="400px">contracts/CometRewards.sol, contracts/bridges/arbitrum/AddressAliasHelper.sol, contracts/bridges/arbitrum/ArbitrumBridgeReceiver.sol</td>
-        </tr>
-        <tr>
-          <th>Deployment Target</th>
-          <td>Arbitrum (Optimistic Rollup)</td>
-        </tr>
-        <tr>
-          <th>Architecture</th>
-          <td>L1 Governor communicates with L2 contracts via bridge and Timelock</td>
-        </tr>
-        <tr>
-          <th>Interlinked Contracts</th>
-          <td>Receiver (message relay) and Timelock (execution control)</td>
-        </tr>
-      </table>
-    fullDetails: |-
-      <h3>Security Considerations & Trust Assumptions</h3>
-
-      <table>
-        <tr>
-          <th width="200px">Arbitrum Network</th>
-          <td width="400px">Reliance on optimistic rollup mechanism</td>
-        </tr>
-        <tr>
-          <th>Implicit Trust</th>
-          <td>Ecosystem roles (sequencer, validators, Arbitrum DAO)</td>
-        </tr>
-        <tr>
-          <th>Mainnet Governor Role</th>
-          <td>Origin of governance transactions on Arbitrum</td>
-        </tr>
-        <tr>
-          <th>Bridge Inoperability</th>
-          <td>No governance actions on deployed Arbitrum contracts</td>
-        </tr>
-        <tr>
-          <th>Security Monitoring</th>
-          <td>Stay informed about Arbitrum's security posture</td>
-        </tr>
+          <tr>
+              <td width="200px">Severity</td>
+              <td width="400px">Count</td>
+          </tr>
+          <tr>
+              <td>Low</td>
+              <td>1</td>
+          </tr>
+          <tr>
+              <td>Notes</td>
+              <td>2</td>
+          </tr>
       </table>
 
-      <h3>Findings</h3>
+    fullDetails: >-
+
+      ### Overview
+
+      OpenZeppelin audited the compound-finance/comet repository, targeting its
+      recent deployment to the Arbitrum network. The audit encompassed key files
+      linked to the Arbitrum Bridge Receiver. While most issues from past
+      deployments were addressed, some new concerns emerged during this review.
+
+
+      ### Findings
 
       <table>
-        <tr>
-          <th width="200px">Severity</th>
-          <th width="400px">Recommendations</th>
-        </tr>
-        <tr>
-          <td>Low</td>
-          <td>L-01 ETH Stuck in Receiver: Implement a sweeping mechanism for stuck ETH in the receiver</td>
-        </tr>
+          <tr>
+              <td width="200px">Severity</td>
+              <td width="400px">Count</td>
+          </tr>
+          <tr>
+              <td>Low</td>
+              <td>1</td>
+          </tr>
+          <tr>
+              <td>Notes</td>
+              <td>2</td>
+          </tr>
       </table>
 
-      <h3>Notes & Monitoring Recommendations</h3>
+
+
+      ### Issues Found
+
 
       <table>
-        <tr>
-          <th width="200px">Notes</th>
-          <td width="400px">N-01 Rewards Configuration: Consider allowing ERC-20 tokens with more decimals in rewards</td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>N-02 Solidity Compiler Version: Pin the Solidity compiler version to 0.8.15</td>
-        </tr>
-        <tr>
-          <th>Monitoring</th>
-          <td>Implement automated monitoring of contract activity on Arbitrum network</td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>Monitor events related to bridge messages and proposal execution</td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>Monitor retryable ticket queue on Arbitrum for correct handling of messages</td>
-        </tr>
+
+      <thead>
+
+      <tr>
+
+      <th width="200px">ID</th>
+
+      <th width="200px">Severity</th>
+
+      <th width="300px">Title</th>
+
+      <th width="300px">Update</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>L-01</td>
+
+      <td>Low</td>
+
+      <td>ETH can get stuck in the ArbitrumBridgeReceiver contract</td>
+
+      <td>Resolved in <a
+      href="https://github.com/compound-finance/comet/pull/733">pull request
+      733</a> at commit <a
+      href="https://github.com/compound-finance/comet/pull/733/commits/6fc6be678732ac2aeaff862cb490aa20c9c11575">6fc6be6</a>.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N-01</td>
+
+      <td>Note</td>
+
+      <td>Cannot configure rewards for tokens with twenty decimals or
+      greater</td>
+
+      <td>Acknowledged, not resolved.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>N-02</td>
+
+      <td>Note</td>
+
+      <td>Solidity compiler version not pinned</td>
+
+      <td>Resolved in <a
+      href="https://github.com/compound-finance/comet/pull/731">pull request
+      731</a> at commit <a
+      href="https://github.com/compound-finance/comet/pull/731/commits/ab022818aba15a55897ee831ee29692bef92b677">ab02281</a>.</td>
+
+      </tr>
+
+      </tbody>
+
       </table>
     moreLink: https://gist.github.com/antonleviathan/79d539469779c240ce694142957b0451
   - title: 'Audit Report: Polygon Bridge Receiver Audit'
