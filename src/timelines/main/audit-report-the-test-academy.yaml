@@ -1434,6 +1434,212 @@ events:
       contracts/access/manager/IAuthority.sol
       ```
     moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918
+  - title: 'Audit Report: Multicollateral DAI and DSR Integration'
+    uuid: ff8cdf56-4534-437a-9778-ba88933c1682
+    date: 2020-02-10T02:54:46.000Z
+    summary: >-
+      ### Overview
+
+      Compound Finance introduced changes to support Multi-collateral DAI and
+      the DAI Savings Rate contracts, allowing DAI suppliers to earn both from
+      the DAI Savings Rate (DSR) and the interest from DAI borrowers.
+
+      The logic for this integration is managed by the new CDaiDelegate contract
+      which uses the DAIInterestRateModel contract to set borrow and supply
+      rates.
+
+      No critical or high severity issues were found in the audit, but some
+      medium severity issues were identified that could affect user withdrawals,
+      interest rates, and gas efficiency.
+
+
+      ### Findings
+
+      Table with the Count of the Issues by Severity:
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th width="200px">Severity</th>
+
+      <thwidth="400px">Issue Count</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>Critical</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>High</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Medium</td>
+
+      <td>3</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Low</td>
+
+      <td>0</td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
+    fullDetails: >-
+      ### Overview
+
+      Compound Finance introduced changes to support Multi-collateral DAI and
+      the DAI Savings Rate contracts, allowing DAI suppliers to earn both from
+      the DAI Savings Rate (DSR) and the interest from DAI borrowers.
+
+      The logic for this integration is managed by the new CDaiDelegate contract
+      which uses the DAIInterestRateModel contract to set borrow and supply
+      rates.
+
+      No critical or high severity issues were found in the audit, but some
+      medium severity issues were identified that could affect user withdrawals,
+      interest rates, and gas efficiency.
+
+
+      ### Findings
+
+      Table with the Count of the Issues by Severity:
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th width="200px">Severity</th>
+
+      <thwidth="400px">Issue Count</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>Critical</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>High</td>
+
+      <td>0</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Medium</td>
+
+      <td>3</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Low</td>
+
+      <td>0</td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
+
+
+      ### Table of the Issues Found and Updates for Them
+
+      <table>
+
+      <thead>
+
+      <tr>
+
+      <th>Issue Code</th>
+
+      <th>Description</th>
+
+      <th>Updates/Suggestions</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr>
+
+      <td>M01</td>
+
+      <td><code>daiJoin.cage</code> prevents withdrawals</td>
+
+      <td>Inform users about risks of using Compound’s DAI market and consider
+      actions for pauseGuardian/admin roles if "caged".</td>
+
+      </tr>
+
+      <tr>
+
+      <td>M02</td>
+
+      <td>Negative DSR causes unexpected reverts</td>
+
+      <td>Return 0 when <code>dsr &lt; 1e27</code> and consider mechanism to
+      halt deposits into the DSR contract if <code>dsr</code> is below
+      <code>1e27</code>.</td>
+
+      </tr>
+
+      <tr>
+
+      <td>M03</td>
+
+      <td>Unnecessary calls to <code>drip</code> function of <code>pot</code>
+      contract</td>
+
+      <td>Wrap line 103 of <code>CDaiDelegate.sol</code> in an if condition
+      (<code>PotLike(potAddress).rho() != now</code>) for better gas
+      efficiency.</td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
 admins: []
 tags: []
 priority: 50
