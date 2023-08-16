@@ -207,41 +207,23 @@ events:
         </tr>
       </table>
     moreLink: https://gist.github.com/antonleviathan/79d539469779c240ce694142957b0451
-  - title: 'OPENZEPPELIN SECURITY '
+  - title: 'Audit Report: Polygon Bridge Receiver Audit'
     uuid: 018ac34b-994c-4147-be85-d5881a92fdbb
     date: 2023-02-17T18:07:03.000Z
-    summary: |-
-      ### Audit Summary
+    summary: >-
+      ### Overview
 
-      <table>
-        <tr>
-          <th width="200px">Severity</th>
-          <td width="300px">Finding Description</th>
-          <th width="300px">Proposed Action & Timeline</th>
-        </tr>
-        <tr>
-          <td >Recommendation</td>
-          <td >Unused getSupplyRate function</td>
-          <td >Consider whether to remove unused function (Action recommended)</td>
-        </tr>
-        <tr>
-          <td>Recommendation</td>
-          <td>Scaling approach change</td>
-          <td>Thoroughly test changes in scaling approach (Action recommended)</td>
-        </tr>
-        <tr>
-          <td>Recommendation</td>
-          <td>Utilization calculation with reserves</td>
-          <td>Evaluate the impact of reserves on utilization (Action recommended)</td>
-        </tr>
-        <tr>
-          <td>Recommendation</td>
-          <td>Scenario simulations and testing recommended</td>
-          <td>Run simulations and thorough testing (Action recommended)</td>
-        </tr>
-      </table>
+      Compound Finance's comet repository, focused on bridging Ethereum Mainnet
+      and Polygon for its v3 protocol, was audited. While the infrastructure
+      presents reduced attack surfaces due to interlinked contracts, concerns
+      were raised on potential vulnerabilities like rendering the
+      BaseBridgeReceiver inoperable, inability to cancel proposals, and
+      unidirectional message paths. Several issues were acknowledged but left
+      unresolved, and some were addressed in pull requests.
 
-      ### Summary
+
+      ### Findings
+
 
       <table>
         <tr>
@@ -274,6 +256,23 @@ events:
         </tr>
       </table>
     fullDetails: >-
+      ### Contracts Audited
+
+      ```
+
+      - contracts/bridges/BaseBridgeReceiver.sol
+
+      - contracts/bridges/polygon/PolygonBridgeReceiver.sol
+
+      - contracts/bridges/vendor/fx-portal/contracts/FxChild.sol
+
+      - contracts/vendor/Timelock.sol
+
+      - contracts/ITimelock.sol
+
+      ```
+
+
       <h3>Scope</h3>
 
       <p>Audited the compound-finance/comet repository at the
