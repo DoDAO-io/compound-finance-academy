@@ -1434,6 +1434,173 @@ events:
       contracts/access/manager/IAuthority.sol
       ```
     moreLink: https://www.comp.xyz/t/openzeppelin-security-updates-for-jan-2022/2918
+  - title: 'Audit Report: Governor Bravo'
+    uuid: 0891236a-28dc-4b0c-8b4c-faf835b6d002
+    date: 2021-02-12T13:15:08.000Z
+    summary: >
+      ### Overview
+
+      The audit evaluated the new governance mechanism called Governor Bravo
+      introduced by the Compound team. No critical or high severity issues were
+      discovered; however, some medium and low severity issues were identified
+      and recommendations provided. Overall, the codebase was deemed clear and
+      readable, with incremental changes from Governor Alpha commended.
+
+
+      ### Findings
+
+      Count of Issues by Severity:
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th width="200px">Severity</th>
+            <th width="400px">Issue Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Critical</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>High</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Medium</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Notes & Additional Information</td>
+            <td>5</td>
+          </tr>
+        </tbody>
+      </table>
+    fullDetails: >
+      ### Overview
+
+      The audit evaluated the new governance mechanism called Governor Bravo
+      introduced by the Compound team. No critical or high severity issues were
+      discovered; however, some medium and low severity issues were identified
+      and recommendations provided. Overall, the codebase was deemed clear and
+      readable, with incremental changes from Governor Alpha commended.
+
+
+      ### Findings
+
+      Count of Issues by Severity:
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th width="200px">Severity</th>
+            <th width="400px">Issue Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Critical</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>High</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Medium</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Notes & Additional Information</td>
+            <td>5</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      ### Table of Issues Found and Updates for Them:
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Severity</th>
+            <th>Issue</th>
+            <th>Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Medium</td>
+            <td>[M01] Lack of input validation</td>
+            <td>Partially fixed in pull request #5</td>
+          </tr>
+          <tr>
+            <td>Medium</td>
+            <td>[M02] Proposals cannot contain duplicate transactions</td>
+            <td>Not Specified</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>[L01] Unexecuted proposals from Governor Alpha will be frozen</td>
+            <td>Not Specified</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>[L02] initialize can be called multiple times</td>
+            <td>Fixed in pull request #4</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>[L03] Missing docstrings</td>
+            <td>Fixed in pull request #10</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>[L04] Superfluous condition in require statement</td>
+            <td>Not Specified</td>
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td>[L05] Unused return value</td>
+            <td>Fixed in pull request #6</td>
+          </tr>
+          <tr>
+            <td>Notes</td>
+            <td>[N01] Inconsistent style</td>
+            <td>Fixed in pull request #7</td>
+          </tr>
+          <tr>
+            <td>Notes</td>
+            <td>[N02] Misleading revert messages</td>
+            <td>Partially fixed in pull request #8</td>
+          </tr>
+          <tr>
+            <td>Notes</td>
+            <td>[N03] Overflow protection unneeded</td>
+            <td>Not Specified</td>
+          </tr>
+          <tr>
+            <td>Notes</td>
+            <td>[N04] Declare uint as uint256</td>
+            <td>Not Specified</td>
+          </tr>
+          <tr>
+            <td>Notes</td>
+            <td>[N05] Upgradeable proxy design can be improved</td>
+            <td>Fixed in pull request #9</td>
+          </tr>
+        </tbody>
+      </table>
+    moreLink: https://blog.openzeppelin.com/compound-governor-bravo-audit
   - title: 'Audit Report:  Open Price Feed – Uniswap Integration'
     uuid: ac07bb59-c47d-4522-8fbe-6ba6bcfb3dd4
     date: 2020-07-16T02:05:35.000Z
@@ -1932,6 +2099,7 @@ events:
               </tr>
           </tbody>
       </table>
+    moreLink: https://blog.openzeppelin.com/compound-tether-integration-audit
   - title: 'Audit Report: Multicollateral DAI and DSR Integration'
     uuid: ff8cdf56-4534-437a-9778-ba88933c1682
     date: 2020-02-10T02:54:46.000Z
