@@ -868,42 +868,27 @@ events:
 
       Below is a tabular representation of the security audit findings:
 
-      <table>
+      <table border="1">
+        <thead>
           <tr>
-              <td width="200px">Severity Level</td>
-              <td width="300px">Finding Summary</td>
-              <td width="300px">Update &amp; Response</td>
+            <th width="200px">Severity</th>
+            <th width="400px">Issue Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>High Severity</td>
+            <td>1</td>
           </tr>
           <tr>
-              <td>High</td>
-              <td>Locked assets in contracts</td>
-              <td>Partially fixed in commit 3681613. Team plans to add sweep functions to the Bulker. No plan to change Comet now.</td>
+            <td>Medium Severity</td>
+            <td>3</td>
           </tr>
           <tr>
-              <td></td>
-              <td>ERC20 tokens might get lost in Bulker contract</td>
-              <td></td>
+            <td>Low Severity</td>
+            <td>20</td>
           </tr>
-          <tr>
-              <td>Medium</td>
-              <td>Governor can approve anyone to transfer assets within the Comet contract</td>
-              <td>Fixed in PR#414. Team acknowledged potential governance attack risks.</td>
-          </tr>
-          <tr>
-              <td></td>
-              <td>Protocol may hold collateral assets in an unwanted manner</td>
-              <td>Acknowledged. Team intends to set targetReserves to a large value.</td>
-          </tr>
-          <tr>
-              <td></td>
-              <td>Incorrect accounting of used gas</td>
-              <td>Acknowledged. Improved docstrings in commit 14fbc27.</td>
-          </tr>
-          <tr>
-              <td>Low</td>
-              <td>Everyone can deploy new Comet instances</td>
-              <td>Not fixed. Team acknowledges issue but sees no worth in complicating Configurator or altering CometFactory.clone().</td>
-          </tr>
+        </tbody>
       </table>
     fullDetails: |
       ### Details
