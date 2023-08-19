@@ -379,9 +379,9 @@ events:
 
       <tr>
 
-      <th width="200px>Severity</th>
+      <th width="200px">Severity</th>
 
-      <th width="400px>Count</th>
+      <th width="400px">Count</th>
 
       </tr>
 
@@ -648,7 +648,7 @@ events:
           <td>5 (0 resolved, 2 partially resolved)</td>
         </tr>
       </table>
-    fullDetails: >-
+    fullDetails: >
       ### Overview
 
       Compound Finance's comet repository, focused on bridging Ethereum Mainnet
@@ -675,48 +675,124 @@ events:
       ```
 
 
-      <h3>Scope</h3>
-
-      Audited the compound-finance/comet repository at the
-      2eb33b5e8454dba148373b6cb64ede4f7436fad7 commit.
-
-      System Overview: Audit focused on communication infrastructure between
-      Compound Governor contract on Ethereum Mainnet and Polygon Network.
-
-      Security Considerations & Trust Assumptions: Interlinked contracts,
-      reliance on Polygon bridge security, trust in validators, potential delay
-      issues.
+      ### Findings
 
 
-      <h3>Medium Severity Findings</h3>
+      <table>
+        <tr>
+          <th width="200px">Languages</th>
+          <td width="400px">Solidity</td>
+        </tr>
+        <tr>
+          <th>Total Issues</th>
+          <td>14 (4 resolved, 2 partially resolved)</td>
+        </tr>
+        <tr>
+          <th>Critical Severity Issues</th>
+          <td>0 (0 resolved)</td>
+        </tr>
+        <tr>
+          <th>High Severity Issues</th>
+          <td>0 (0 resolved)</td>
+        </tr>
+        <tr>
+          <th>Medium Severity Issues</th>
+          <td>2 (1 resolved)</td>
+        </tr>
+        <tr>
+          <th>Low Severity Issues</th>
+          <td>7 (3 resolved)</td>
+        </tr>
+        <tr>
+          <th>Notes & Additional Information</th>
+          <td>5 (0 resolved, 2 partially resolved)</td>
+        </tr>
+      </table>
 
-      1. BaseBridgeReceiver localTimelock issue.
 
-      2. Proposal cancellation limitation.
+      ### Details
 
-
-      <h2>Low Severity Findings</h2>
-
-      1. Reverted proposals not seen in Ethereum.
-
-      2. Inconsistent transaction expiry.
-
-      3. Inconsistent usage of uint across loops.
-
-      4. Missing indexed parameter in an event.
-
-      5. Lack of distinction between queued and ready-to-execute state.
-
-      6. Identical transactions executed inside the same proposal.
-
-      7. Unused return value from executeTransaction.
-
-
-      <h3>Notes & Additional Information</h3>
-
-      Inconsistent nomenclature, missing docstrings, non-explicit imports, same
-      configuration values as Mainnet deployment, inconsistency between backlog
-      and implementation.
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Severity</th>
+            <th>Issue</th>
+            <th>Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Medium Severity</td>
+            <td>BaseBridgeReceiver can be rendered inoperable by incorrectly setting the localTimelock</td>
+            <td>Resolved in pull request 665 at commit 1ffc7e9.</td>
+          </tr>
+          <tr>
+            <td>Medium Severity</td>
+            <td>Proposals cannot be canceled</td>
+            <td>Acknowledged, not resolved. L2Timelock proposals cannot be canceled by design.</td>
+          </tr>
+          <tr>
+            <td>Low Severity</td>
+            <td>Reversions in Polygon will not be seen in Ethereum</td>
+            <td>Acknowledged, not resolved. Unidirectional approach by design.</td>
+          </tr>
+          <tr>
+            <td>Low Severity</td>
+            <td>Inconsistent transaction expiry</td>
+            <td>Resolved in pull request 666 at commit fcb9ef3.</td>
+          </tr>
+          <tr>
+            <td>Low Severity</td>
+            <td>Inconsistent usage of uint across loops</td>
+            <td>Resolved in pull request 666 at commit 55712fb.</td>
+          </tr>
+          <tr>
+            <td>Low Severity</td>
+            <td>Lack of indexed parameter</td>
+            <td>Resolved in pull request 666 at commit 4b9bcb5.</td>
+          </tr>
+          <tr>
+            <td>Low Severity</td>
+            <td>Missing distinction between queued and ready-to-execute state</td>
+            <td>Acknowledged, not resolved. Functionally equivalent states.</td>
+          </tr>
+          <tr>
+            <td>Low Severity</td>
+            <td>Identical transactions can be executed inside the same proposal</td>
+            <td>Acknowledged, not resolved. Identical transactions aren't a problem.</td>
+          </tr>
+          <tr>
+            <td>Low Severity</td>
+            <td>Unused return value from executeTransaction</td>
+            <td>Acknowledged, not resolved. Unclear benefits from exposing return values.</td>
+          </tr>
+          <tr>
+            <td>Notes & Additional Information</td>
+            <td>Inconsistent Nomenclature</td>
+            <td>Partially resolved in pull request 666 at commit ccba0d9. GRACE_PERIOD unchanged. Timelock untouched. FxChild docstrings not added.</td>
+          </tr>
+          <tr>
+            <td>Notes & Additional Information</td>
+            <td>Missing docstrings</td>
+            <td>Partially resolved in pull request 666 at commit ccba0d9. Timelock unchanged. FxChild docstrings not added.</td>
+          </tr>
+          <tr>
+            <td>Notes & Additional Information</td>
+            <td>Non-explicit imports are used</td>
+            <td>Acknowledged, not resolved. Will continue using non-explicit imports for consistency.</td>
+          </tr>
+          <tr>
+            <td>Notes & Additional Information</td>
+            <td>Same configuration values as Mainnet deployment</td>
+            <td>Acknowledged, will resolve. Configuration values in #598 not final.</td>
+          </tr>
+          <tr>
+            <td>Notes & Additional Information</td>
+            <td>Inconsistency between backlog and implementation</td>
+            <td>Acknowledged, will resolve. Configuration values in #598 not final.</td>
+          </tr>
+        </tbody>
+      </table>
     moreLink: https://blog.openzeppelin.com/compound-polygon-bridge-receiver-audit
   - title: Compound Changes - cETH IRM
     uuid: 13e0442d-d72c-4537-ad23-dc1cdc852e7d
@@ -1753,6 +1829,46 @@ events:
           </tbody>
       </table>
     fullDetails: >-
+      ### Overview
+
+      The Compound team's new view for the Open Price Feed has been audited,
+      which incorporates an integration with Uniswap V2. The system enables a
+      trusted reporter to post asset prices on-chain, anchored by Uniswap V2
+      prices, ensuring reporter's limited ability to manipulate. Although there
+      are no critical or high-severity issues, multiple medium and low-severity
+      concerns were identified.
+
+
+      ### Findings
+
+      <table >
+          <thead>
+              <tr>
+                  <th width="200px">Severity</th>
+                  <th width="400px">Count</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Critical</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>High</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>Medium</td>
+                  <td>8</td>
+              </tr>
+              <tr>
+                  <td>Low</td>
+                  <td>8</td>
+              </tr>
+          </tbody>
+      </table>
+
+
       <h3>Issues</h3>
 
       <table>
