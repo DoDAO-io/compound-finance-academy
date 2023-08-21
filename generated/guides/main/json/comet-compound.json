@@ -1,15 +1,11 @@
 {
   "categories": [],
-  "content": "Into to Comet smart contracts, deployments and configurator",
-  "created": "2023-03-08T15:38:33.982Z",
-  "guideIntegrations": {
-    "discordRoleIds": []
-  },
+  "content": "Intro to Comet smart contracts, deployments and configurator",
+  "created": "2023-08-21T16:15:10.590Z",
   "guideType": "course",
   "key": "comet-compound",
   "name": "Comet Protocol",
   "publishStatus": "Live",
-  "showIncorrectOnCompletion": true,
   "steps": [
     {
       "content": "## Compound III Updates\nUpdates to Compound III can be suggested, but caution must be taken as changes may decrease the program's security. Developers should create tests to ensure that any modifications work properly and do not introduce vulnerabilities. To help ensure safety, companies such as OpenZeppelin, ChainSecurity, and Certora also offer support.\n\nTo make changes safely to Compound III, this guide provides detailed instructions on code-level updates and safety measures. The guide covers topics such as creating tests for new code, running tests to confirm functionality, and using GitHub Actions to aid in testing. It also outlines the program's architecture, how to make changes to it, and how to ensure changes are safe before integrating them into the program.\n\n## Architecture\nThe lending, borrowing, and market creation functions in Compound III are all contained within the \"comet\" smart contracts. \n\n#### Tests\nThe code base undergoes testing using various frameworks, including Solidity unit tests using Mocha.js written in JavaScript, and \"scenarios\" acting as integration tests.\n\n#### Configurator\nThe Configurator is a unique contract that manages all the settings for the Compound III protocol. As even minor changes can have significant consequences, caution must be exercised. Developers must write tests, scenarios, and migration scripts to make changes safely.\n\n#### Github Actions\nThe Compound III repository offers a range of Github Actions that developers can utilize. Some actions, such as testing, are executed automatically upon code commit, while others can be triggered via the Github UI, such as enacting migrations\n",
@@ -45,7 +41,8 @@
           ],
           "content": "What is the purpose of the Configurator in Compound III?",
           "type": "SingleChoice",
-          "uuid": "40ee6038-ff8f-494b-8567-d1c62b5ae545"
+          "uuid": "40ee6038-ff8f-494b-8567-d1c62b5ae545",
+          "explanation": null
         },
         {
           "answerKeys": [
@@ -71,7 +68,8 @@
           ],
           "content": "Which testing frameworks are used to test the Compound III code base?",
           "type": "SingleChoice",
-          "uuid": "f5a63411-4925-43b1-9e93-a8eec837e218"
+          "uuid": "f5a63411-4925-43b1-9e93-a8eec837e218",
+          "explanation": null
         }
       ],
       "uuid": "0c8ad38a-289e-4a77-8650-274daa258dc6"
@@ -110,7 +108,8 @@
           ],
           "content": "What is Governor Bravo?",
           "type": "SingleChoice",
-          "uuid": "ca030224-5cc3-49e3-9399-0d6f3914c639"
+          "uuid": "ca030224-5cc3-49e3-9399-0d6f3914c639",
+          "explanation": null
         },
         {
           "answerKeys": [
@@ -136,7 +135,8 @@
           ],
           "content": "How much COMP must be delegated to an individual's address to propose a governance proposal?",
           "type": "SingleChoice",
-          "uuid": "1229a6b9-fd1e-4a68-a841-9f538ca5f5ee"
+          "uuid": "1229a6b9-fd1e-4a68-a841-9f538ca5f5ee",
+          "explanation": null
         }
       ],
       "uuid": "5d009408-61e3-47f4-9368-f221bbab857a"
@@ -181,7 +181,8 @@
           ],
           "content": "What is the purpose of migration scripts in contract deployment?",
           "type": "SingleChoice",
-          "uuid": "a90c1041-96c3-4074-893f-b50e95f44cc8"
+          "uuid": "a90c1041-96c3-4074-893f-b50e95f44cc8",
+          "explanation": null
         },
         {
           "answerKeys": [
@@ -207,7 +208,8 @@
           ],
           "content": "What are the two methods that must be implemented in a migration script?",
           "type": "SingleChoice",
-          "uuid": "26b97a55-7b09-49eb-a45a-1cb87cf7c97e"
+          "uuid": "26b97a55-7b09-49eb-a45a-1cb87cf7c97e",
+          "explanation": null
         }
       ],
       "uuid": "5184b94a-c51c-4925-ad5e-f4edfb12fea4"
@@ -233,5 +235,6 @@
     }
   ],
   "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/academy/compound/compound_comet.png",
-  "uuid": "comet-compound"
+  "uuid": "comet-compound",
+  "version": 1
 }
