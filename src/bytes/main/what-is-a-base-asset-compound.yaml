@@ -1,42 +1,50 @@
 id: what-is-a-base-asset-compound
-name: What is a Base Asset?
-content: About Base Assets in Compound III
+name: Market Deployment- Compound III
+content: Market Deployment on Different Chains
 created: '2024-05-06T13:12:52.180Z'
 admins: []
 tags: []
 priority: 0
 steps:
-  - name: Introduction
+  - name: Multi-Chain Integration
     uuid: c4a8908b-27e7-49f1-b480-07bb883c61d4
     content: >-
-      In Compound III, the borrowable asset is referred to as the base asset,
-      simplifying the borrowing process for users.
+      Compound III operates on different L2 infrastructures, enabling users to
+      interact with Compound's markets on chains such as Arbitrum, Optimism and
+      others.
               
+    imageUrl: null
     stepItems: []
-  - name: Usage
+  - name: Adding Collateral Assets
     uuid: 3b07cec4-516b-4147-a65c-0fdafb52cbe1
     content: >-
-      Lenders can supply the base asset to earn interest while borrowers can
-      borrow the base asset and pay interest after supplying collateral.
+      Users can increase their borrowing capacity by adding collateral assets to
+      their account using the supply function in Compound III.
+    imageUrl: null
     stepItems: []
-  - name: Example
+  - name: Borrowing Capacity Calculation
     uuid: eef93e05-aa80-438e-8121-459a52107415
     content: >-
-      For instance, in the case of USDC base market, users can supply ETH,
-      WBTC,COMP etc. to borrow USDC.
+      Each collateral asset contributes to the borrowing capacity based on its
+      borrowing collateral factor, representing the percentage of collateral
+      value available for borrowing.
+    imageUrl: null
     stepItems: []
-  - name: Interest
+  - name: 'Example: Borrow Collateral Factor'
     uuid: b86c3d96-5963-4ec6-ae62-d014b4d030bd
     content: >-
-      The only asset that earns interest in v3 markets is the base asset which
-      in this case is USDC, ensuring simplicity and clarity for users seeking to
-      earn passive income.
+      For instance, if the borrowing collateral factor for WBTC is 85%, users
+      can borrow up to 85% of the USD value of their supplied WBTC in the base
+      asset.
+    imageUrl: null
     stepItems: []
-  - name: Collateral Assets
+  - name: Requirement Fulfillment
     uuid: 00af6c46-4733-4e58-93a1-e7d6861a1a46
     content: >-
-      Collateral assets serve solely as security against borrowed assets and do
-      not participate in interest earning or payment within Compound III.
+      If a borrowing account fails to meet the borrow collateral factor
+      requirements, it must either supply more collateral or reduce its borrow
+      balance using the supply function to continue borrowing assets.
+    imageUrl: null
     stepItems: []
 spaceId: compound-eth-1
 videoUrl: null
