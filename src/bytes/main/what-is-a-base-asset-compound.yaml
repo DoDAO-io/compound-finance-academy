@@ -1,0 +1,44 @@
+id: what-is-a-base-asset-compound
+name: What is a Base Asset?
+content: About Base Assets in Compound III
+created: '2024-05-06T13:12:52.180Z'
+admins: []
+tags: []
+priority: 0
+steps:
+  - name: Introduction
+    uuid: c4a8908b-27e7-49f1-b480-07bb883c61d4
+    content: >-
+      In Compound III, the borrowable asset is referred to as the base asset,
+      simplifying the borrowing process for users.
+              
+    stepItems: []
+  - name: Usage
+    uuid: 3b07cec4-516b-4147-a65c-0fdafb52cbe1
+    content: >-
+      Lenders can supply the base asset to earn interest while borrowers can
+      borrow the base asset and pay interest after supplying collateral.
+    stepItems: []
+  - name: Example
+    uuid: eef93e05-aa80-438e-8121-459a52107415
+    content: >-
+      For instance, in the case of USDC base market, users can supply ETH,
+      WBTC,COMP etc. to borrow USDC.
+    stepItems: []
+  - name: Interest
+    uuid: b86c3d96-5963-4ec6-ae62-d014b4d030bd
+    content: >-
+      The only asset that earns interest in v3 markets is the base asset which
+      in this case is USDC, ensuring simplicity and clarity for users seeking to
+      earn passive income.
+    stepItems: []
+  - name: Collateral Assets
+    uuid: 00af6c46-4733-4e58-93a1-e7d6861a1a46
+    content: >-
+      Collateral assets serve solely as security against borrowed assets and do
+      not participate in interest earning or payment within Compound III.
+    stepItems: []
+spaceId: compound-eth-1
+videoUrl: null
+byteStyle: CardAndCircleProgress
+completionScreen: null
