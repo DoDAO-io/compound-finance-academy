@@ -1,40 +1,45 @@
 {
   "id": "interest-rates-compound",
-  "name": "Interest Rates",
-  "content": "About Interest Rates in Compound III",
+  "name": "Liquidation",
+  "content": "About Liquidation- Compound III",
   "created": "2024-05-06T13:27:35.489Z",
   "admins": [],
   "tags": [],
   "priority": 0,
   "steps": [
     {
-      "name": "Introduction",
+      "name": "Over-collateralization Requirement",
       "uuid": "3781d5d1-863e-4f2e-ad14-3e7a71565ac9",
-      "content": "In Compound III, users with positive balances of the base asset earn interest, while those with negative balances pay interest. These rates are determined separately and controlled by governance.\n        ",
+      "content": "Borrowers in Compound III must maintain more collateral value than their borrowed amount, ensuring safety against liquidation.\n        ",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Utilization Rate Impact",
+      "name": "Liquidation Triggers",
       "uuid": "249877a0-8495-4416-bfee-d93abf027618",
-      "content": "Interest rates for lending and borrowing depend on the utilization rate of the base asset, with rates increasing more rapidly.",
+      "content": "Accounts face liquidation if borrowers' interest accumulates excessively, collateral devalues, or borrow amounts increase beyond set thresholds.",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Continuous Interest Calculation",
+      "name": "Protocol Reserve Repayment",
       "uuid": "157579fe-9203-4341-9b7e-1dab86c670ff",
-      "content": "Interest accrues continuously, with calculations made every second based on the block timestamp, which is like a digital clock on the blockchain, ensuring accurate interest tracking.",
+      "content": "Underwater loans are settled using the protocol's reserves, safeguarding against defaults.",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Collateral Asset Exclusion",
+      "name": "Liquidation Thresholds",
       "uuid": "9d9a19f4-2c09-4537-b100-beb3bbd7376c",
-      "content": "Collateral assets don't earn or pay interest, simplifying the system by focusing solely on the base asset.",
+      "content": "If reserves fall below a governance-defined threshold, liquidators can access value from absorbed accounts.",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Governance Control",
+      "name": "Risk Mitigation Measures",
       "uuid": "c731f37e-a3fc-4a39-8063-28f369d16210",
-      "content": "The interest rate models are decided by the tokenholders, giving them the flexibility to adjust rates as needed to keep the market working well.",
+      "content": "Compound III's liquidation mechanism and reserve management ensure risk mitigation and protocol stability.",
+      "imageUrl": null,
       "stepItems": []
     }
   ],
