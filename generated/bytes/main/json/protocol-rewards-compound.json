@@ -1,0 +1,45 @@
+{
+  "id": "protocol-rewards-compound",
+  "name": "Protocol Rewards",
+  "content": "Overview of Protocol Rewards",
+  "created": "2024-05-06T13:41:14.396Z",
+  "admins": [],
+  "tags": [],
+  "priority": 0,
+  "steps": [
+    {
+      "name": "Reward Tracking System",
+      "uuid": "d3b5d981-43f2-4061-a6d1-9606a0d55cc4",
+      "content": "Compound III incorporates a system to monitor rewards for accounts engaging with the protocol, meticulously tracking the complete history of reward accrual for both suppliers and borrowers of the base asset.\n        ",
+      "stepItems": []
+    },
+    {
+      "name": "Flexible Reward Tokens",
+      "uuid": "559c6185-e054-499e-b2b0-6bcf83adaf63",
+      "content": "Rewards within Compound III can take the form of any ERC-20 token, offering versatility and potential for diverse reward options.",
+      "stepItems": []
+    },
+    {
+      "name": "Criteria",
+      "uuid": "4bd7e234-3977-43cd-8993-910db4642d41",
+      "content": "To ensure rewards accrue to Compound III accounts, a certain threshold requiring a minimum total supply of the base asset needs to be met.",
+      "stepItems": []
+    },
+    {
+      "name": "Supplier and Borrower Benefits",
+      "uuid": "262b2649-e498-490b-b2ba-05580be335be",
+      "content": "Both suppliers and borrowers of the base asset can benefit from the reward system, enhancing engagement and incentivizing participation within the protocol.",
+      "stepItems": []
+    },
+    {
+      "name": "Transparency",
+      "uuid": "cbef0b01-4b96-451f-826f-6627ce3a7270",
+      "content": "The reward tracking system in Compound III promotes transparency by recording reward accruals, while also incentivizing users to contribute to the protocol's growth and liquidity.",
+      "stepItems": []
+    }
+  ],
+  "spaceId": "compound-eth-1",
+  "videoUrl": null,
+  "byteStyle": "CardAndCircleProgress",
+  "completionScreen": null
+}
