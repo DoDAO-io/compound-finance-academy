@@ -1,0 +1,55 @@
+id: what-is-compound-finance-compound
+name: What is Compound Finance?
+content: Overview of Compound Finance
+created: '2024-05-06T12:45:47.667Z'
+admins: []
+tags: []
+priority: 0
+steps:
+  - name: Introduction
+    uuid: 82f76047-03f9-4379-9a7b-75a3bed1c994
+    content: >-
+      Compound Finance is a decentralized lending and borrowing platform based
+      on the Ethereum blockchain.
+              
+    imageUrl: null
+    stepItems: []
+  - name: Mechanism
+    uuid: 05a600ea-c6ba-424e-87fb-f8644655c80f
+    content: >-
+      Users can deposit assets into markets and borrow base assets according to
+      their needs and preferences.
+    imageUrl: null
+    stepItems: []
+  - name: Example
+    uuid: 7ca00f1f-fa7d-43f1-acbd-96561563a3bc
+    content: >-
+      For instance, users can deposit WBTC as collateral and borrow USDC, with
+      flexibility in repayment to avoid liquidation risks.
+    imageUrl: null
+    stepItems: []
+  - name: Interest Rates
+    uuid: 777d771c-1595-4827-80ef-c1d70f2892c1
+    content: >-
+      Based on the utilization ratio of the base asset, interest rates are
+      determined.
+    imageUrl: null
+    stepItems: []
+  - name: On-Chain Record
+    uuid: 1ba40356-3ddc-40bc-9845-d388a83b6f3c
+    content: >-
+      All borrowing and lending activities are recorded on-chain. Users also
+      have the flexibility to update their positions at any time.
+    imageUrl: null
+    stepItems: []
+  - name: Governance by COMP Holders
+    uuid: 47196362-80fd-4e37-b1d1-80e708882ccb
+    content: >-
+      COMP token holders have full control over Compound's management marking a
+      shift towards decentralized governance.
+    imageUrl: null
+    stepItems: []
+spaceId: compound-eth-1
+videoUrl: null
+byteStyle: CardAndCircleProgress
+completionScreen: null
