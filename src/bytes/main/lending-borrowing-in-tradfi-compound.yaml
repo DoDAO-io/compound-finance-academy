@@ -1,0 +1,56 @@
+id: lending-borrowing-in-tradfi-compound
+name: Lending & Borrowing in TradFi
+content: Overview of Lending & Borrowing in TradFi
+created: '2024-05-06T12:35:05.025Z'
+admins: []
+tags: []
+priority: 0
+steps:
+  - name: Lending Dynamics
+    uuid: f94ad534-575c-42ee-8260-37b1d2a2ea62
+    content: >-
+      In the traditional financial system, lending involves financial
+      institutions providing funds to borrowers, who agree to repay the
+      principal amount along with interest over a specified period, usually
+      through installment payments.
+              
+    stepItems: []
+  - name: Borrowing Mechanisms
+    uuid: 6127a984-ca5f-44a6-abef-d851f004a3bb
+    content: >-
+      In TradFi, borrowing involves individuals or entities obtaining funds from
+      lenders, committing to repay the borrowed amount plus interest according
+      to agreed terms.
+    stepItems: []
+  - name: Institutional Mediation
+    uuid: 84e54791-b71f-405d-bbb8-018cfe975740
+    content: >-
+      TradFi lending and borrowing involve financial transactions controlled by
+      established institutions such as banks, credit unions, and mortgage
+      companies.
+    stepItems: []
+  - name: Interest Rates
+    uuid: 0fc2500f-e5fc-41ad-887c-77dd02b6129c
+    content: >-
+      Lending typically involves borrowers paying interest to lenders as
+      compensation for the use of funds, with interest rates determined by
+      market conditions and borrower risk profiles.
+    stepItems: []
+  - name: Risk Assessment
+    uuid: cb8f2616-87e1-452e-ba04-e896c123397b
+    content: >-
+      Traditional finance institutions evaluate the creditworthiness of
+      borrowers based on factors like credit history, income stability, and
+      existing debt obligations before granting loans.
+    stepItems: []
+  - name: Collateral
+    uuid: 0e7a0444-6172-4b5e-9ab6-abe12cfb20f3
+    content: >-
+      In many cases, traditional lenders require borrowers to provide
+      collateral—such as property or assets—that can be seized in the event of
+      loan default, serving as a form of security for the lender.
+    stepItems: []
+spaceId: compound-eth-1
+videoUrl: null
+byteStyle: CardAndCircleProgress
+completionScreen: null
