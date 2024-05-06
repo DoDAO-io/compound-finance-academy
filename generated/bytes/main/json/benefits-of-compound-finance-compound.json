@@ -1,46 +1,45 @@
 {
   "id": "benefits-of-compound-finance-compound",
-  "name": "Benefits of Compound Finance",
-  "content": "Advantages of Using Compound Finance",
+  "name": "What is Compound III?",
+  "content": "Overview of Compound III",
   "created": "2024-05-06T13:04:58.002Z",
   "admins": [],
   "tags": [],
   "priority": 0,
   "steps": [
     {
-      "name": "Passive Income Opportunities",
+      "name": "Introduction",
       "uuid": "752afac6-d85d-47b3-87c8-3724b9f0a4ad",
-      "content": "Compound offers regular users the chance to earn passive income by lending out their idle crypto assets, allowing them to leverage their holdings while retaining ownership.\n        ",
+      "content": "Compound III is a streamlined version of the protocol, with an emphasis on improved security, capital efficiency, and user experience.\n        ",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Network Security Measures",
+      "name": "Single Borrowable Asset Model",
       "uuid": "f9942082-243a-49d7-ad60-da31b0bd14b1",
-      "content": "Compound maintains network security through extensive security audits conducted by reputable agencies like Open Zeppelin.",
+      "content": "Each Compound III deployment focuses on one borrowable asset, ensuring collateral remains secure and boosting capital efficiency.",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Governance",
+      "name": "Enhanced Risk Management",
       "uuid": "0eecb16d-03b6-43a9-9a92-00439b958be7",
-      "content": "Compound's governance model allows token holders to collectively participate in decision-making. ",
+      "content": "Compound III introduces a redesigned risk management and liquidation engine to enhance fund safety while being more borrower-friendly. ",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Different Assets",
+      "name": "Flexible Interest Rates",
       "uuid": "c06e80d8-0416-4573-b2df-04cd1fedf0e0",
-      "content": "Compound's support for various markets (markets with different base assets) enables users to access a diverse range of assets to borrow and lend.",
+      "content": "The protocol separates earn and borrow interest rates, giving governance control over policies, and offers advanced tools for managing accounts. The interest rates are only applicable on base assets.",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Different Chains",
+      "name": "Easy Governance",
       "uuid": "82338def-009e-4401-aec0-9f2cbd12ef2d",
-      "content": "Compound is deployed on multiple chains, enabling users to pick the chain that aligns best with their interest based on the gas fees and experience they’re looking for.",
-      "stepItems": []
-    },
-    {
-      "name": "High Liquidity",
-      "uuid": "33bafa8d-2ecc-4259-8d92-944f552e6ea8",
-      "content": "Lenders can easily withdraw their assets at any time, and borrowers can quickly access funds without any delays or restrictions.",
+      "content": "Governance is straightforward in Compound III, managed through a single Configurator contract, while Chainlink provides reliable price data for broader compatibility.",
+      "imageUrl": null,
       "stepItems": []
     }
   ],
