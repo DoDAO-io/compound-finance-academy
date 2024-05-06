@@ -1,54 +1,58 @@
 id: lending-borrowing-in-tradfi-compound
-name: Lending & Borrowing in TradFi
-content: Overview of Lending & Borrowing in TradFi
+name: Lending & Borrowing in DeFi
+content: Overview of Lending & Borrowing in DeFi
 created: '2024-05-06T12:35:05.025Z'
 admins: []
 tags: []
 priority: 0
 steps:
-  - name: Lending Dynamics
+  - name: Decentralized Operations
     uuid: f94ad534-575c-42ee-8260-37b1d2a2ea62
     content: >-
-      In the traditional financial system, lending involves financial
-      institutions providing funds to borrowers, who agree to repay the
-      principal amount along with interest over a specified period, usually
-      through installment payments.
+      DeFi lending and borrowing markets operate via decentralized protocols
+      governed by smart contracts, enabling users to transact without the need
+      for intermediaries.
               
+    imageUrl: null
     stepItems: []
-  - name: Borrowing Mechanisms
+  - name: Liquidity Providers
     uuid: 6127a984-ca5f-44a6-abef-d851f004a3bb
     content: >-
-      In TradFi, borrowing involves individuals or entities obtaining funds from
-      lenders, committing to repay the borrowed amount plus interest according
-      to agreed terms.
+      Lenders, also known as liquidity providers, deposit assets into lending
+      pools and get receipts (interest bearing tokens depending on the protocol)
+      in exchange which represents their deposited assets. 
+    imageUrl: null
     stepItems: []
-  - name: Institutional Mediation
+  - name: Interest Rate
     uuid: 84e54791-b71f-405d-bbb8-018cfe975740
     content: >-
-      TradFi lending and borrowing involve financial transactions controlled by
-      established institutions such as banks, credit unions, and mortgage
-      companies.
+      Interest rates on assets in DeFi lending pools fluctuate based on supply
+      and demand; higher demand typically leads to increased interest rates for
+      lending those assets.
+    imageUrl: null
     stepItems: []
-  - name: Interest Rates
+  - name: Borrowing with Collateral
     uuid: 0fc2500f-e5fc-41ad-887c-77dd02b6129c
     content: >-
-      Lending typically involves borrowers paying interest to lenders as
-      compensation for the use of funds, with interest rates determined by
-      market conditions and borrower risk profiles.
+      Borrowers in DeFi lending markets provide collateral in the form of
+      digital assets to access funds from the liquidity pool, securing their
+      loans through smart contracts.
+    imageUrl: null
     stepItems: []
-  - name: Risk Assessment
+  - name: Fund Utilization
     uuid: cb8f2616-87e1-452e-ba04-e896c123397b
     content: >-
-      Traditional finance institutions evaluate the creditworthiness of
-      borrowers based on factors like credit history, income stability, and
-      existing debt obligations before granting loans.
+      Borrowers can use the borrowed digital assets for various purposes,
+      including trading, investment, or accessing capital without selling their
+      existing holdings.
+    imageUrl: null
     stepItems: []
-  - name: Collateral
+  - name: Interest Redistribution
     uuid: 0e7a0444-6172-4b5e-9ab6-abe12cfb20f3
     content: >-
-      In many cases, traditional lenders require borrowers to provide
-      collateral—such as property or assets—that can be seized in the event of
-      loan default, serving as a form of security for the lender.
+      Interest paid by borrowers is redistributed to lenders, incentivizing them
+      to participate in the lending market.
+    imageUrl: null
     stepItems: []
 spaceId: compound-eth-1
 videoUrl: null
