@@ -29,24 +29,25 @@ steps:
   - name: Formula Components
     uuid: 4bd7e234-3977-43cd-8993-910db4642d41
     content: >
-      supplyPerSecondInterestRateBase: This is a base interest rate per second.
+      - supplyPerSecondInterestRateBase: This is a base interest rate per
+      second.
 
 
-      supplyPerSecondInterestRateSlopeLow: This represents the rate of increase
-      of the supply rate per second when the utilization is below or equal to
-      the Kink parameter.
+      - supplyPerSecondInterestRateSlopeLow: This represents the rate of
+      increase of the supply rate per second when the utilization is below or
+      equal to the Kink parameter.
     imageUrl: null
     stepItems: []
   - name: Example
     uuid: 262b2649-e498-490b-b2ba-05580be335be
     content: >
-      supplyPerSecondInterestRateBase = 0.01 
+      - supplyPerSecondInterestRateBase = 0.01 
 
-      supplyPerSecondInterestRateSlopeLow = 0.005 
+      - supplyPerSecondInterestRateSlopeLow = 0.005 
 
-      supplyKink = 0.6 (Kink parameter set at 60% utilization)
+      - supplyKink = 0.6 (Kink parameter set at 60% utilization)
 
-      Utilization Rate= 50%
+      - Utilization Rate= 50%
 
 
       Using the formula for when utilization is below or equal to the Kink
@@ -55,6 +56,7 @@ steps:
 
       SupplyRate = supplyPerSecondInterestRateBase +
       supplyPerSecondInterestRateSlopeLow * utilization
+
                  = 0.01 + 0.005 * 0.5
                  = 0.0125 or 1.25% per second
     imageUrl: null
@@ -74,35 +76,37 @@ steps:
   - name: Formula Components
     uuid: 699ad8cb-a896-4f7b-850d-a55b24228f84
     content: >
-      supplyPerSecondInterestRateBase: This is a base interest rate per second.
+      - supplyPerSecondInterestRateBase: This is a base interest rate per
+      second.
 
 
-      supplyPerSecondInterestRateSlopeLow: This represents the rate of increase
-      of the supply rate per second when the utilization is below or equal to
-      the Kink parameter.
+      - supplyPerSecondInterestRateSlopeLow: This represents the rate of
+      increase of the supply rate per second when the utilization is below or
+      equal to the Kink parameter.
 
 
-      supplyPerSecondInterestRateSlopeHigh: This represents the rate of increase
-      of the supply rate per second when the utilization is above the Kink
-      parameter.
+      - supplyPerSecondInterestRateSlopeHigh: This represents the rate of
+      increase of the supply rate per second when the utilization is above the
+      Kink parameter.
 
 
-      supplyKink: This is the threshold value for the utilization. If the
+      - supplyKink: This is the threshold value for the utilization. If the
       utilization is equal to or less than this value, the first formula is
       used; otherwise, the second formula is used.
+    imageUrl: null
     stepItems: []
   - name: Example
     uuid: 85d4df46-48f3-4ad1-87e6-52f4c751cb8c
     content: >
-      supplyPerSecondInterestRateBase = 0.01 
+      - supplyPerSecondInterestRateBase = 0.01 
 
-      supplyPerSecondInterestRateSlopeLow = 0.005 
+      - supplyPerSecondInterestRateSlopeLow = 0.005 
 
-      supplyPerSecondInterestRateSlopeHigh = 0.01
+      - supplyPerSecondInterestRateSlopeHigh = 0.01
 
-      supplyKink = 0.6 (Kink parameter set at 60% utilization)
+      - supplyKink = 0.6 (Kink parameter set at 60% utilization)
 
-      Utilization Rate= 80%
+      - Utilization Rate= 80%
 
 
       Using the formula for when utilization is above the Kink parameter:
@@ -114,10 +118,11 @@ steps:
 
                  = 0.01 + 0.005 * 0.6 + 0.01 * (0.8 - 0.6)
                  = 0.015 or 1.5% per second
+    imageUrl: null
     stepItems: []
   - name: APR Calculation
     uuid: 9111a7a8-1280-480d-8260-2c62da108550
-    content: >
+    content: >-
       To convert the supply rate into an annual percentage rate (APR), you use
       the following formula:
 
@@ -130,8 +135,10 @@ steps:
 
       Using the supply rate of Scenario 2 i.e. 0.015:
 
+       = 0.015 / (10 ^ 18) * 31,536,000 * 100
 
-      Supply APR= 0.015 / (10 ^ 18) * 31,536,000 * 100 = 4.734%
+      Supply APR= 4.734%
+    imageUrl: null
     stepItems: []
 spaceId: compound-eth-1
 videoUrl: null
