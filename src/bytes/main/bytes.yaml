@@ -8,3 +8,4 @@ bytes:
   - what-is-a-base-asset-compound.yaml
   - interest-rates-compound.yaml
   - protocol-rewards-compound.yaml
+  - borrow-rate-compound.yaml
