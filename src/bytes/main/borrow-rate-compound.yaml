@@ -1,6 +1,6 @@
 id: borrow-rate-compound
-name: Borrow Rate
-content: Overview of Borrow Rate Function
+name: Utilization
+content: Overview of Utilization Function
 created: '2024-05-07T11:59:25.952Z'
 admins: []
 tags: []
@@ -9,136 +9,38 @@ steps:
   - name: Introduction
     uuid: dc00d309-4c5b-4109-b567-2b02a07f19d2
     content: >-
-      The borrow interest rate is a function of the utilization rate of the base
-      asset.This function returns the per second borrow rate as the decimal
-      representation of a percentage scaled up by 10 ^ 18.
+      The utilization function returns the current protocol utilization of the
+      base asset.
               
+    imageUrl: null
     stepItems: []
-  - name: Scenario 1
+  - name: Formula
     uuid: 6587352c-38a6-47ce-86c5-27b93f30939a
-    content: >
-      If the utilization is less than or equal to a certain threshold called the
-      Kink parameter, you use this formula to calculate the borrow rate:
-
-
-      BorrowRate = borrowPerSecondInterestRateBase +
-      borrowPerSecondInterestRateSlopeLow * utilization
+    content: |
+      Utilization= Total Supply/Total Borrows
+    imageUrl: null
     stepItems: []
-  - name: Formula Components
+  - name: Explanation
     uuid: 2204f9b7-bf66-482b-acc6-47fbc68b7af9
     content: >
-      - borrowPerSecondInterestRateBase: This is a base interest rate per
-      second.
-
-
-      - borrowPerSecondInterestRateSlopeLow: This represents the rate of
-      increase of the borrow rate per second when the utilization is below or
-      equal to the Kink parameter.
+      It calculates the current protocol utilization of the base asset based on
+      the total amount borrowed and the total amount supplied.
+    imageUrl: null
     stepItems: []
   - name: Example
     uuid: bd03ad8a-bc86-4e5f-9ffa-98f117360b27
-    content: >
-      borrowPerSecondInterestRateBase = 0.02
+    content: |+
+      Total Borrows: $10,000
 
+      Total Supply: $50,000
 
-      borrowPerSecondInterestRateSlopeLow = 0.015
+      We can plug these values into the formula to find the utilization:
 
+      Utilization= 50,000 / 10,000 = 0.2 or 20%
 
-      borrowKink = 0.7 (Kink parameter set at 70% utilization)
+      This means 20% of the total supply is currently being borrowed.
 
-
-      Utilization Rate= 50%
-
-
-      BorrowRate = borrowPerSecondInterestRateBase +
-      borrowPerSecondInterestRateSlopeLow * utilization
-
-
-      0.02 + 0.015 * 0.5
-
-      = 0.0275 or 2.75% per second
-    stepItems: []
-  - name: Scenario 2
-    uuid: a2089e0c-d4b3-4cdd-b48f-9837cea3448e
-    content: >
-      If the utilization is above the Kink parameter, you use this formula to
-      calculate the borrow rate:
-
-
-      BorrowRate = borrowPerSecondInterestRateBase +
-      borrowPerSecondInterestRateSlopeLow * borrowKink +
-      borrowPerSecondInterestRateSlopeHigh * (utilization - borrowKink)
-    stepItems: []
-  - name: Formula Components
-    uuid: 8ae594be-d6a8-4477-9dc3-b65b736456cb
-    content: >
-      - borrowPerSecondInterestRateBase: This is a base interest rate per
-      second.
-
-
-      - borrowPerSecondInterestRateSlopeLow: This represents the rate of
-      increase of the borrow rate per second when the utilization is below or
-      equal to the Kink parameter.
-
-
-      - borrowPerSecondInterestRateSlopeHigh: Rate of increase of the borrow
-      rate per second when utilization is high.
-
-
-      - borrowKink: Threshold value for the utilization. If utilization is equal
-      to or less than this value, the first formula is used; otherwise, the
-      second formula is used.
-    stepItems: []
-  - name: Example
-    uuid: 24a70d72-facb-4cb7-891c-0747c3930bd5
-    content: >
-      borrowPerSecondInterestRateBase = 0.02
-
-
-      borrowPerSecondInterestRateSlopeLow = 0.015
-
-
-      borrowPerSecondInterestRateSlopeHigh = 0.025
-
-
-      borrowKink = 0.7 (Kink parameter set at 70% utilization)
-
-
-      Utilization Rate= 80%
-
-
-      BorrowRate = borrowPerSecondInterestRateBase +
-      borrowPerSecondInterestRateSlopeLow * borrowKink +
-      borrowPerSecondInterestRateSlopeHigh * (utilization - borrowKink)
-
-
-      0.02 + 0.015 * 0.7 + 0.025 * (0.8 - 0.7)
-
-      = 0.033 or 3.3% per second
-    stepItems: []
-  - name: APR Calculation
-    uuid: 53684b3e-4145-4e25-ba6a-d30ce1380889
-    content: >
-      To convert the borrow rate into an annual percentage rate (APR), you use
-      the following formula:
-
-
-      Borrow APR = Borrow Rate / (10 ^ 18) * Seconds Per Year * 100
-
-
-      Seconds Per Year = 60 * 60 * 24 * 365= 31,536,000 seconds
-
-
-      Using the borrow rate of Scenario 2 i.e. 0.033:
-
-
-      Borrow APR = Borrow Rate / (10 ^ 18) * Seconds Per Year * 100
-
-
-      0.033 / (10 ^ 18) * 31,536,000 * 100
-
-
-      = 1.041%
+    imageUrl: null
     stepItems: []
 spaceId: compound-eth-1
 videoUrl: null
