@@ -114,10 +114,9 @@ steps:
 
       SupplyRate = supplyPerSecondInterestRateBase +
       supplyPerSecondInterestRateSlopeLow * supplyKink +
-      supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink)
-
-                 = 0.01 + 0.005 * 0.6 + 0.01 * (0.8 - 0.6)
-                 = 0.015 or 1.5% per second
+      supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink) = 0.01 +
+      0.005 * 0.6 + 0.01 * (0.8 - 0.6)
+       = 0.015 or 1.5% per second
     imageUrl: null
     stepItems: []
   - name: APR Calculation
