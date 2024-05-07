@@ -100,15 +100,15 @@ steps:
   - name: Example
     uuid: 85d4df46-48f3-4ad1-87e6-52f4c751cb8c
     content: >
-      - supplyPerSecondInterestRateBase = 0.01 
+      supplyPerSecondInterestRateBase = 0.01 
 
-      - supplyPerSecondInterestRateSlopeLow = 0.005 
+      supplyPerSecondInterestRateSlopeLow = 0.005 
 
-      - supplyPerSecondInterestRateSlopeHigh = 0.01
+      supplyPerSecondInterestRateSlopeHigh = 0.01
 
-      - supplyKink = 0.6 (Kink parameter set at 60% utilization)
+      supplyKink = 0.6 (Kink parameter set at 60% utilization)
 
-      - Utilization Rate= 80%
+      Utilization Rate= 80%
 
 
       Using the formula for when utilization is above the Kink parameter:

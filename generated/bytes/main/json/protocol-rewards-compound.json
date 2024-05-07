@@ -52,7 +52,7 @@
     {
       "name": "Example",
       "uuid": "85d4df46-48f3-4ad1-87e6-52f4c751cb8c",
-      "content": "- supplyPerSecondInterestRateBase = 0.01 \n- supplyPerSecondInterestRateSlopeLow = 0.005 \n- supplyPerSecondInterestRateSlopeHigh = 0.01\n- supplyKink = 0.6 (Kink parameter set at 60% utilization)\n- Utilization Rate= 80%\n\nUsing the formula for when utilization is above the Kink parameter:\n\nSupplyRate = supplyPerSecondInterestRateBase + supplyPerSecondInterestRateSlopeLow * supplyKink + supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink) \n\n0.01 + 0.005 * 0.6 + 0.01 * (0.8 - 0.6)\n= 0.015 or 1.5% per second\n",
+      "content": "supplyPerSecondInterestRateBase = 0.01 \nsupplyPerSecondInterestRateSlopeLow = 0.005 \nsupplyPerSecondInterestRateSlopeHigh = 0.01\nsupplyKink = 0.6 (Kink parameter set at 60% utilization)\nUtilization Rate= 80%\n\nUsing the formula for when utilization is above the Kink parameter:\n\nSupplyRate = supplyPerSecondInterestRateBase + supplyPerSecondInterestRateSlopeLow * supplyKink + supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink) \n\n0.01 + 0.005 * 0.6 + 0.01 * (0.8 - 0.6)\n= 0.015 or 1.5% per second\n",
       "imageUrl": null,
       "stepItems": []
     },
