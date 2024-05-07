@@ -58,7 +58,7 @@ steps:
       supplyPerSecondInterestRateSlopeLow * utilization
 
 
-      = 0.01 + 0.005 * 0.5
+      0.01 + 0.005 * 0.5
 
       = 0.0125 or 1.25% per second
     imageUrl: null
@@ -119,7 +119,7 @@ steps:
       supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink) 
 
 
-      = 0.01 + 0.005 * 0.6 + 0.01 * (0.8 - 0.6)
+      0.01 + 0.005 * 0.6 + 0.01 * (0.8 - 0.6)
 
       = 0.015 or 1.5% per second
     imageUrl: null
@@ -139,7 +139,9 @@ steps:
 
       Using the supply rate of Scenario 2 i.e. 0.015:
 
-       = 0.015 / (10 ^ 18) * 31,536,000 * 100
+
+      0.015 / (10 ^ 18) * 31,536,000 * 100
+
 
       Supply APR= 4.734%
     imageUrl: null

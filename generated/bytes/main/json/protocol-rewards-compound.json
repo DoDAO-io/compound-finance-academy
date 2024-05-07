@@ -31,7 +31,7 @@
     {
       "name": "Example",
       "uuid": "262b2649-e498-490b-b2ba-05580be335be",
-      "content": "supplyPerSecondInterestRateBase = 0.01 \nsupplyPerSecondInterestRateSlopeLow = 0.005 \nsupplyKink = 0.6 (Kink parameter set at 60% utilization)\nUtilization Rate= 50%\n\nUsing the formula for when utilization is below or equal to the Kink parameter:\n\nSupplyRate = supplyPerSecondInterestRateBase + supplyPerSecondInterestRateSlopeLow * utilization\n\n= 0.01 + 0.005 * 0.5\n= 0.0125 or 1.25% per second\n",
+      "content": "supplyPerSecondInterestRateBase = 0.01 \nsupplyPerSecondInterestRateSlopeLow = 0.005 \nsupplyKink = 0.6 (Kink parameter set at 60% utilization)\nUtilization Rate= 50%\n\nUsing the formula for when utilization is below or equal to the Kink parameter:\n\nSupplyRate = supplyPerSecondInterestRateBase + supplyPerSecondInterestRateSlopeLow * utilization\n\n0.01 + 0.005 * 0.5\n= 0.0125 or 1.25% per second\n",
       "imageUrl": null,
       "stepItems": []
     },
@@ -52,14 +52,14 @@
     {
       "name": "Example",
       "uuid": "85d4df46-48f3-4ad1-87e6-52f4c751cb8c",
-      "content": "- supplyPerSecondInterestRateBase = 0.01 \n- supplyPerSecondInterestRateSlopeLow = 0.005 \n- supplyPerSecondInterestRateSlopeHigh = 0.01\n- supplyKink = 0.6 (Kink parameter set at 60% utilization)\n- Utilization Rate= 80%\n\nUsing the formula for when utilization is above the Kink parameter:\n\nSupplyRate = supplyPerSecondInterestRateBase + supplyPerSecondInterestRateSlopeLow * supplyKink + supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink) \n\n= 0.01 + 0.005 * 0.6 + 0.01 * (0.8 - 0.6)\n= 0.015 or 1.5% per second\n",
+      "content": "- supplyPerSecondInterestRateBase = 0.01 \n- supplyPerSecondInterestRateSlopeLow = 0.005 \n- supplyPerSecondInterestRateSlopeHigh = 0.01\n- supplyKink = 0.6 (Kink parameter set at 60% utilization)\n- Utilization Rate= 80%\n\nUsing the formula for when utilization is above the Kink parameter:\n\nSupplyRate = supplyPerSecondInterestRateBase + supplyPerSecondInterestRateSlopeLow * supplyKink + supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink) \n\n0.01 + 0.005 * 0.6 + 0.01 * (0.8 - 0.6)\n= 0.015 or 1.5% per second\n",
       "imageUrl": null,
       "stepItems": []
     },
     {
       "name": "APR Calculation",
       "uuid": "9111a7a8-1280-480d-8260-2c62da108550",
-      "content": "To convert the supply rate into an annual percentage rate (APR), you use the following formula:\n\nSupply APR = Supply Rate / (10 ^ 18) * Seconds Per Year * 100\n\nSeconds Per Year = 60 * 60 * 24 * 365= 31,536,000 seconds\n\nUsing the supply rate of Scenario 2 i.e. 0.015:\n\n = 0.015 / (10 ^ 18) * 31,536,000 * 100\n\nSupply APR= 4.734%",
+      "content": "To convert the supply rate into an annual percentage rate (APR), you use the following formula:\n\nSupply APR = Supply Rate / (10 ^ 18) * Seconds Per Year * 100\n\nSeconds Per Year = 60 * 60 * 24 * 365= 31,536,000 seconds\n\nUsing the supply rate of Scenario 2 i.e. 0.015:\n\n0.015 / (10 ^ 18) * 31,536,000 * 100\n\nSupply APR= 4.734%",
       "imageUrl": null,
       "stepItems": []
     }
