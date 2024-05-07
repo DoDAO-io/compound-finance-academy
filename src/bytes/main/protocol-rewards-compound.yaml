@@ -41,13 +41,13 @@ steps:
   - name: Example
     uuid: 262b2649-e498-490b-b2ba-05580be335be
     content: >
-      - supplyPerSecondInterestRateBase = 0.01 
+      supplyPerSecondInterestRateBase = 0.01 
 
-      - supplyPerSecondInterestRateSlopeLow = 0.005 
+      supplyPerSecondInterestRateSlopeLow = 0.005 
 
-      - supplyKink = 0.6 (Kink parameter set at 60% utilization)
+      supplyKink = 0.6 (Kink parameter set at 60% utilization)
 
-      - Utilization Rate= 50%
+      Utilization Rate= 50%
 
 
       Using the formula for when utilization is below or equal to the Kink
@@ -57,8 +57,10 @@ steps:
       SupplyRate = supplyPerSecondInterestRateBase +
       supplyPerSecondInterestRateSlopeLow * utilization
 
-                 = 0.01 + 0.005 * 0.5
-                 = 0.0125 or 1.25% per second
+
+      = 0.01 + 0.005 * 0.5
+
+      = 0.0125 or 1.25% per second
     imageUrl: null
     stepItems: []
   - name: Scenario 2
@@ -114,9 +116,12 @@ steps:
 
       SupplyRate = supplyPerSecondInterestRateBase +
       supplyPerSecondInterestRateSlopeLow * supplyKink +
-      supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink) = 0.01 +
-      0.005 * 0.6 + 0.01 * (0.8 - 0.6)
-       = 0.015 or 1.5% per second
+      supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink) 
+
+
+      = 0.01 + 0.005 * 0.6 + 0.01 * (0.8 - 0.6)
+
+      = 0.015 or 1.5% per second
     imageUrl: null
     stepItems: []
   - name: APR Calculation
