@@ -41,11 +41,13 @@ steps:
   - name: Example
     uuid: 262b2649-e498-490b-b2ba-05580be335be
     content: >
-      supplyPerSecondInterestRateBase = 0.01 
-
+      supplyPerSecondInterestRateBase = 0.01
+       
       supplyPerSecondInterestRateSlopeLow = 0.005 
 
+
       supplyKink = 0.6 (Kink parameter set at 60% utilization)
+
 
       Utilization Rate= 50%
 
@@ -102,11 +104,15 @@ steps:
     content: >
       supplyPerSecondInterestRateBase = 0.01 
 
+
       supplyPerSecondInterestRateSlopeLow = 0.005 
+
 
       supplyPerSecondInterestRateSlopeHigh = 0.01
 
+
       supplyKink = 0.6 (Kink parameter set at 60% utilization)
+
 
       Utilization Rate= 80%
 
