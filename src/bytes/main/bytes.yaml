@@ -10,3 +10,4 @@ bytes:
   - protocol-rewards-compound.yaml
   - borrow-rate-compound.yaml
   - introduction-compound.yaml
+  - collateral-borrowing-compound.yaml

@@ -9,5 +9,6 @@
   "interest-rates-compound.json",
   "protocol-rewards-compound.json",
   "borrow-rate-compound.json",
-  "introduction-compound.json"
+  "introduction-compound.json",
+  "collateral-borrowing-compound.json"
 ]
