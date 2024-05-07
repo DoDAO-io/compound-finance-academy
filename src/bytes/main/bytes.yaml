@@ -9,3 +9,4 @@ bytes:
   - interest-rates-compound.yaml
   - protocol-rewards-compound.yaml
   - borrow-rate-compound.yaml
+  - introduction-compound.yaml

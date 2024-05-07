@@ -1,0 +1,39 @@
+{
+  "id": "introduction-compound",
+  "name": "Introduction",
+  "content": "Overview of borrowing functions",
+  "created": "2024-05-07T12:17:23.630Z",
+  "admins": [],
+  "tags": [],
+  "priority": 0,
+  "steps": [
+    {
+      "name": "Positive Balances",
+      "uuid": "262bb12d-326e-42ab-b192-ea647e70c2d4",
+      "content": "If an account has supplied assets to the protocol (i.e., it has a positive balance), its present balance is calculated using the base supply index.\n        ",
+      "stepItems": []
+    },
+    {
+      "name": "Formula",
+      "uuid": "3f85ec53-cc4e-448e-aef8-501c93689f66",
+      "content": "Balance= Principal×BaseSupplyIndex\n\nHere, \"Principal\" represents the amount of assets supplied by the account, and \"BaseSupplyIndex\" represents the current global index for supply.\n",
+      "stepItems": []
+    },
+    {
+      "name": "Negative Balances",
+      "uuid": "ca1cf5b7-f50b-41ea-977a-17cde22cb717",
+      "content": "If an account has borrowed assets from the protocol (i.e., it has a negative balance), its present balance is calculated using the base borrow index.",
+      "stepItems": []
+    },
+    {
+      "name": "Formula",
+      "uuid": "938d6271-bd40-41ed-8eb5-4135239058d5",
+      "content": "Balance= Principal×BaseBorrowIndex\n\nHere, \"Principal\" represents the amount of assets borrowed by the account, and \"BaseBorrowIndex\" represents the current global index for borrow.\n",
+      "stepItems": []
+    }
+  ],
+  "spaceId": "compound-eth-1",
+  "videoUrl": null,
+  "byteStyle": "CardAndCircleProgress",
+  "completionScreen": null
+}
