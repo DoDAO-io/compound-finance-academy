@@ -1,34 +1,44 @@
 {
   "id": "process-of-liquidation-compound",
-  "name": "Process of Liquidation",
-  "content": "Overview of Liquidation Procedure",
+  "name": "Incentives for Liquidators",
+  "content": "About Incentives for Liquidators",
   "created": "2024-05-14T16:16:41.344Z",
   "admins": [],
   "tags": [],
   "priority": 0,
   "steps": [
     {
-      "name": "Detection of Liquidation Opportunity",
+      "name": "Introduction",
       "uuid": "7be37d27-fc96-48b0-8524-f596264c50ae",
-      "content": "When changes occur in protocol prices or interest, indicating a borrower might be in trouble, a system checks if liquidation is possible.",
+      "content": "There is a financial incentive for buying collateral at a discount, so liquidators are constantly hunting for opportunities to absorb debt and subsequently buy the newly available collateral.",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Moving Collateral to Cover Debt",
+      "name": "Liquidation Arbitrage",
       "uuid": "b4dba4c7-0590-459e-a7ae-fc3eb52e6b9e",
-      "content": "The ownership of borrower's collateral is transferred to the protocol to cover the debt of the borrower.",
+      "content": "Liquidation creates an arbitrage chance where there is a disparity between the discounted price of the seized collateral and its actual market value. This allows any account to buy the discounted collateral, sell it at its true market value, and pocket the profit.",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Liquidators",
+      "name": "Public Sale",
       "uuid": "55dfd1ca-303b-4c78-aa16-0403a1d2d6c9",
-      "content": "In case the protocol's reserves drop sufficiently and they are unable to pay off the debt of the borrower then it creates an opportunity for liquidators.",
+      "content": "The discounted collateral is sold publicly, allowing any account to purchase it using the base asset.",
+      "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Completing Transactions",
+      "name": "Profit Through Exchange on DEX",
       "uuid": "417bafff-a9db-497e-9097-c9daeb741711",
-      "content": "Funds are provided by the liquidator to purchase the discounted collateral.",
+      "content": "A liquidator can buy discounted collateral, exchange it on a decentralized exchange (DEX) like Uniswap at a higher price, and profit from the price difference in a single transaction.",
+      "imageUrl": null,
+      "stepItems": []
+    },
+    {
+      "name": "Win-Win Situation",
+      "uuid": "6a18b939-2edb-46eb-a28a-16aff82e0db4",
+      "content": "Both the protocol and liquidators benefit from the liquidation process. The protocol maintains stability, while liquidators profit from discounted collateral opportunities.",
       "stepItems": []
     }
   ],
