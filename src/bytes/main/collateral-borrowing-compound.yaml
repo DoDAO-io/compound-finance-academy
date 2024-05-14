@@ -1,43 +1,49 @@
 id: collateral-borrowing-compound
-name: Collateral & Borrowin
-content: Overview of Collateral & Borrowing Functions
+name: Liquidation Collateral Factor
+content: Overview of Liquidation Collateral Factor
 created: '2024-05-07T12:27:16.400Z'
 admins: []
 tags: []
 priority: 0
 steps:
-  - name: Collateral Balance
+  - name: Introduction
     uuid: 2e4f9895-aa53-4687-be88-e7041499e9ca
     content: >-
-      This function provides the current balance of a specific collateral asset
-      associated with a given account within the protocol.
+      Compound III employs separate liquidation collateral factors which are set
+      higher than borrow collateral factors, to determine liquidation
+      thresholds.
               
     imageUrl: null
     stepItems: []
-  - name: Borrow Collateralization
+  - name: Protection Mechanism
     uuid: fe60b402-0320-4226-89da-627d75af6f34
     content: >-
-      By evaluating the borrow collateral factors, this function determines
-      whether an account possesses sufficient collateral to maintain a
-      non-negative liquidity position.
+      These factors protect borrowers and the protocol by ensuring a safety
+      margin for asset prices, reducing the risk of sudden liquidations due to
+      price fluctuations.
     imageUrl: null
     stepItems: []
-  - name: Liquidity Check
+  - name: Governance Flexibility
     uuid: c80c5527-e84e-4e43-8a75-e995fabf7ecb
     content: >-
-      It also evaluates whether an account has adequate liquidity to increase
-      its borrow position in order to prevent users from entering unsustainable
-      borrowing positions.
+      The separation of liquidation collateral factors enables governance to
+      adjust borrow collateral factors without triggering liquidations,
+      providing flexibility in managing risk and market conditions.
     imageUrl: null
     stepItems: []
-  - name: Minimum Borrow Balance
+  - name: Liquidation Eligibility
     uuid: a91ff04f-1a9a-4c76-960a-df6c45d69c7a
     content: >-
-      This function establishes the minimum borrow balance allowed in the base
-      asset for an account. It ensures that users initiate borrow transactions
-      with a minimum threshold, contributing to the stability and security of
-      the protocol.
+      Accounts with borrow balances surpassing the limits defined by liquidation
+      collateral factors become eligible for liquidation.
     imageUrl: null
+    stepItems: []
+  - name: Risk Management and Stability
+    uuid: a713e486-34a4-4df4-accd-2b6610f96272
+    content: >-
+      Compound III's liquidation collateral factors play a crucial role in risk
+      management, enhancing protocol stability by ensuring the safety of
+      borrower positions.
     stepItems: []
 spaceId: compound-eth-1
 videoUrl: null
