@@ -1,40 +1,38 @@
 id: partial-liquidation-compound
-name: Partial Liquidatio
-content: Overview of Partial Liquidation
+name: Uses of COMP Token
+content: Overview of Usage of COMP Token
 created: '2024-05-14T16:37:55.215Z'
 admins: []
 tags: []
 priority: 0
 steps:
-  - name: Full Collateral Seizure
+  - name: Governance Power
     uuid: 7fb3e70a-3da0-44ad-b975-5714f1477a14
     content: >-
-      From the borrower's viewpoint, Compound v3 liquidations involve
-      liquidators seizing the entire collateral asset of the borrower to cover
-      their entire debt amount.
+      COMP holders can propose and vote on protocol changes, shaping its
+      parameters and functionality through a decentralized governance model.
               
     imageUrl: null
     stepItems: []
-  - name: Base Asset Return
+  - name: Community Participation
     uuid: defa16bd-56ac-444e-bab2-ae609bb809fd
     content: >-
-      After applying penalties or bonuses, any remaining value is returned to
-      the borrower in the base asset of the Compound v3 instance being utilized.
+      This governance approach ensures that decisions are made collectively and
+      that the community's voice is heard.
     imageUrl: null
     stepItems: []
-  - name: Example
+  - name: Weighted Voting Power
     uuid: f25fdd17-c63c-4c97-8153-11511aef6b4c
     content: >-
-      For instance, in Compound v3-USDC, if a borrower's position with ETH
-      collateral and USDC debt undergoes liquidation, they receive USDC back
-      since it's the base asset.
+      The more COMP a user has in their wallet, the more weight their vote will
+      have on a proposal.
     imageUrl: null
     stepItems: []
-  - name: Implication
+  - name: Economic Incentives
     uuid: c52abb09-1c37-491c-8d92-73b7da0cde1a
     content: >-
-      Borrowers should make sure to keep an eye on the liquidation factor and
-      understand how liquidation events might impact them.
+      Governance capabilities create economic incentives for COMP holders,
+      driving active involvement in protocol governance and ecosystem growth.
     imageUrl: null
     stepItems: []
 spaceId: compound-eth-1
