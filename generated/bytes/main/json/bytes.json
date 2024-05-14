@@ -11,5 +11,6 @@
   "borrow-rate-compound.json",
   "introduction-compound.json",
   "collateral-borrowing-compound.json",
-  "process-of-liquidation-compound.json"
+  "process-of-liquidation-compound.json",
+  "partial-liquidation-compound.json"
 ]
