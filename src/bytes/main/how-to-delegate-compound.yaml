@@ -1,42 +1,48 @@
 id: how-to-delegate-compound
-name: How To Delegate?
-content: About Delegating COMP Tokens
+name: Voting
+content: About Voting in Compound III
 created: '2024-05-14T17:34:53.129Z'
 admins: []
 tags: []
 priority: 0
 steps:
-  - name: Requirements
+  - name: Governance Mechanism
     uuid: f01dd21a-fea3-4e5e-9717-ef433585fc1e
     content: >-
-      To delegate voting rights in Compound Governance, we need a web3 wallet
-      and a balance of COMP tokens. It's essential to understand that an
-      undelegated wallet cannot vote, even for itself, until manually delegated.
+      The Compound DAO facilitates all protocol changes via the Compound
+      Governor. Proposals are not mere suggestions but executable code that
+      directly impacts the protocol's functioning.
+    imageUrl: null
     stepItems: []
-  - name: Types of Delegation
+  - name: Voting Period
     uuid: 82f6f8c4-7ca2-4119-bf9d-d2c1ac44df26
     content: >-
-      You need to decide whether to engage in Manual Voting or Delegate Voting.
-      Manual Voting allows you to vote on your behalf, while Delegate Voting
-      permits someone else to vote on your behalf, such as a trusted entity or
-      protocol.
+      After creation, proposals undergo a 3-day voting period. Approval requires
+      reaching a minimum quorum of 400,000 votes and securing a majority among
+      voters.
+    imageUrl: null
     stepItems: []
-  - name: Initiating Delegation
+  - name: Quorum and Majority
     uuid: 66c2ff5e-5430-4773-a60b-beb4fdcfc47f
     content: >-
-      If opting for Manual Voting, simply click the "Delegate" button on the
-      Compound Voting Interface. If you choose the option of Delegate Voting,
-      after clicking "Delegate," you are supposed to provide the Ethereum
-      address of the delegate.
+      A proposal must meet the minimum threshold of votes and achieve a majority
+      vote to be approved. This ensures that significant support exists within
+      the community for proposed changes.
+    imageUrl: null
     stepItems: []
-  - name: Confirmation
+  - name: Implementation Timeline
     uuid: bcb1343e-9ac9-4124-b669-ec7de0bda551
     content: >-
-      After delegating, you will have to confirm the transaction via MetaMask
-      and monitor its status. Once completed, observe the updated delegation
-      status in the Voting Wallet section. For Delegate Voting, note that your
-      votes now match your COMP balance, with future insights into your
-      delegate's voting activity available over time.
+      Once approved, the proposal is automatically queued in the timelock
+      contract and scheduled for implementation after a 2-day waiting period.
+      This allows for a brief grace period before enacting changes.
+    imageUrl: null
+    stepItems: []
+  - name: Efficient Governance
+    uuid: 6f61d108-0778-4714-80ac-a9485dfeac30
+    content: >-
+      The defined process ensures transparent decision-making and efficient
+      implementation of protocol changes.
     stepItems: []
 spaceId: compound-eth-1
 videoUrl: null
