@@ -1,0 +1,37 @@
+id: process-of-liquidation-compound
+name: Process of Liquidation
+content: Overview of Liquidation Procedure
+created: '2024-05-14T16:16:41.344Z'
+admins: []
+tags: []
+priority: 0
+steps:
+  - name: Detection of Liquidation Opportunity
+    uuid: 7be37d27-fc96-48b0-8524-f596264c50ae
+    content: >-
+      When changes occur in protocol prices or interest, indicating a borrower
+      might be in trouble, a system checks if liquidation is possible.
+    stepItems: []
+  - name: Moving Collateral to Cover Debt
+    uuid: b4dba4c7-0590-459e-a7ae-fc3eb52e6b9e
+    content: >-
+      The ownership of borrower's collateral is transferred to the protocol to
+      cover the debt of the borrower.
+    stepItems: []
+  - name: Liquidators
+    uuid: 55dfd1ca-303b-4c78-aa16-0403a1d2d6c9
+    content: >-
+      In case the protocol's reserves drop sufficiently and they are unable to
+      pay off the debt of the borrower then it creates an opportunity for
+      liquidators.
+    stepItems: []
+  - name: Completing Transactions
+    uuid: 417bafff-a9db-497e-9097-c9daeb741711
+    content: >-
+      Funds are provided by the liquidator to purchase the discounted
+      collateral.
+    stepItems: []
+spaceId: compound-eth-1
+videoUrl: null
+byteStyle: CardAndCircleProgress
+completionScreen: null

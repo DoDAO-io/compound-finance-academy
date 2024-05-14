@@ -11,3 +11,4 @@ bytes:
   - borrow-rate-compound.yaml
   - introduction-compound.yaml
   - collateral-borrowing-compound.yaml
+  - process-of-liquidation-compound.yaml

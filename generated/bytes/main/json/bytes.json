@@ -10,5 +10,6 @@
   "protocol-rewards-compound.json",
   "borrow-rate-compound.json",
   "introduction-compound.json",
-  "collateral-borrowing-compound.json"
+  "collateral-borrowing-compound.json",
+  "process-of-liquidation-compound.json"
 ]
