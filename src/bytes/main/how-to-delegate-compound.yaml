@@ -1,0 +1,44 @@
+id: how-to-delegate-compound
+name: How To Delegate?
+content: About Delegating COMP Tokens
+created: '2024-05-14T17:34:53.129Z'
+admins: []
+tags: []
+priority: 0
+steps:
+  - name: Requirements
+    uuid: f01dd21a-fea3-4e5e-9717-ef433585fc1e
+    content: >-
+      To delegate voting rights in Compound Governance, we need a web3 wallet
+      and a balance of COMP tokens. It's essential to understand that an
+      undelegated wallet cannot vote, even for itself, until manually delegated.
+    stepItems: []
+  - name: Types of Delegation
+    uuid: 82f6f8c4-7ca2-4119-bf9d-d2c1ac44df26
+    content: >-
+      You need to decide whether to engage in Manual Voting or Delegate Voting.
+      Manual Voting allows you to vote on your behalf, while Delegate Voting
+      permits someone else to vote on your behalf, such as a trusted entity or
+      protocol.
+    stepItems: []
+  - name: Initiating Delegation
+    uuid: 66c2ff5e-5430-4773-a60b-beb4fdcfc47f
+    content: >-
+      If opting for Manual Voting, simply click the "Delegate" button on the
+      Compound Voting Interface. If you choose the option of Delegate Voting,
+      after clicking "Delegate," you are supposed to provide the Ethereum
+      address of the delegate.
+    stepItems: []
+  - name: Confirmation
+    uuid: bcb1343e-9ac9-4124-b669-ec7de0bda551
+    content: >-
+      After delegating, you will have to confirm the transaction via MetaMask
+      and monitor its status. Once completed, observe the updated delegation
+      status in the Voting Wallet section. For Delegate Voting, note that your
+      votes now match your COMP balance, with future insights into your
+      delegate's voting activity available over time.
+    stepItems: []
+spaceId: compound-eth-1
+videoUrl: null
+byteStyle: CardAndCircleProgress
+completionScreen: null
