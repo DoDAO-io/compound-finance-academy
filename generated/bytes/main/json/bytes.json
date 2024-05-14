@@ -13,5 +13,6 @@
   "collateral-borrowing-compound.json",
   "process-of-liquidation-compound.json",
   "partial-liquidation-compound.json",
-  "what-is-comp-token-compound.json"
+  "what-is-comp-token-compound.json",
+  "lifecycle-of-governor-proposals-compound.json"
 ]

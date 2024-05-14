@@ -1,0 +1,45 @@
+{
+  "id": "lifecycle-of-governor-proposals-compound",
+  "name": "Lifecycle of Governor Proposals",
+  "content": "Overview of Compound Governor Proposals",
+  "created": "2024-05-14T17:14:53.185Z",
+  "admins": [],
+  "tags": [],
+  "priority": 0,
+  "steps": [
+    {
+      "name": "Proposal Initiation",
+      "uuid": "d0389559-726b-4533-94b2-851b1a36d0d8",
+      "content": "Proposals for changes to Compound's parameters or contracts are initially posted on the Compound Forum under the \"Proposal\" category. This stage involves outlining the proposal's impact on Compound and providing sufficient details for community review.\n        ",
+      "stepItems": []
+    },
+    {
+      "name": "Community Feedback",
+      "uuid": "812d5286-7dfb-40c1-a49d-324252431ee3",
+      "content": "During this stage, the proposal undergoes community feedback where stakeholders provide input and suggestions. Authors of proposals are encouraged to be open-minded and receptive to feedback, making necessary adjustments based on community input.",
+      "stepItems": []
+    },
+    {
+      "name": "Proposal Refinement",
+      "uuid": "c41a40f9-dd4b-4715-8270-ac8ad491e631",
+      "content": "Based on the feedback received, authors refine their proposals to address concerns or incorporate valuable suggestions from the community.",
+      "stepItems": []
+    },
+    {
+      "name": "On-Chain Vote",
+      "uuid": "b11c6caa-c63f-4834-9478-ce0ae6ca3f3f",
+      "content": "Once a proposal has garnered sufficient community support and the author believes it has a high chance of success, it is moved to an on-chain vote.",
+      "stepItems": []
+    },
+    {
+      "name": "Proposal Authorization",
+      "uuid": "5794ff74-6c90-454d-84c3-371317705e95",
+      "content": "If a proposal receives the necessary support and passes the on-chain vote, it is implemented.",
+      "stepItems": []
+    }
+  ],
+  "spaceId": "compound-eth-1",
+  "videoUrl": null,
+  "byteStyle": "CardAndCircleProgress",
+  "completionScreen": null
+}
