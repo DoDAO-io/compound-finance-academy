@@ -1,0 +1,37 @@
+id: what-is-comp-token-compound
+name: What is COMP Token?
+content: About COMP Token
+created: '2024-05-14T16:42:30.940Z'
+admins: []
+tags: []
+priority: 0
+steps:
+  - name: Introduction
+    uuid: 64d39536-8599-4a7a-a152-b7e52278bce1
+    content: |-
+      COMP is the native governance token of the DeFi protocol, Compound. 
+              
+    stepItems: []
+  - name: Reward Mechanism
+    uuid: 8c16d086-e4f3-419b-b7bf-e9e5e15d51e4
+    content: >-
+      Users who contribute liquidity to Compound's pools or engage in borrowing
+      activities receive COMP tokens as rewards.
+    stepItems: []
+  - name: Active Users
+    uuid: 8399b605-0c1b-4cdc-881c-89e4ca824131
+    content: >-
+      COMP tokens are distributed not only to lenders and borrowers but also to
+      active participants of the protocol, including developers and builders,
+      fostering community engagement and growth.
+    stepItems: []
+  - name: Distribution
+    uuid: 1ae75dab-ea45-4caa-98dd-532d80e3e60a
+    content: >-
+      COMP is distributed every 15 seconds (Ethereum mining period) in
+      proportion to user’s interest.
+    stepItems: []
+spaceId: compound-eth-1
+videoUrl: null
+byteStyle: CardAndCircleProgress
+completionScreen: null
