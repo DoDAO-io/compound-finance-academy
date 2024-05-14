@@ -1,6 +1,6 @@
 {
   "id": "partial-liquidation-compound",
-  "name": "Partial Liquidation",
+  "name": "Partial Liquidatio",
   "content": "Overview of Partial Liquidation",
   "created": "2024-05-14T16:37:55.215Z",
   "admins": [],
@@ -11,24 +11,28 @@
       "name": "Full Collateral Seizure",
       "uuid": "7fb3e70a-3da0-44ad-b975-5714f1477a14",
       "content": "From the borrower's viewpoint, Compound v3 liquidations involve liquidators seizing the entire collateral asset of the borrower to cover their entire debt amount.\n        ",
+      "imageUrl": null,
       "stepItems": []
     },
     {
       "name": "Base Asset Return",
       "uuid": "defa16bd-56ac-444e-bab2-ae609bb809fd",
       "content": "After applying penalties or bonuses, any remaining value is returned to the borrower in the base asset of the Compound v3 instance being utilized.",
+      "imageUrl": null,
       "stepItems": []
     },
     {
       "name": "Example",
       "uuid": "f25fdd17-c63c-4c97-8153-11511aef6b4c",
       "content": "For instance, in Compound v3-USDC, if a borrower's position with ETH collateral and USDC debt undergoes liquidation, they receive USDC back since it's the base asset.",
+      "imageUrl": null,
       "stepItems": []
     },
     {
       "name": "Implication",
       "uuid": "c52abb09-1c37-491c-8d92-73b7da0cde1a",
       "content": "Borrowers should make sure to keep an eye on the liquidation factor and understand how liquidation events might impact them.",
+      "imageUrl": null,
       "stepItems": []
     }
   ],
