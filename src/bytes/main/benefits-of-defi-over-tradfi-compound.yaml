@@ -13,6 +13,7 @@ steps:
       access and a cryptocurrency wallet, providing financial services to a
       broader audience.
               
+    imageUrl: null
     stepItems: []
   - name: Higher Interest Rates
     uuid: 05a600ea-c6ba-424e-87fb-f8644655c80f
@@ -20,6 +21,7 @@ steps:
       Lenders can earn significantly higher interest rates on their deposits
       compared to traditional savings accounts, as DeFi platforms often offer
       more competitive rates due to the absence of intermediaries.
+    imageUrl: null
     stepItems: []
   - name: Flexibility & Control
     uuid: 7ca00f1f-fa7d-43f1-acbd-96561563a3bc
@@ -27,12 +29,14 @@ steps:
       Users have more control over their financial decisions in DeFi lending and
       borrowing, with the freedom to choose when to lend, borrow, or repay loans
       without centralized approval.
+    imageUrl: null
     stepItems: []
   - name: Transparency
     uuid: 777d771c-1595-4827-80ef-c1d70f2892c1
     content: >-
       All transactions and loan terms are recorded on the blockchain, ensuring
       full transparency and allowing users to audit the system's operations.
+    imageUrl: null
     stepItems: []
   - name: Overcollateralization
     uuid: 1ba40356-3ddc-40bc-9845-d388a83b6f3c
@@ -41,14 +45,18 @@ steps:
       they borrow, reducing the risk of default—a significant departure from
       traditional finance, which may offer unsecured loans or rely on
       creditworthiness.
+    imageUrl: null
     stepItems: []
   - name: Instant Access to Funds
     uuid: 47196362-80fd-4e37-b1d1-80e708882ccb
     content: >-
       Borrowers can access funds immediately without undergoing lengthy approval
       processes, providing quick liquidity when needed.
+    imageUrl: null
     stepItems: []
 spaceId: compound-eth-1
-videoUrl: null
+videoUrl: >-
+  https://dodao-prod-public-assets.s3.amazonaws.com/academy/compound-eth-1/Videos/Liquidation.mp4
+videoAspectRatio: landscape
 byteStyle: CardAndCircleProgress
 completionScreen: null
