@@ -52,7 +52,7 @@
   ],
   "spaceId": "compound-eth-1",
   "videoUrl": "https://dodao-prod-public-assets.s3.amazonaws.com/academy/compound-eth-1/Videos/Benefits_of_Compound_Finance.mp4",
-  "videoAspectRatio": null,
+  "videoAspectRatio": "landscape",
   "byteStyle": "CardAndCircleProgress",
   "completionScreen": null
 }
