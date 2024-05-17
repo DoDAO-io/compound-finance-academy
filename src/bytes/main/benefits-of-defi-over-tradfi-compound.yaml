@@ -56,7 +56,7 @@ steps:
     stepItems: []
 spaceId: compound-eth-1
 videoUrl: >-
-  https://dodao-prod-public-assets.s3.amazonaws.com/academy/compound-eth-1/Videos/Liquidation.mp4
+  https://dodao-prod-public-assets.s3.amazonaws.com/academy/compound-eth-1/Videos/Benefits_of_DeFi.mp4
 videoAspectRatio: landscape
 byteStyle: CardAndCircleProgress
 completionScreen: null
