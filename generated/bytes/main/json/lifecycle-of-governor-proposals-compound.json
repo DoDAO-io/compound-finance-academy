@@ -1,68 +1,51 @@
 {
   "id": "lifecycle-of-governor-proposals-compound",
-  "name": "Compound Improvement Proposals",
-  "content": "About Compound Improvement Proposals (CIPs)",
+  "name": "Lifecycle of Governor Proposals",
+  "content": "Overview of Compound Governor Proposals",
   "created": "2024-05-14T17:14:53.185Z",
   "admins": [],
   "tags": [],
   "priority": 0,
   "steps": [
     {
-      "name": "Introduction",
+      "name": "Proposal Initiation",
       "uuid": "d0389559-726b-4533-94b2-851b1a36d0d8",
-      "content": "These proposals describe the standards, processes, and enhancements to improve the governance protocol. Their main purpose is to improve the off-chain and on-chain governance of the Compound.\n        ",
+      "content": "Proposals for changes to Compound's parameters or contracts are initially posted on the Compound Forum under the \"Proposal\" category. This stage involves outlining the proposal's impact on Compound and providing sufficient details for community review.\n        ",
       "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "CIP Types",
+      "name": "Community Feedback",
       "uuid": "812d5286-7dfb-40c1-a49d-324252431ee3",
-      "content": "Meta Process: Any process to be implemented or modified that coordinates Compound’s governance, development, or community efforts.\n\nProtocol Enhancement: This involves any changes to smart contracts that are involved in Compound Protocol and Governor\n\nTooling & Support: This involves any additions or modifications to off-chain infrastructure, tooling, documentation, or other components that support the usage of Compound Protocol.\n",
+      "content": "During this stage, the proposal undergoes community feedback where stakeholders provide input and suggestions. Authors of proposals are encouraged to be open-minded and receptive to feedback, making necessary adjustments based on community input.",
       "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "CIP Lifecycle",
+      "name": "Proposal Refinement",
       "uuid": "c41a40f9-dd4b-4715-8270-ac8ad491e631",
-      "content": "CIP authors begin with an idea, draft it into a formal CIP document, request peer review and revision facilitated by the Compound Working Group.",
+      "content": "Based on the feedback received, authors refine their proposals to address concerns or incorporate valuable suggestions from the community.",
       "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Review Process",
+      "name": "On-Chain Vote",
       "uuid": "b11c6caa-c63f-4834-9478-ce0ae6ca3f3f",
-      "content": "CIP documents are submitted for review on Compound Discord's #governance channel or via GitHub issues. They're discussed in biweekly Working Group meetings.",
+      "content": "Once a proposal has garnered sufficient community support and the author believes it has a high chance of success, it is moved to an on-chain vote.",
       "imageUrl": null,
       "stepItems": []
     },
     {
-      "name": "Editorial Feedback",
+      "name": "Proposal Authorization",
       "uuid": "5794ff74-6c90-454d-84c3-371317705e95",
-      "content": "CIP Editors provide feedback during meetings. Authors address objections and may request another review. If no objections or majority support in the second meeting, it moves to Last Call for 14 days.",
+      "content": "If a proposal receives the necessary support and passes the on-chain vote, it is implemented.",
       "imageUrl": null,
-      "stepItems": []
-    },
-    {
-      "name": "Approval Process",
-      "uuid": "3f375e27-0b22-4a7c-abaa-71240b92ee07",
-      "content": "Meta Process CIPs are approved via a majority Signal vote by COMP holders. Protocol Enhancements undergo a Compound Governance vote.",
-      "stepItems": []
-    },
-    {
-      "name": "Implementation Path",
-      "uuid": "d0f42fde-4803-4881-884e-0acbc4946834",
-      "content": "Non-Meta Process CIPs are community-implemented, potentially funded by a Grant Committee. Implementation begins after the Last Call phase.",
-      "stepItems": []
-    },
-    {
-      "name": "Adoption and Compliance",
-      "uuid": "adac05b4-8110-4d4a-aaf1-ec06e83793a8",
-      "content": "Approved CIPs become officially adopted components of the Compound governance process, which all COMP holders are expected to uphold.",
       "stepItems": []
     }
   ],
   "spaceId": "compound-eth-1",
-  "videoUrl": null,
+  "videoUrl": "https://dodao-prod-public-assets.s3.amazonaws.com/academy/compound-eth-1/Videos/Lifecycle-_CGP.mp4",
+  "videoAspectRatio": "landscape",
   "byteStyle": "CardAndCircleProgress",
   "completionScreen": null
 }
