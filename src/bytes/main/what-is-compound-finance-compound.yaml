@@ -1,50 +1,57 @@
 id: what-is-compound-finance-compound
-name: How does Compound Finance work?
-content: Workflow of Compound Finance
+name: What is Compound Finance?
+content: Overview of Compound Finance
 created: '2024-05-06T12:45:47.667Z'
 admins: []
 tags: []
 priority: 0
 steps:
-  - name: Separate Markets
+  - name: Introduction
     uuid: 82f76047-03f9-4379-9a7b-75a3bed1c994
     content: >-
-      In Compound III, both lenders and borrowers are required to deposit and
-      borrow assets from the available markets, rather than traditional lending
-      pools.
+      Compound Finance is a decentralized lending and borrowing platform based
+      on the Ethereum blockchain.
               
     imageUrl: null
     stepItems: []
-  - name: Overcollateralization
+  - name: Mechanism
     uuid: 05a600ea-c6ba-424e-87fb-f8644655c80f
     content: >-
-      Borrowers in Compound must deposit collateral exceeding the borrowed
-      amount, a practice known as overcollateralization in order to keep
-      themselves safe from the risk of liquidation.
+      Users can deposit assets into markets and borrow base assets according to
+      their needs and preferences.
     imageUrl: null
     stepItems: []
-  - name: Base Assets
+  - name: Example
     uuid: 7ca00f1f-fa7d-43f1-acbd-96561563a3bc
     content: >-
-      Compound applies interest rates exclusively to the base asset, excluding
-      collateral assets.
+      For instance, users can deposit WBTC as collateral and borrow USDC, with
+      flexibility in repayment to avoid liquidation risks.
     imageUrl: null
     stepItems: []
-  - name: Rewards
+  - name: Interest Rates
     uuid: 777d771c-1595-4827-80ef-c1d70f2892c1
     content: >-
-      The platform rewards users who participate as lenders and borrowers with
-      COMP tokens, contributing to cumulative compound interest rates.
+      Based on the utilization ratio of the base asset, interest rates are
+      determined.
     imageUrl: null
     stepItems: []
-  - name: COMP Token
+  - name: On-Chain Record
     uuid: 1ba40356-3ddc-40bc-9845-d388a83b6f3c
     content: >-
-      These tokens play a central role in the governance of compound finance,
-      allowing holders to propose and vote on platform decisions.
+      All borrowing and lending activities are recorded on-chain. Users also
+      have the flexibility to update their positions at any time.
+    imageUrl: null
+    stepItems: []
+  - name: Governance by COMP Holders
+    uuid: 47196362-80fd-4e37-b1d1-80e708882ccb
+    content: >-
+      COMP token holders have full control over Compound's management marking a
+      shift towards decentralized governance.
     imageUrl: null
     stepItems: []
 spaceId: compound-eth-1
-videoUrl: null
+videoUrl: >-
+  https://dodao-prod-public-assets.s3.amazonaws.com/academy/compound-eth-1/Videos/About_Compound_Finance.mp4
+videoAspectRatio: landscape
 byteStyle: CardAndCircleProgress
 completionScreen: null
