@@ -44,7 +44,8 @@
     }
   ],
   "spaceId": "compound-eth-1",
-  "videoUrl": null,
+  "videoUrl": "https://dodao-prod-public-assets.s3.amazonaws.com/academy/compound-eth-1/Videos/How_Does_Compound_III_Work.mp4",
+  "videoAspectRatio": null,
   "byteStyle": "CardAndCircleProgress",
   "completionScreen": null
 }
