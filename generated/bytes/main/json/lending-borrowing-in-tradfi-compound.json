@@ -51,7 +51,8 @@
     }
   ],
   "spaceId": "compound-eth-1",
-  "videoUrl": null,
+  "videoUrl": "https://dodao-prod-public-assets.s3.amazonaws.com/academy/compound-eth-1/Videos/Lending_Borrowing.mp4",
+  "videoAspectRatio": "landscape",
   "byteStyle": "CardAndCircleProgress",
   "completionScreen": null
 }
