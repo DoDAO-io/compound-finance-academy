@@ -1,158 +1,53 @@
 id: protocol-rewards-compound
-name: Supply Rate
-content: Overview of Supply Rate Function
+name: Protocol Rewards
+content: Overview of Protocol Rewards
 created: '2024-05-06T13:41:14.396Z'
 admins: []
 tags: []
 priority: 0
 steps:
-  - name: Introduction
+  - name: Reward Tracking System
     uuid: d3b5d981-43f2-4061-a6d1-9606a0d55cc4
     content: >-
-      The supply interest rate is a function of the utilization rate of the base
-      asset.This function returns the per second supply rate as the decimal
-      representation of a percentage scaled up by 10 ^ 18.
+      Compound III incorporates a system to monitor rewards for accounts
+      engaging with the protocol, meticulously tracking the complete history of
+      reward accrual for both suppliers and borrowers of the base asset.
               
     imageUrl: null
     stepItems: []
-  - name: Scenario 1
+  - name: Flexible Reward Tokens
     uuid: 559c6185-e054-499e-b2b0-6bcf83adaf63
-    content: >
-      If the utilization is less than or equal to a certain threshold called the
-      Kink parameter, you use this formula to calculate the supply rate: 
-
-
-      supplyPerSecondInterestRateBase + supplyPerSecondInterestRateSlopeLow *
-      utilization
-    imageUrl: null
-    stepItems: []
-  - name: Formula Components
-    uuid: 4bd7e234-3977-43cd-8993-910db4642d41
-    content: >
-      - supplyPerSecondInterestRateBase: This is a base interest rate per
-      second.
-
-
-      - supplyPerSecondInterestRateSlopeLow: This represents the rate of
-      increase of the supply rate per second when the utilization is below or
-      equal to the Kink parameter.
-    imageUrl: null
-    stepItems: []
-  - name: Example
-    uuid: 262b2649-e498-490b-b2ba-05580be335be
-    content: >
-      supplyPerSecondInterestRateBase = 0.01
-       
-      supplyPerSecondInterestRateSlopeLow = 0.005 
-
-
-      supplyKink = 0.6 (Kink parameter set at 60% utilization)
-
-
-      Utilization Rate= 50%
-
-
-      Using the formula for when utilization is below or equal to the Kink
-      parameter:
-
-
-      SupplyRate = supplyPerSecondInterestRateBase +
-      supplyPerSecondInterestRateSlopeLow * utilization
-
-
-      0.01 + 0.005 * 0.5
-
-      = 0.0125 or 1.25% per second
-    imageUrl: null
-    stepItems: []
-  - name: Scenario 2
-    uuid: cbef0b01-4b96-451f-826f-6627ce3a7270
-    content: >
-      If the utilization is above the Kink parameter, you use this formula to
-      calculate the supply rate: 
-
-
-      SupplyRate = supplyPerSecondInterestRateBase +
-      supplyPerSecondInterestRateSlopeLow * supplyKink +
-      supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink)
-    imageUrl: null
-    stepItems: []
-  - name: Formula Components
-    uuid: 699ad8cb-a896-4f7b-850d-a55b24228f84
-    content: >
-      - supplyPerSecondInterestRateBase: This is a base interest rate per
-      second.
-
-
-      - supplyPerSecondInterestRateSlopeLow: This represents the rate of
-      increase of the supply rate per second when the utilization is below or
-      equal to the Kink parameter.
-
-
-      - supplyPerSecondInterestRateSlopeHigh: This represents the rate of
-      increase of the supply rate per second when the utilization is above the
-      Kink parameter.
-
-
-      - supplyKink: This is the threshold value for the utilization. If the
-      utilization is equal to or less than this value, the first formula is
-      used; otherwise, the second formula is used.
-    imageUrl: null
-    stepItems: []
-  - name: Example
-    uuid: 85d4df46-48f3-4ad1-87e6-52f4c751cb8c
-    content: >
-      supplyPerSecondInterestRateBase = 0.01 
-
-
-      supplyPerSecondInterestRateSlopeLow = 0.005 
-
-
-      supplyPerSecondInterestRateSlopeHigh = 0.01
-
-
-      supplyKink = 0.6 (Kink parameter set at 60% utilization)
-
-
-      Utilization Rate= 80%
-
-
-      Using the formula for when utilization is above the Kink parameter:
-
-
-      SupplyRate = supplyPerSecondInterestRateBase +
-      supplyPerSecondInterestRateSlopeLow * supplyKink +
-      supplyPerSecondInterestRateSlopeHigh * (utilization - supplyKink) 
-
-
-      0.01 + 0.005 * 0.6 + 0.01 * (0.8 - 0.6)
-
-      = 0.015 or 1.5% per second
-    imageUrl: null
-    stepItems: []
-  - name: APR Calculation
-    uuid: 9111a7a8-1280-480d-8260-2c62da108550
     content: >-
-      To convert the supply rate into an annual percentage rate (APR), you use
-      the following formula:
-
-
-      Supply APR = Supply Rate / (10 ^ 18) * Seconds Per Year * 100
-
-
-      Seconds Per Year = 60 * 60 * 24 * 365= 31,536,000 seconds
-
-
-      Using the supply rate of Scenario 2 i.e. 0.015:
-
-
-      0.015 / (10 ^ 18) * 31,536,000 * 100
-
-
-      Supply APR= 4.734%
+      Rewards within Compound III can take the form of any ERC-20 token,
+      offering versatility and potential for diverse reward options.
+    imageUrl: null
+    stepItems: []
+  - name: Criteria
+    uuid: 4bd7e234-3977-43cd-8993-910db4642d41
+    content: >-
+      To ensure rewards accrue to Compound III accounts, a certain threshold
+      requiring a minimum total supply of the base asset needs to be met.
+    imageUrl: null
+    stepItems: []
+  - name: Supplier and Borrower Benefits
+    uuid: 262b2649-e498-490b-b2ba-05580be335be
+    content: >-
+      Both suppliers and borrowers of the base asset can benefit from the reward
+      system, enhancing engagement and incentivizing participation within the
+      protocol.
+    imageUrl: null
+    stepItems: []
+  - name: Transparency
+    uuid: cbef0b01-4b96-451f-826f-6627ce3a7270
+    content: >-
+      The reward tracking system in Compound III promotes transparency by
+      recording reward accruals, while also incentivizing users to contribute to
+      the protocol's growth and liquidity.
     imageUrl: null
     stepItems: []
 spaceId: compound-eth-1
-videoUrl: null
+videoUrl: >-
+  https://dodao-prod-public-assets.s3.amazonaws.com/academy/compound-eth-1/Videos/Protocol_Rewards.mp4
+videoAspectRatio: null
 byteStyle: CardAndCircleProgress
 completionScreen: null
