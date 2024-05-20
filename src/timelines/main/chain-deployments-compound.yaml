@@ -1,0 +1,67 @@
+id: chain-deployments-compound
+name: Chain Deployments
+excerpt: Delve into the chain deployment updates of Compound Finance.
+content: >-
+  This timeline is an informative chronicle showcasing all the key deployments
+  on various Layer-2 chains in the journey of Compound. It highlights the major
+  events, including the initial deployment date and subsequent updates. It
+  serves as a comprehensive reference for enthusiasts to track the progress and
+  evolution of Compound in enhancing the scalability, speed, and efficiency of
+  lending & borrowing crypto assets. Each entry in the timeline is succinctly
+  described, providing insights into how each launch or update has contributed
+  to Compound's growing impact in the blockchain and cryptocurrency space.
+publishStatus: ''
+events:
+  - title: Deployed on Optimism
+    uuid: ab118385-cac7-4e7d-a19e-cfd09c23bade
+    date: 2024-04-15T17:13:16.000Z
+    summary: >-
+      Compound Finance's recent deployment on Optimism, an Ethereum Layer-2
+      solution, brings significant benefits. Users experience reduced gas fees,
+      making transactions more economical, and enhanced transaction speeds. This
+      expansion aims to improve scalability and user experience on the Compound
+      platform.
+    fullDetails: ''
+    moreLink: https://www.comp.xyz/t/deploy-compound-iii-on-optimism/4975/10
+  - title: Compound Live On Base
+    uuid: 2e733a05-cfb2-48b5-8fa0-4a39e0bfc106
+    date: 2023-08-12T16:26:41.000Z
+    summary: >-
+      Compound is live on Base which is Coinbase’s recently launched layer 2
+      chain. Compound features a bridged USDC market, and ETH market on Base.
+      ETH and cbETH can be used as collateral to borrow bridged USDC, or cbETH
+      to borrow ETH in each respective market.
+    fullDetails: ''
+    moreLink: https://compound.substack.com/p/compound-launches-on-base-native
+  - title: Compound Launched on Arbitrum
+    uuid: d947c857-7088-4b1c-b449-f12d07b82e97
+    date: 2023-05-15T16:46:59.000Z
+    summary: >-
+      The Compound III USDC market is live on Arbitrum. This marks the third
+      chain Compound is deployed on - bringing the security and efficiency of
+      Compound III to more ecosystems.
+    fullDetails: ''
+    moreLink: https://compound.substack.com/p/compound-launches-on-arbitrum-transaction
+  - title: Compound Live on Polygon
+    uuid: cd650b68-6193-42b3-9f0c-63c6b80f2ad5
+    date: 2023-02-20T16:53:10.000Z
+    summary: >-
+      Compound Finance has expanded its reach by launching on the Polygon
+      network. This strategic move aims to enhance user experience by leveraging
+      Polygon's high-speed, low-cost infrastructure.
+    fullDetails: ''
+    moreLink: https://www.comp.xyz/t/initialize-compound-iii-usdc-on-polygon-pos/3611
+  - title: Live on Ethereum Mainnet
+    uuid: b0f7db60-4cf5-4baf-aaa9-c150510b77a3
+    date: 2018-05-27T17:15:43.000Z
+    summary: >-
+      The project had officially launched on the Ethereum Mainnet on Sept. 27,
+      2018, later upgrading to its Compound v2 in May 2019 and Compound III in
+      August 2022.
+    fullDetails: ''
+    moreLink: https://messari.io/project/compound/profile
+admins: []
+tags: []
+priority: 50
+created: '2024-05-20T16:20:25.810Z'
+timelineStyle: V1_Default
